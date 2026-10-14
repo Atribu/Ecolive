@@ -1,0 +1,93 @@
+:root {
+  --wave-height: 58px;
+}
+/* Overlap the real next surface. The solid mask joins the curve without a seam. */
+.motion-wave-active.motion-wave-active {
+  position: relative;
+  margin-top: calc(-1 * var(--wave-height));
+  background-color: var(--wave-background, var(--cream));
+  -webkit-mask-image: var(--wave-mask), linear-gradient(#000, #000);
+  mask-image: var(--wave-mask), linear-gradient(#000, #000);
+  -webkit-mask-size:
+    100% calc(var(--wave-height) * var(--wave-scale, 1) + 8px),
+    100% calc(100% - var(--wave-height) - 1px);
+  mask-size:
+    100% calc(var(--wave-height) * var(--wave-scale, 1) + 8px),
+    100% calc(100% - var(--wave-height) - 1px);
+  -webkit-mask-position:
+    0 var(--wave-shift, 0px),
+    0 bottom;
+  mask-position:
+    0 var(--wave-shift, 0px),
+    0 bottom;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+/* Short navigation/status strips need clear space on both curved edges. */
+.inner-page .page-guide.motion-wave-active,
+.stage-note.motion-wave-active {
+  padding-top: calc(var(--wave-height) + 8px);
+  padding-bottom: calc(var(--wave-height) + 8px);
+  border-bottom: 0;
+}
+.chapter-columns.motion-wave-active {
+  padding-top: calc(var(--wave-height) + 30px);
+  --wave-background: #efede6 !important;
+}
+.intro .body-block.motion-wave-active,
+.focus-description.motion-wave-active {
+  padding-top: calc(var(--wave-height) + 22px);
+}
+.focus-description.motion-wave-active {
+  border-top: 0;
+}
+/* Keep captions and controls above the following section's overlap. */
+.hero.motion-wave-outgoing .hero-bottom {
+  bottom: calc(var(--wave-height) + 22px);
+}
+.hero.motion-wave-outgoing .hero-note,
+.page-hero.motion-wave-outgoing .page-render-note {
+  bottom: calc(var(--wave-height) + 14px);
+}
+.motion-wave-outgoing .image-caption,
+.motion-wave-outgoing .map-caption,
+.motion-wave-outgoing .place-label,
+.inner-page .motion-wave-outgoing .deep-image figcaption,
+.inner-page .deep-image.motion-wave-outgoing figcaption,
+.project-plan.motion-wave-outgoing button > span,
+.project-plan button.motion-wave-outgoing > span,
+.related.motion-wave-outgoing .related-card > div:last-child,
+.related-card.motion-wave-outgoing > div:last-child {
+  bottom: calc(var(--wave-height) + 16px);
+}
+@media (max-width: 760px) {
+  :root {
+    --wave-height: 32px;
+  }
+  .intro .body-block.motion-wave-active,
+  .focus-description.motion-wave-active {
+    padding-top: calc(var(--wave-height) + 16px);
+  }
+  .focus-options.motion-wave-outgoing {
+    padding-bottom: calc(var(--wave-height) + 20px);
+  }
+  .project-plan.motion-wave-active > div {
+    padding-bottom: calc(var(--wave-height) + 20px);
+  }
+  .related-card.motion-wave-active {
+    z-index: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-wave-active {
+    --wave-shift: 0px !important;
+    --wave-scale: 1 !important;
+  }
+}
+@media print {
+  .motion-wave-active.motion-wave-active {
+    -webkit-mask: none;
+    mask: none;
+    margin-top: 0;
+  }
+}

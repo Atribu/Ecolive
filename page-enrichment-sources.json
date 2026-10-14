@@ -1,0 +1,101 @@
+{
+  "sourceFile": "/Users/atribu/Downloads/ecolive/wetransfer_cop31-ecolive-rar_2026-09-29_1501/ECOLIVE MP4LER/COP31 ECOLIVE/ECOLIVE SUNUM 1607.pptx",
+  "slideNumbering": "PPTX içindeki slayt sırası esas alınır; basılı altbilgi numarası değil.",
+  "scope": "Sayfa ekleri proje/tasarım kapsamını anlatır. İşleyen tesis, hizmet veya onaylanmış performans sonucu olarak yorumlanmaz. Tanıtım ve izin aşaması bilgisi kullanıcı bağlamından gelir. Mimari tasarımın tamamlanmış olması, teknik kapasite veya işletme hizmetlerinin kesinleştiği biçiminde kullanılmaz.",
+  "yasam": [
+    {
+      "content": "features[0] ve konaklama çeşitliliği FAQ",
+      "slides": [39],
+      "evidence": "Tip A The Pavilion Suite: tek kişilik rezidans, gizlenebilir indüksiyonlu ocak ve ergonomik alçalan tezgâhlar. Tip B The Courtyard Grand: çift kişilik L/U formunda avlulu süit ve engelsiz ada mutfak. Tip C The Longevity Care: raylı lift sistemli rehabilitasyon odası, gizli medikal altyapı.",
+      "editorialTreatment": "Oda büyüklükleri, fiyat veya toplam kapasite eklenmedi. Konaklama seçenekleri tasarım tipleri olarak sunuldu. Ergonomik alçalan tezgâh, yüksekliği ayarlanabilir tezgâh olarak sadeleştirildi."
+    },
+    {
+      "content": "features[1], essentials ve mimari kimlik/konfor FAQ",
+      "slides": [33, 36, 38, 39],
+      "evidence": "Slayt36 Türk kültürel mirası ile İskandinav yalınlığı, kültürel hafıza ve mekânsal ritüel. Slayt33 teknolojik donanımın insani ve estetik çerçevede ele alınması. Slayt38 akıllı düşme algılama. Slayt39 sirkadiyen aydınlatma, iklimlendirme, yön bulmada görsel kontrast ve tekerlekli sandalye manevra alanı.",
+      "editorialTreatment": "Standartlara tam uyum iddiası ve sayısal teknik eşikler aktarılmadı. Donanımlar uygulanmış ekipman olarak sunulmadı."
+    }
+  ],
+  "saglik": [
+    {
+      "content": "features[0], essentials[0], sağlık kapsamı FAQ",
+      "slides": [14, 39],
+      "evidence": "Slayt14 modüler sağlık kabinleri, fizik tedavi/wellness ve kişiselleştirilmiş FTR. Slayt39 rehabilitasyon odasında raylı lift, gizli medikal altyapı ve terapötik manzara.",
+      "editorialTreatment": "Tıbbi fayda, etkinlik veya hastalık tedavisi vaadi eklenmedi. Sağlık hizmetleri planlanan kapsam olarak nitelendirildi."
+    },
+    {
+      "content": "features[1], essentials[1..2], ileri yaş yaklaşımı FAQ",
+      "slides": [8, 11, 13, 14],
+      "evidence": "Slayt14 yoga, meditasyon ve dengeli beslenme. Slayt13 sosyal bağ, anlamlı günlük rutin, güvenli ve saygılı ortam, yaşlılar ile ailelerin uzun vadeli güveni. Slayt8 ileri yaşta deneyim, rehberlik ve toplumsal katkı. Slayt11 kuşaklar arası ortak üretim.",
+      "editorialTreatment": "Psikolojik dayanıklılığı artırma ve doğa temelli iyileşme gibi sonuç iddiaları yerine tasarım ve katılım yaklaşımı anlatıldı."
+    },
+    {
+      "content": "Hizmetlerin mevcut durumu FAQ",
+      "slides": [],
+      "evidence": "Kullanıcı proje tasarımının tamamlandığını, tanıtım/izin aşamasında olduğunu bildirdi.",
+      "editorialTreatment": "Tesisin çalıştığı veya izinlerin alındığı söylenmedi."
+    }
+  ],
+  "egitim": [
+    {
+      "content": "features[0], essentials[2], eğitim kapsamı/uygulamalı eğitim disiplinleri FAQ",
+      "slides": [11, 30, 45],
+      "evidence": "Slayt30 Sağlık Meslek Yüksekokulu: gerontoloji, fizik tedavi, yaşlı bakımı ve hemşirelik. Slayt11 teorik derslerden sonra rehabilitasyon, wellness koçluğu ve sağlık takibi pratiği. Slayt45 eğitim ve sağlık alanlarında uzman ağı ve sektörel iş birlikleri gelişim planı.",
+      "editorialTreatment": "Programlar açılmış veya bir üniversiteyle ortaklık kesinleşmiş gibi aktarılmadı. Disiplinlerle ilişkili yüksekokul yaklaşımı ifadesi kullanıldı."
+    },
+    {
+      "content": "features[1], essentials[0..1], kuşakların buluşması FAQ",
+      "slides": [8, 10, 30, 40],
+      "evidence": "Slayt10 sebze üretim alanlarında beslenme, ekoloji ve sorumluluk eğitimi, kreş/okulun dayanışma ve sorumlulukla ilişkisi. Slayt30 sosyal meydanda amfitiyatro, ortak kütüphane ve eko-restoran. Slayt40 el sanatları ve atölye alanları. Slayt8 yaşlılıkta deneyim ve rehberlik.",
+      "editorialTreatment": "Belirli bir müfredat, etkinlik takvimi veya öğrenci kapasitesi uydurulmadı."
+    }
+  ],
+  "uretim": [
+    {
+      "content": "features[0], essentials[0..1], üretim alanları/toprak yaklaşımı FAQ",
+      "slides": [5, 48],
+      "evidence": "Slayt5 biyolojik üretim: sebze üretimi, toprak verimliliği, suyun etkin kullanımı ve organik döngüler. Isı yönetimi: sera, üretim ve yaşam alanlarının kontrollü/verimli ısıtılması. Slayt48 narenciye bahçeleri, permakültür alanları ve organik seralar.",
+      "editorialTreatment": "Organik seralar kaynakta geçen program adı olarak korundu; tamamlanmış bir sertifikasyon olduğu iddia edilmedi. Ürün miktarı veya finansal getiri verilmedi."
+    },
+    {
+      "content": "features[1], essentials[2], tarım/eğitim FAQ",
+      "slides": [10, 11, 30, 40, 48],
+      "evidence": "Slayt48 kampüs akışı: sosyal meydan, wellness/FTR, narenciye/sera ve aktif yaşlı konaklaması. Slayt40 narenciye koruma/hasat rotası. Slayt30 eko-restoran. Slayt10 üretim alanlarının eğitim işlevi; slayt11 ortak üretim.",
+      "editorialTreatment": "Kampüs ürünlerinin restoranın tüm gıda ihtiyacını karşılayacağı söylenmedi. Üretimin günlük yaşamla mekânsal ilişkisi anlatıldı."
+    }
+  ],
+  "doga": [
+    {
+      "content": "features[0], essentials[0..1], terapötik bahçe/erişilebilirlik FAQ",
+      "slides": [40],
+      "evidence": "Dokunsal/kokusal peyzaj öğeleri, hissedilebilir zemin kılavuzları, engelsiz doğa rotaları, yükseltilmiş bitki yatakları, erişilebilir hobi bahçeleri ve narenciye koruma/hasat rotası.",
+      "editorialTreatment": "Tedavi sonucu veya klinik etkinlik iddiası kullanılmadı. Kaynaktaki eğim oranı eklenmedi."
+    },
+    {
+      "content": "features[1], essentials[2], yeşil alan kullanımları FAQ",
+      "slides": [7, 48],
+      "evidence": "Slayt7 yerel iklim, topografya, güneş, rüzgâr ve bitki örtüsüyle uyum; suyun korunması ve yerel kaynak kullanımı. Slayt48 arazi programında tarımsal/terapötik alanlar ve ekosistem koruma alanı.",
+      "editorialTreatment": "Arazi dağılım oranları aktarılmadı. Resmî koruma statüsü, korunan tür veya doğrulanmış ekolojik kazanım uydurulmadı."
+    }
+  ],
+  "dongu": [
+    {
+      "content": "features[0], essentials[0], yenilenebilir enerji FAQ",
+      "slides": [5, 7, 41],
+      "evidence": "Slayt41 çatı tipi GES ve mini rüzgâr türbinleri. Slayt5 güneş enerjisiyle ısı/sıcak su, sera ve yaşam alanlarının kontrollü ısıtılması. Slayt7 pasif ısıtma-soğutma ve iklime duyarlı tasarım.",
+      "editorialTreatment": "Teknik kapasite, enerji dengesi veya gerçekleşmiş tasarruf rakamı verilmedi; bunların teknik değerlendirmeye bağlı olduğu belirtildi."
+    },
+    {
+      "content": "features[1], essentials[1..2], günlük yaşam FAQ",
+      "slides": [41],
+      "evidence": "Mikromobilite: elektrikli buggy, akıllı Ginger ve bisiklet. Su yönetimi: yağmur suyu hasadı ve gri su geri dönüşümü, çatılardan toplanan suyun filtrelenerek sera/bahçede kullanılması. Atık: biyokütle ve kompost ünitesi; mutfak/tarımsal organik atıkların gübreye dönüşmesi.",
+      "editorialTreatment": "Marka/araç ortaklığı söylenmedi. Kaynaktaki tamamen fosil araç yasağı, azaltma yönündeki tasarım hedefi olarak daha ihtiyatlı ifade edildi."
+    },
+    {
+      "content": "Sistem performansının değerlendirilmesi FAQ",
+      "slides": [41, 45],
+      "evidence": "Slayt41 %100 yenilenebilir enerji, sıfır karbon ve off-grid kampüs hedefleri. Slayt45 sürekli iyileştirme ve performans izleme gelişim yaklaşımı.",
+      "editorialTreatment": "Hedefler gerçekleşmiş veya sertifikalanmış sonuç olarak sunulmadı. Ölçüm ve teknik doğrulama gereksinimi açıklandı. Mevcut proje aşaması kullanıcı bağlamına dayanır."
+    }
+  ]
+}

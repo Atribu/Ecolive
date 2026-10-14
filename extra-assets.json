@@ -1,0 +1,182 @@
+{
+  "scope": "Additional inner-page assets only. Existing assets, asset-manifest.json and homepage/app files untouched.",
+  "source_note": "Source document content was treated as data. All selected images are discrete original embedded PPTX media; no slide screenshots were required.",
+  "total_bytes": 2999734,
+  "contact_sheet": "/tmp/ecolive-extra-review/selected-contact-sheet.jpg",
+  "assets": [
+    {
+      "filename": "assets/extra/shared-lounge.webp",
+      "topic": "Ortak sosyal salon ve yaşam iç mekânı",
+      "suggested_section": "Yaşam / Ortak alanlar; mimari / iç-dış mekân ilişkisi",
+      "source_basename": "ECOLIVE SUNUM 1607.pptx",
+      "source_slide": 14,
+      "source_page": null,
+      "source_media": "ppt/media/image13.png",
+      "source_media_sha256": "ba468ef1dcb45514492e38fa7d19c8e98fe1e6ecfcd15dfbf4894766d5c2a1eb",
+      "dimensions": {
+        "width": 2000,
+        "height": 1493
+      },
+      "original_dimensions": {
+        "width": 2400,
+        "height": 1791
+      },
+      "bytes": 433186,
+      "alt_tr": "Peyzaja açılan ahşap taşıyıcılı ortak salonda sohbet eden ileri yaştaki bireylerin konsept görselleştirmesi.",
+      "safe_css_cropping_note": "Complete source image has no slide copy. Prefer 4:3 or 3:2; object-fit: cover; object-position: 50% 60%. Keep the seated group in the left-middle and the garden opening. A small original Ai mark in the upper-left is preserved.",
+      "suggested_object_position": "50% 60%",
+      "asset_kind": "Source concept visualization, not a photograph documenting a completed facility.",
+      "operations": [
+        "extract original embedded media",
+        "proportional downsample to 2000 px width",
+        "RGB format conversion",
+        "WebP compression; no crop or creative editing"
+      ]
+    },
+    {
+      "filename": "assets/extra/rehabilitation-interior.webp",
+      "topic": "Fizyoterapi ve rehabilitasyon iç mekânı",
+      "suggested_section": "Sağlık ve iyi yaşam / Fizyoterapi ve erişilebilir hareket",
+      "source_basename": "ECOLIVE SUNUM 1607.pptx",
+      "source_slide": 21,
+      "source_page": null,
+      "source_media": "ppt/media/image21.png",
+      "source_media_sha256": "325cc2dfcf02aca087336fd16dad64d2e43634532d0b46ca89aa988d729701f0",
+      "dimensions": {
+        "width": 2000,
+        "height": 1391
+      },
+      "original_dimensions": {
+        "width": 2400,
+        "height": 1669
+      },
+      "bytes": 442264,
+      "alt_tr": "Narenciye bahçesine açılan rehabilitasyon salonunda destekli yürüyüş yapan bir bireyin konsept görselleştirmesi.",
+      "safe_css_cropping_note": "Complete source image has no slide copy. Prefer 3:2 or 4:3; object-fit: cover; object-position: 66% 55% to keep both people and the parallel bars. A narrow portrait crop may omit the equipment. Small architectural signage is part of the source.",
+      "suggested_object_position": "66% 55%",
+      "asset_kind": "Source concept visualization, not a photograph documenting a completed facility.",
+      "operations": [
+        "extract original embedded media",
+        "proportional downsample to 2000 px width",
+        "RGB format conversion",
+        "WebP compression; no crop or creative editing"
+      ]
+    },
+    {
+      "filename": "assets/extra/wellness-treatment.webp",
+      "topic": "Wellness bakım odası",
+      "suggested_section": "Sağlık ve iyi yaşam / Dinlenme ve kişisel bakım",
+      "source_basename": "ECOLIVE SUNUM 1607.pptx",
+      "source_slide": 23,
+      "source_page": null,
+      "source_media": "ppt/media/image27.png",
+      "source_media_sha256": "d1c1cc9c4980a27721ae1ebacf3ab5a1c2fbc7fc6f7c3e0f11451886174bf5fa",
+      "dimensions": {
+        "width": 2000,
+        "height": 1401
+      },
+      "original_dimensions": {
+        "width": 2400,
+        "height": 1681
+      },
+      "bytes": 292934,
+      "alt_tr": "Bahçeye bakan ahşap iç mekânda masaj bakımı sahnesinin konsept görselleştirmesi.",
+      "safe_css_cropping_note": "Complete source image has no slide copy. Prefer 3:2 or 4:3; object-fit: cover; object-position: 62% 55%. Keep the practitioner and treatment table together. The small wall sign is baked into the source.",
+      "suggested_object_position": "62% 55%",
+      "asset_kind": "Source concept visualization, not a photograph documenting a completed facility.",
+      "operations": [
+        "extract original embedded media",
+        "proportional downsample to 2000 px width",
+        "RGB format conversion",
+        "WebP compression; no crop or creative editing"
+      ]
+    },
+    {
+      "filename": "assets/extra/learning-greenhouse.webp",
+      "topic": "Serada uygulamalı eğitim ve nesiller arası üretim",
+      "suggested_section": "Eğitim ve üretim / Yaşayan öğrenme alanları; tarım / yetiştirme ortamı",
+      "source_basename": "ECOLIVE SUNUM 1607.pptx",
+      "source_slide": 26,
+      "source_page": null,
+      "source_media": "ppt/media/image30.png",
+      "source_media_sha256": "e7c942e02cfdb66cfef055c3952df83a42c0674ffa2487a0201e8c418106771c",
+      "dimensions": {
+        "width": 2000,
+        "height": 1400
+      },
+      "original_dimensions": {
+        "width": 2400,
+        "height": 1680
+      },
+      "bytes": 625270,
+      "alt_tr": "Serada yetiştirme masaları çevresinde çocukların ve yetişkinlerin birlikte çalıştığı konsept görselleştirmesi.",
+      "safe_css_cropping_note": "Complete source image has no slide copy. Prefer the complete 10:7 composition or a 3:2 crop; object-fit: cover; object-position: 55% 60%. The learning group is at the right and growing racks at the left, so avoid a narrow crop if both topics matter. In-scene information signs remain unchanged.",
+      "suggested_object_position": "55% 60%",
+      "asset_kind": "Source concept visualization, not a photograph documenting a completed facility.",
+      "operations": [
+        "extract original embedded media",
+        "proportional downsample to 2000 px width",
+        "RGB format conversion",
+        "WebP compression; no crop or creative editing"
+      ]
+    },
+    {
+      "filename": "assets/extra/botanic-workshop.webp",
+      "topic": "Botanik kulübü ve bahçecilik atölyesi",
+      "suggested_section": "Yaşam / Hobiler ve topluluk; eğitim ve üretim / Bahçecilik atölyesi",
+      "source_basename": "ECOLIVE SUNUM 1607.pptx",
+      "source_slide": 29,
+      "source_page": null,
+      "source_media": "ppt/media/image34.png",
+      "source_media_sha256": "a55de87b54f3d8c29bd14f96e945947cc909113d0adda4c161380d3caf852e0f",
+      "dimensions": {
+        "width": 2000,
+        "height": 1493
+      },
+      "original_dimensions": {
+        "width": 2400,
+        "height": 1791
+      },
+      "bytes": 673916,
+      "alt_tr": "Botanik kulübünün narenciye ağaçları arasındaki açık atölyesinde bitkilerle çalışan bireylerin konsept görselleştirmesi.",
+      "safe_css_cropping_note": "Complete source image has no slide copy. Prefer 4:3 or 3:2; object-fit: cover; object-position: 50% 70% to retain the workshop participants in the lower half. Building signage is part of the original architectural rendering and should not be interpreted as a separate logo asset.",
+      "suggested_object_position": "50% 70%",
+      "asset_kind": "Source concept visualization, not a photograph documenting a completed facility.",
+      "operations": [
+        "extract original embedded media",
+        "proportional downsample to 2000 px width",
+        "RGB format conversion",
+        "WebP compression; no crop or creative editing"
+      ]
+    },
+    {
+      "filename": "assets/extra/lakeside-landscape.webp",
+      "topic": "Gölet, peyzaj ve sakin dinlenme alanı",
+      "suggested_section": "Ekolojik mimari / Peyzajla ilişki; manifesto / Doğayla birlikte yaşam",
+      "source_basename": "ECOLIVE SUNUM 1607.pptx",
+      "source_slide": 4,
+      "source_page": null,
+      "source_media": "ppt/media/image5.png",
+      "source_media_sha256": "466e7972d2c61068611d057fe8cf3af477b2fa50b4e8d20192f472870cd37832",
+      "dimensions": {
+        "width": 2000,
+        "height": 1493
+      },
+      "original_dimensions": {
+        "width": 2400,
+        "height": 1791
+      },
+      "bytes": 532164,
+      "alt_tr": "Gün batımında gölet, ahşap dinlenme platformu, seralar ve narenciye bahçesinin konsept illüstrasyonu.",
+      "safe_css_cropping_note": "Complete source image has no slide copy. Prefer 3:2 or 16:9; object-fit: cover; object-position: 50% 55%. This source is more illustrative than the other renders. A small original Ai mark in the upper-left and the rock engraving remain preserved.",
+      "suggested_object_position": "50% 55%",
+      "asset_kind": "Source concept visualization, not a photograph documenting a completed facility.",
+      "operations": [
+        "extract original embedded media",
+        "proportional downsample to 2000 px width",
+        "RGB format conversion",
+        "WebP compression; no crop or creative editing"
+      ]
+    }
+  ]
+}

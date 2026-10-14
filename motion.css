@@ -1,0 +1,74 @@
+/* JavaScript only opts in safe text nodes; the unenhanced document stays visible. */
+.motion-reveal {
+  transition:
+    opacity 900ms cubic-bezier(0.2, 0.6, 0.3, 1) var(--motion-delay, 0ms),
+    translate 900ms cubic-bezier(0.2, 0.6, 0.3, 1) var(--motion-delay, 0ms);
+}
+.motion-reveal.motion-waiting {
+  opacity: 0;
+  translate: 0 12px;
+}
+.motion-reveal.motion-immediate {
+  transition: none;
+}
+/* Never conceal a direct hash target or content that receives keyboard focus. */
+.motion-reveal:target,
+.motion-reveal:focus-within {
+  opacity: 1;
+  translate: none;
+  transition: none;
+}
+
+/* Keep the home hero's former settled crop without replaying its old entrance. */
+.hero-media img {
+  animation: none;
+  transform: scale(1.025);
+}
+/* Individual scale preserves the interior heroes' existing crop transforms. */
+.hero-media img.motion-hero-zoom,
+.hero-photo img.motion-hero-zoom {
+  animation: ecolive-motion-hero 8s cubic-bezier(0.2, 0.6, 0.3, 1) both;
+}
+.hero-media img.motion-hero-zoom.motion-hero-paused,
+.hero-photo img.motion-hero-zoom.motion-hero-paused {
+  animation-play-state: paused;
+}
+.hero-media img.motion-hero-still,
+.hero-photo img.motion-hero-still {
+  animation: none;
+  scale: 1.025;
+}
+@keyframes ecolive-motion-hero {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.025;
+  }
+}
+
+/* Editorial photo frames keep their crops, hover transforms, and object-position. */
+img.motion-parallax {
+  translate: 0 var(--motion-parallax-y, 0px);
+  scale: var(--motion-parallax-scale, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-reveal,
+  .motion-reveal.motion-waiting {
+    opacity: 1;
+    translate: none;
+    transition: none;
+  }
+  .hero-media img.motion-hero-zoom,
+  .hero-photo img.motion-hero-zoom,
+  .hero-media img.motion-hero-still,
+  .hero-photo img.motion-hero-still {
+    animation: none;
+    scale: 1;
+  }
+  img.motion-parallax {
+    translate: none;
+    scale: 1;
+  }
+}

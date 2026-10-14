@@ -1,0 +1,202 @@
+/* Load after motion.css. Native dialog visibility and control sizes stay intact. */
+:root {
+  --interaction-duration: 200ms;
+  --interaction-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:is(
+  .button,
+  .nav-contact,
+  .text-link,
+  .discovery-link,
+  .project-link,
+  .icon-button,
+  .menu-toggle,
+  .copy-email,
+  .email-link,
+  .contact-email,
+  .page-scroll,
+  .scroll-cue,
+  .main-nav a,
+  .page-guide a,
+  .footer-nav a
+) {
+  transition:
+    color var(--interaction-duration) ease,
+    background-color var(--interaction-duration) ease,
+    border-color var(--interaction-duration) ease;
+}
+
+/* Keep the control in place; only its arrow travels. */
+.button:is(:hover, :focus-visible),
+.scroll-cue:is(:hover, :focus-visible) {
+  transform: none;
+}
+.discovery-link > span {
+  display: inline-block;
+}
+:is(
+    .button,
+    .text-link,
+    .nav-contact,
+    .discovery-link,
+    .email-link,
+    .contact-email,
+    .page-scroll,
+    .scroll-cue
+  )
+  > span,
+.page-guide a > span,
+.related-arrow,
+.place-arrow,
+.map-expand {
+  translate: 0 0;
+  transition:
+    translate var(--interaction-duration) var(--interaction-ease),
+    opacity var(--interaction-duration) ease,
+    color var(--interaction-duration) ease;
+}
+:is(
+    .button,
+    .text-link,
+    .nav-contact,
+    .discovery-link,
+    .email-link,
+    .contact-email
+  ):is(:hover, :focus-visible)
+  > span,
+.page-guide a:is(:hover, :focus-visible) > span,
+.related-card:is(:hover, :focus-visible) .related-arrow,
+.place-card:is(:hover, :focus-visible) .place-arrow,
+.campus-map:is(:hover, :focus-visible) .map-expand {
+  translate: 3px 0;
+}
+:is(.page-scroll, .scroll-cue):is(:hover, :focus-visible) > span {
+  translate: 0 3px;
+}
+.place-arrow,
+.main-nav a:is(:hover, :focus-visible) > span:last-child {
+  transform: none;
+}
+
+.button.dark:focus-visible,
+.icon-button:is(:hover, :focus-visible) {
+  background-color: var(--green);
+}
+.menu-toggle:is(:hover, :focus-visible) {
+  background-color: #fff;
+}
+.nav-contact:is(:hover, :focus-visible) {
+  background-color: #e5e8dc;
+}
+.site-header.scrolled .nav-contact:is(:hover, :focus-visible) {
+  background-color: var(--green);
+}
+.text-link:focus-visible,
+.page-guide a:focus-visible {
+  color: var(--green);
+}
+.main-nav a:focus-visible {
+  color: #6a795a;
+}
+.email-link:focus-visible,
+.contact-email:is(:hover, :focus-visible),
+.footer-nav a:is(:hover, :focus-visible) {
+  color: #cad4a8;
+}
+.copy-email:is(:hover, :focus-visible) {
+  color: #eaf0dc;
+}
+.scroll-cue:focus-visible {
+  background-color: #ffffff26;
+}
+.contact-topic h2 {
+  transition: color var(--interaction-duration) ease;
+}
+.contact-topic:focus-visible h2 {
+  color: #6c7f5c;
+}
+
+/* Fade the native modal; stagger nine links from 0–320ms, finishing at 620ms. */
+.navigation[open],
+.navigation[open]::backdrop {
+  animation: interaction-menu-in 400ms var(--interaction-ease) both;
+}
+.navigation[open] .main-nav > a {
+  animation: interaction-menu-link-in 300ms var(--interaction-ease) both;
+  animation-delay: var(--menu-link-delay, 0ms);
+}
+.main-nav > a:nth-child(2) {
+  --menu-link-delay: 40ms;
+}
+.main-nav > a:nth-child(3) {
+  --menu-link-delay: 80ms;
+}
+.main-nav > a:nth-child(4) {
+  --menu-link-delay: 120ms;
+}
+.main-nav > a:nth-child(5) {
+  --menu-link-delay: 160ms;
+}
+.main-nav > a:nth-child(6) {
+  --menu-link-delay: 200ms;
+}
+.main-nav > a:nth-child(7) {
+  --menu-link-delay: 240ms;
+}
+.main-nav > a:nth-child(8) {
+  --menu-link-delay: 280ms;
+}
+.main-nav > a:nth-child(n + 9) {
+  --menu-link-delay: 320ms;
+}
+.navigation[open] .main-nav > a:focus-visible {
+  opacity: 1 !important;
+}
+@keyframes interaction-menu-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes interaction-menu-link-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Applies immediately if the preference changes while the menu is open. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --interaction-duration: 0ms;
+  }
+  .navigation[open],
+  .navigation[open]::backdrop,
+  .navigation[open] .main-nav > a {
+    animation: none !important;
+    opacity: 1;
+  }
+  :is(
+      .button,
+      .text-link,
+      .nav-contact,
+      .discovery-link,
+      .email-link,
+      .contact-email,
+      .page-scroll,
+      .scroll-cue
+    )
+    > span,
+  .page-guide a > span,
+  .related-arrow,
+  .place-arrow,
+  .map-expand {
+    translate: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "prepared_on": "2026-10-13",
+  "purpose": "Local ECOLIVE website prototype; source extraction and format optimization only.",
+  "source_integrity": "Original supplied documents and images were not modified. No generated imagery, creative retouching, cropping, or upscaling.",
+  "catalogue_structure": "All 26 pages contain a single flattened raster. No independent photo or logo objects were available.",
+  "total_bytes": 4364569,
+  "assets": [
+    {
+      "file": "assets/hero.webp",
+      "width": 2200,
+      "height": 1584,
+      "bytes": 755794,
+      "source": {
+        "file": "KATALOG BASKI.pdf",
+        "page": 19,
+        "embeddedImage": "Im0",
+        "width": 3549,
+        "height": 2551
+      },
+      "alt_tr": "Narenciye bahçeleri arasında, yeşil çatılı ECOLIVE sosyal yaşam yapısının konsept görselleştirmesi.",
+      "quality_note": "Full-page architectural rendering; small source slogan and logo are baked into the lower-right corner.",
+      "operations": [
+        "flattened PDF page rendered to RGB with Poppler to preserve viewer color appearance",
+        "proportional downsample to 2200 px wide",
+        "WebP compression"
+      ],
+      "suggested_css_viewport_normalized": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.89
+      }
+    },
+    {
+      "file": "assets/living.webp",
+      "width": 2200,
+      "height": 1584,
+      "bytes": 437528,
+      "source": {
+        "file": "KATALOG BASKI.pdf",
+        "page": 9,
+        "embeddedImage": "Im0",
+        "width": 3549,
+        "height": 2551
+      },
+      "alt_tr": "Bitkilendirilmiş yaya yolları boyunca ahşap kaplamalı, yeşil çatılı yaşam birimlerinin konsept görselleştirmesi.",
+      "quality_note": "Full-page architectural rendering; small source slogan and logo are baked into the lower-right corner.",
+      "operations": [
+        "flattened PDF page rendered to RGB with Poppler to preserve viewer color appearance",
+        "proportional downsample to 2200 px wide",
+        "WebP compression"
+      ],
+      "suggested_css_viewport_normalized": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.89
+      }
+    },
+    {
+      "file": "assets/active.webp",
+      "width": 2200,
+      "height": 1584,
+      "bytes": 761112,
+      "source": {
+        "file": "KATALOG BASKI.pdf",
+        "page": 15,
+        "embeddedImage": "Im0",
+        "width": 3549,
+        "height": 2551
+      },
+      "alt_tr": "Narenciye bahçeleri ve seralar arasında padel kortu ve sosyal alanların konsept görselleştirmesi.",
+      "quality_note": "Full-page architectural rendering; small source slogan and logo are baked into the lower-right corner.",
+      "operations": [
+        "flattened PDF page rendered to RGB with Poppler to preserve viewer color appearance",
+        "proportional downsample to 2200 px wide",
+        "WebP compression"
+      ],
+      "suggested_css_viewport_normalized": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.89
+      }
+    },
+    {
+      "file": "assets/generations.webp",
+      "width": 2200,
+      "height": 1584,
+      "bytes": 503106,
+      "source": {
+        "file": "KATALOG BASKI.pdf",
+        "page": 20,
+        "embeddedImage": "Im0",
+        "width": 3548,
+        "height": 2551
+      },
+      "alt_tr": "Bahçede birlikte üretim yapan çocuklar ve ileri yaştaki bireylerin katalog konsept görseli.",
+      "quality_note": "Flattened catalogue layout includes lower-half copy and a circular image inset; use a CSS viewport over the upper-left photo region.",
+      "operations": [
+        "flattened PDF page rendered to RGB with Poppler to preserve viewer color appearance",
+        "proportional downsample to 2200 px wide",
+        "WebP compression"
+      ],
+      "suggested_css_viewport_normalized": {
+        "x": 0,
+        "y": 0,
+        "width": 0.65,
+        "height": 0.55
+      }
+    },
+    {
+      "file": "assets/wellness.webp",
+      "width": 2200,
+      "height": 1584,
+      "bytes": 643812,
+      "source": {
+        "file": "KATALOG BASKI.pdf",
+        "page": 14,
+        "embeddedImage": "Im0",
+        "width": 3548,
+        "height": 2551
+      },
+      "alt_tr": "Peyzajla bütünleşen sağlık ve rehabilitasyon yapıları ile erişilebilir yürüme yollarının konsept görselleştirmesi.",
+      "quality_note": "Flattened catalogue layout includes lower-half copy and a circular pool image inset; use a CSS viewport over the upper-left photo region.",
+      "operations": [
+        "flattened PDF page rendered to RGB with Poppler to preserve viewer color appearance",
+        "proportional downsample to 2200 px wide",
+        "WebP compression"
+      ],
+      "suggested_css_viewport_normalized": {
+        "x": 0,
+        "y": 0,
+        "width": 0.65,
+        "height": 0.55
+      }
+    },
+    {
+      "file": "assets/campus-plan.webp",
+      "width": 2200,
+      "height": 1584,
+      "bytes": 255694,
+      "source": {
+        "file": "KATALOG BASKI.pdf",
+        "page": 24,
+        "embeddedImage": "Im0",
+        "width": 3548,
+        "height": 2551
+      },
+      "alt_tr": "ECOLIVE konsept kampüs yerleşiminin üstten görünümü.",
+      "quality_note": "Full-page campus plan is already green-tinted in the supplied catalogue; branding and background are baked in. No technical dimensions are provided.",
+      "operations": [
+        "flattened PDF page rendered to RGB with Poppler to preserve viewer color appearance",
+        "proportional downsample to 2200 px wide",
+        "WebP compression"
+      ]
+    },
+    {
+      "file": "assets/greenhouses.webp",
+      "width": 1700,
+      "height": 949,
+      "bytes": 429560,
+      "source": {
+        "file": "image-01.jpg",
+        "collection": "supplied energy document images"
+      },
+      "alt_tr": "Sera, tarım alanı, narenciye bahçesi ve güneş enerjisi yapılarının birlikte gösterildiği ECOLIVE Agro Campus konsept görselleştirmesi.",
+      "quality_note": "Source contains a baked-in branding strip at the bottom; no upscaling performed.",
+      "operations": [
+        "RGB conversion",
+        "WebP compression"
+      ],
+      "suggested_css_viewport_normalized": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 0.95
+      }
+    },
+    {
+      "file": "assets/solar.webp",
+      "width": 1400,
+      "height": 1117,
+      "bytes": 296994,
+      "source": {
+        "file": "image-07.jpg",
+        "collection": "supplied energy document images"
+      },
+      "alt_tr": "Peyzaj ve yapı önünde parabolik güneş enerjisi kolektörlerinin konsept görselleştirmesi.",
+      "quality_note": "Native 1400 px wide source. This depicts solar thermal concentrators, not ordinary flat photovoltaic panels; no upscaling performed.",
+      "operations": [
+        "RGB conversion",
+        "WebP compression"
+      ]
+    },
+    {
+      "file": "assets/harvest.webp",
+      "width": 1000,
+      "height": 562,
+      "bytes": 149094,
+      "source": {
+        "file": "image-10.jpg",
+        "collection": "supplied energy document images"
+      },
+      "alt_tr": "Serada yükseltilmiş yetiştirme sıralarındaki çilek bitkileri.",
+      "quality_note": "Native 1000 px wide source; best used in a smaller card or split layout. No upscaling performed.",
+      "operations": [
+        "RGB conversion",
+        "WebP compression"
+      ]
+    },
+    {
+      "file": "assets/brand-cover.webp",
+      "width": 2200,
+      "height": 1584,
+      "bytes": 22064,
+      "source": {
+        "file": "KATALOG BASKI.pdf",
+        "page": 1,
+        "embeddedImage": "Im0",
+        "width": 3549,
+        "height": 2551
+      },
+      "alt_tr": "Koyu yeşil zemin üzerinde beyaz ECOLIVE marka logosu.",
+      "quality_note": "Complete flattened cover retained. The actual source logo is centered on a solid background; no standalone vector or transparent logo exists in the PDF. Use a CSS viewport over the logo; do not treat this as a transparent logo asset.",
+      "suggested_css_viewport_normalized": {
+        "x": 0.3390909090909091,
+        "y": 0.42045454545454547,
+        "width": 0.295,
+        "height": 0.1571969696969697
+      },
+      "operations": [
+        "flattened PDF cover rendered to RGB with Poppler",
+        "proportional downsample to 2200 px wide",
+        "lossless WebP conversion"
+      ]
+    },
+    {
+      "file": "assets/logo-source.png",
+      "width": 871,
+      "height": 368,
+      "bytes": 109811,
+      "source": {
+        "file": "ECOLIVE SUNUM 1607.pptx",
+        "slides": [
+          1,
+          49
+        ],
+        "media": "ppt/media/image2.png"
+      },
+      "alt_tr": "ECOLIVE marka logosu.",
+      "quality_note": "Exact original PNG bytes extracted from the presentation. Dark green and sage artwork with original transparent alpha channel. No recoloring, alpha changes, crop, or redrawing.",
+      "operations": [
+        "exact embedded media byte extraction"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "ecolive",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "ECOLIVE proje tanıtım sitesi",
+  "scripts": {
+    "dev": "node scripts/generate-pages.mjs && node scripts/serve.mjs",
+    "start": "node scripts/generate-pages.mjs && node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node --check app.js && node --check content.js && node --check page-content.js && node --check project-content.js && node --check scripts/generate-pages.mjs && node --check scripts/serve.mjs && node --check scripts/build.mjs && node --check page-enrichment.js && node --check project-enrichment.js && node --check scripts/enriched-sections.mjs && node --check waves.js && node --check motion.js"
+  }
+}

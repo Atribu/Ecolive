@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#234c38" />
+    <title>ECOLIVE — Doğayla birlikte, hayatın içinde.</title>
+    <meta
+      name="description"
+      content="Antalya’da doğayı, sağlığı, eğitimi ve üretimi aynı yerleşkede buluşturan ECOLIVE projesini keşfedin. Kuşaklar arasında, doğayla birlikte bir yaşam."
+    />
+    <meta
+      property="og:title"
+      content="ECOLIVE — Doğayla birlikte, hayatın içinde."
+    />
+    <meta
+      property="og:description"
+      content="Antalya’da kuşaklar arası yaşamı, doğayı, sağlığı ve üretimi bir araya getiren yerleşke projesi."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:image" content="/assets/hero.webp" />
+    <link rel="icon" href="/assets/logo-source.png" type="image/png" />
+    <link
+      rel="preload"
+      href="/assets/hero.webp"
+      as="image"
+      fetchpriority="high"
+    />
+    <link rel="stylesheet" href="/assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/pages.css" />
+    <link rel="stylesheet" href="/waves.css" />
+    <link rel="stylesheet" href="/motion.css" />
+    <link rel="stylesheet" href="/interactions.css" />
+    <script src="/app.js" type="module"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#icerik">İçeriğe geç</a>
+    <header class="site-header" id="header">
+      <div class="nav-pill nav-left">
+        <button
+          class="menu-toggle"
+          id="menu-open"
+          aria-label="Menüyü aç"
+          aria-controls="navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span></button
+        ><a class="discovery-link" href="/proje-hakkinda/"
+          >Projeyi keşfedin <span aria-hidden="true">↗</span></a
+        >
+      </div>
+      <a class="brand" href="/" aria-label="ECOLIVE ana sayfa"
+        ><img
+          src="/assets/logo-source.png"
+          alt="ECOLIVE"
+          width="156"
+          height="110"
+      /></a>
+      <div class="nav-pill nav-right">
+        <a href="/proje-hakkinda/" class="project-link">Proje hakkında</a
+        ><a class="nav-contact" href="/iletisim/"
+          >İletişim <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+
+    <dialog id="navigation" class="navigation" aria-label="Ana menü">
+      <div class="menu-shell">
+        <div class="menu-panel">
+          <div class="menu-top">
+            <button
+              class="icon-button"
+              id="menu-close"
+              aria-label="Menüyü kapat"
+            >
+              ×</button
+            ><span class="micro">ECOLIVE · ANTALYA</span>
+          </div>
+          <nav class="main-nav" aria-label="Sayfalar">
+            <a href="/"><span>Ana sayfa</span><span>01</span></a>
+            <a href="/proje-hakkinda/"
+              ><span>Projeyi tanıyın</span><span>02</span></a
+            >
+            <a href="/yasam-ve-mimari/"
+              ><span>Yaşam ve mimari</span><span>03</span></a
+            >
+            <a href="/saglik-ve-iyi-yasam/"
+              ><span>Sağlık ve iyi yaşam</span><span>04</span></a
+            >
+            <a href="/egitim-ve-kusaklar/"
+              ><span>Eğitim ve kuşaklar</span><span>05</span></a
+            >
+            <a href="/tarim-ve-uretim/"
+              ><span>Tarım ve üretim</span><span>06</span></a
+            >
+            <a href="/doga-ve-peyzaj/"
+              ><span>Doğa ve peyzaj</span><span>07</span></a
+            >
+            <a href="/enerji-ve-kaynaklar/"
+              ><span>Enerji ve kaynaklar</span><span>08</span></a
+            >
+            <a href="/iletisim/"><span>İletişim</span><span>09</span></a>
+          </nav>
+          <div class="menu-bottom">
+            <p>Doğayla birlikte,<br /><em>hayatın içinde.</em></p>
+            <a href="mailto:info@ecolive.com.tr">info@ecolive.com.tr ↗</a
+            ><a class="button dark" href="/iletisim/"
+              >Birlikte konuşalım <span>↗</span></a
+            >
+          </div>
+        </div>
+        <div class="menu-image">
+          <img
+            src="/assets/hero.webp"
+            alt="Narenciye bahçesi içinde ECOLIVE sosyal yaşam alanı"
+            loading="lazy"
+          />
+          <div>
+            <span class="micro">BİR YAŞAM DÖNGÜSÜ</span>
+            <p>Her kuşağa<br /><em>yer açan bir gelecek.</em></p>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <main id="icerik">
+      <section class="hero" id="baslangic" aria-labelledby="hero-title">
+        <div class="hero-media">
+          <img
+            src="/assets/hero.webp"
+            alt="ECOLIVE’ın doğayla bütünleşen mimarisi ve ortak yaşam alanları için proje görselleştirmesi"
+            fetchpriority="high"
+            width="2200"
+            height="1582"
+          />
+        </div>
+        <div class="hero-shade"></div>
+        <div class="hero-title">
+          <span class="micro hero-location">ANTALYA, TÜRKİYE</span>
+          <h1 id="hero-title">
+            <em>Doğayla birlikte,</em><span>HAYATIN İÇİNDE.</span>
+          </h1>
+        </div>
+        <div class="hero-bottom">
+          <p>
+            Sağlığı, eğitimi, üretimi ve farklı kuşakları<br
+              class="desktop-break"
+            />
+            doğanın içinde buluşturan bir yaşam projesi.
+          </p>
+          <a
+            class="scroll-cue"
+            href="#vizyon"
+            aria-label="ECOLIVE fikrini keşfedin"
+            ><span>↓</span></a
+          >
+        </div>
+      </section>
+
+      <section class="split intro" id="vizyon" aria-labelledby="vision-title">
+        <div class="copy-panel">
+          <div class="title-block">
+            <span class="micro">ECOLIVE FİKRİ</span>
+            <h2 class="section-title" id="vision-title">
+              <em>Birlikte daha iyi</em><span>DÜŞÜNÜLMÜŞ<br />BİR YAŞAM.</span>
+            </h2>
+          </div>
+          <div class="body-block">
+            <p>
+              ECOLIVE; yaşam alanlarını, sağlık ve bakım yaklaşımını, eğitimi ve
+              tarımsal üretimi aynı yerleşkede buluşturan bir kampüs projesi.
+            </p>
+            <p>
+              Antalya’nın narenciye dokusu içinde tasarlanan bu yaşam modeli,
+              insanların doğayla ve birbirleriyle kurduğu bağı merkezine alıyor.
+              Her yaşın katkısına, her günün yeni bir deneyimine yer açıyor.
+            </p>
+            <a class="text-link" href="#yasam"
+              >Yaşamı keşfedin <span>↗</span></a
+            >
+          </div>
+        </div>
+        <div class="section-image">
+          <img
+            src="/assets/living.webp"
+            alt="Bahçelere açılan erişilebilir yaşam alanları ve yürüyüş yolları"
+            loading="lazy"
+          />
+        </div>
+      </section>
+      <section class="focus-section" id="yasam" aria-labelledby="focus-title">
+        <div class="focus-image" id="focus-image">
+          <img
+            src="/assets/living.webp"
+            alt="Doğa içindeki ECOLIVE yaşam alanları"
+            loading="lazy"
+          /><span class="image-caption"
+            ><span id="focus-number">01 / 06</span
+            ><span>YAŞAMIN İÇİNDEN</span></span
+          >
+        </div>
+        <div class="focus-panel">
+          <div class="focus-heading">
+            <h2 class="section-title" id="focus-title">
+              <em>Hayatın her yönü.</em><span>TEK BİR BÜTÜN.</span>
+            </h2>
+            <p>Size dokunan yerden keşfedin.</p>
+          </div>
+          <div
+            class="focus-options"
+            id="focus-options"
+            aria-label="Yaşam alanları"
+          ></div>
+          <div class="focus-description" aria-live="polite">
+            <p id="focus-description"></p>
+            <a class="button dark" id="focus-detail" href="/yasam-ve-mimari/"
+              >Yakından tanıyın <span>↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="together" aria-labelledby="together-title">
+        <div class="together-photo">
+          <img
+            src="/assets/generations.webp"
+            alt="Bahçede birlikte öğrenen çocuklar ve ileri yaştaki bireyler"
+            loading="lazy"
+          />
+        </div>
+        <div class="together-copy">
+          <span class="micro">KUŞAKLAR ARASINDA</span>
+          <h2 class="section-title" id="together-title">
+            <em>Birlikte öğrenmek.</em
+            ><span>BİRLİKTE<br />HAYATA KATILMAK.</span>
+          </h2>
+          <p>
+            Bir çocuğun merakı, bir büyüğün deneyimi. Aynı bahçede karşılaşan,
+            birlikte üreten ve birbirinden öğrenen kuşaklar.
+          </p>
+          <p>
+            ECOLIVE’ın ortak alanları, gündelik hayatın içindeki bu doğal
+            buluşmalara yer açmak için tasarlandı.
+          </p>
+          <a class="text-link" href="/egitim-ve-kusaklar/"
+            >Eğitim ve kuşaklar arası yaşam <span>↗</span></a
+          >
+        </div>
+      </section>
+      <section class="places" id="mekanlar" aria-labelledby="places-title">
+        <div class="section-intro">
+          <h2 class="section-title" id="places-title">
+            <em>Doğanın içinde</em><span>HAYATA AÇILAN<br />MEKÂNLAR.</span>
+          </h2>
+          <p>
+            Günün farklı anları, aynı yaşamın parçaları.<br />Size ait
+            alanlardan birlikte geçirilen zamana.
+          </p>
+        </div>
+        <div class="place-grid">
+          <a class="place-card" href="/yasam-ve-mimari/"
+            ><img
+              src="/assets/hero.webp"
+              alt="ECOLIVE mimarisi"
+              loading="lazy"
+            /><span class="place-label"
+              ><em>Yaşam alanları</em
+              ><span>ÖZENLE TASARLANMIŞ MEKÂNLAR</span></span
+            ><span class="place-arrow" aria-hidden="true">↗</span></a
+          >
+          <a class="place-card" href="/doga-ve-peyzaj/"
+            ><img
+              src="/assets/living.webp"
+              alt="Doğayla iç içe bahçeler"
+              loading="lazy"
+            /><span class="place-label"
+              ><em>Bahçeler</em><span>DOĞAYLA GÜNDELİK BİR BAĞ</span></span
+            ><span class="place-arrow" aria-hidden="true">↗</span></a
+          >
+          <a class="place-card" href="/saglik-ve-iyi-yasam/"
+            ><img
+              src="/assets/active.webp"
+              alt="Açık havada spor ve sosyal alanlar"
+              loading="lazy"
+            /><span class="place-label"
+              ><em>Aktif yaşam</em><span>HAREKET, DENGE VE PAYLAŞIM</span></span
+            ><span class="place-arrow" aria-hidden="true">↗</span></a
+          >
+          <a class="place-card" href="/tarim-ve-uretim/"
+            ><img
+              src="/assets/greenhouses.webp"
+              alt="Narenciye bahçeleri ve seralar"
+              loading="lazy"
+            /><span class="place-label"
+              ><em>Üretim alanları</em><span>TOPRAKTAN HAYATA</span></span
+            ><span class="place-arrow" aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <section class="cycle-section" id="dongu" aria-labelledby="cycle-title">
+        <div class="cycle-image">
+          <img
+            src="/assets/harvest.webp"
+            alt="Serada yetişen ürünler"
+            loading="lazy"
+          />
+          <div>
+            <span class="micro">ECOLIVE’IN YAŞAM DÖNGÜSÜ</span>
+            <p>
+              <em>Doğadan aldığını<br />doğaya kazandırmak.</em>
+            </p>
+          </div>
+        </div>
+        <div class="cycle-copy">
+          <h2 class="section-title" id="cycle-title">
+            <em>Her şey birbirine bağlı.</em
+            ><span>BİRBİRİNİ BESLEYEN<br />BİR SİSTEM.</span>
+          </h2>
+          <p class="cycle-lead">
+            Enerji, su, toprak ve üretim; aynı yaşam döngüsünün parçaları olarak
+            planlandı.
+          </p>
+          <div class="cycle-accordion">
+            <details open>
+              <summary>
+                <span class="accordion-num">01</span>Güneşten enerji<span
+                  class="plus"
+                ></span>
+              </summary>
+              <p>
+                Fotovoltaik paneller ve güneş ısısı sistemleri, kampüsün enerji
+                ihtiyacını yenilenebilir kaynaklarla desteklemek üzere
+                projelendirildi.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span class="accordion-num">02</span>Suyun yeniden
+                kullanımı<span class="plus"></span>
+              </summary>
+              <p>
+                Yağmur suyunun toplanması ve uygun geri kullanım süreçleri,
+                yaşam alanlarıyla bahçelerin su ihtiyacı birlikte düşünülerek
+                planlandı.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span class="accordion-num">03</span>Toprağa dönen
+                kaynaklar<span class="plus"></span>
+              </summary>
+              <p>
+                Organik artıkların kompost yoluyla değerlendirilmesi, üretimden
+                toprağa uzanan kaynak döngüsünün bir parçası olarak ele
+                alınıyor.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span class="accordion-num">04</span>Yaşamın parçası olan
+                üretim<span class="plus"></span>
+              </summary>
+              <p>
+                Narenciye bahçeleri ve seralar; tarımsal üretimi, öğrenmeyi ve
+                doğayla kurulan gündelik ilişkiyi aynı yerde buluşturuyor.
+              </p>
+            </details>
+          </div>
+          <a class="text-link" href="/enerji-ve-kaynaklar/"
+            >Döngüyü yakından tanıyın <span>↗</span></a
+          >
+        </div>
+      </section>
+      <section
+        class="project-section"
+        id="proje"
+        aria-labelledby="project-title"
+      >
+        <div class="project-copy">
+          <span class="micro">ANTALYA’DA BİR GELECEK FİKRİ</span>
+          <h2 class="section-title" id="project-title">
+            <em>Bir vizyondan</em><span>ORTAK BİR<br />GELECEĞE.</span>
+          </h2>
+          <p>
+            ECOLIVE, Antalya’nın doğasında farklı kuşakları bir araya getiren
+            bir yaşam fikri. Kişisel alanın huzuru, ortak yaşamın paylaşımıyla
+            birlikte düşünülüyor.
+          </p>
+          <p>
+            Yaşam alanlarından sağlık ve eğitime, üretimden kaynak yönetimine
+            uzanan proje; bütün bileşenleri bir arada düşünülerek geliştirildi.
+          </p>
+          <a class="button dark" href="/proje-hakkinda/"
+            >Projeyi yakından tanıyın <span>↗</span></a
+          >
+        </div>
+        <button
+          class="campus-map"
+          id="map-open"
+          aria-label="Kampüsün kavramsal yerleşim planını büyütün"
+        >
+          <img
+            src="/assets/campus-plan.webp"
+            alt="ECOLIVE kampüsünün kuşbakışı kavramsal yerleşimi"
+            loading="lazy"
+          /><span class="map-caption"
+            ><span>KAMPÜSÜN BÜTÜNÜ</span><span class="map-expand">↗</span></span
+          >
+        </button>
+      </section>
+    </main>
+
+    <footer id="iletisim" class="site-footer">
+      <div class="footer-contact">
+        <h2 class="section-title">
+          <em>Birlikte konuşalım.</em
+          ><span>ECOLIVE’I<br />YAKINDAN TANIYIN.</span>
+        </h2>
+        <div>
+          <p>
+            Yaşam modelini keşfetmek, kampüs olanaklarını yakından tanımak veya
+            yatırım ve iş birliği olanaklarını görüşmek için bize yazın.
+          </p>
+          <a class="email-link" href="mailto:info@ecolive.com.tr"
+            >info@ecolive.com.tr <span>↗</span></a
+          >
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div>
+          <span class="micro">PROJEYİ KEŞFEDİN</span
+          ><a href="/proje-hakkinda/">ECOLIVE fikri</a
+          ><a href="/yasam-ve-mimari/">Mekânlar</a
+          ><a href="/proje-hakkinda/#yasam-yaklasimi">Yaşam yaklaşımı</a
+          ><a href="/iletisim/">İletişim</a>
+        </div>
+        <div>
+          <span class="micro">YAŞAMIN İÇİNDEN</span
+          ><a href="/yasam-ve-mimari/">Yaşam ve mimari</a
+          ><a href="/saglik-ve-iyi-yasam/">Sağlık ve iyi yaşam</a
+          ><a href="/egitim-ve-kusaklar/">Eğitim ve kuşaklar</a>
+        </div>
+        <div>
+          <span class="micro">DOĞAYLA BİRLİKTE</span
+          ><a href="/tarim-ve-uretim/">Tarım ve üretim</a
+          ><a href="/doga-ve-peyzaj/">Doğa ve peyzaj</a
+          ><a href="/enerji-ve-kaynaklar/">Enerji ve yaşam döngüsü</a>
+        </div>
+        <div class="footer-location">
+          <span class="micro">BULUŞMA NOKTAMIZ</span>
+          <p>Antalya, Türkiye</p>
+        </div>
+      </div>
+      <div class="footer-brand">
+        <a class="footer-logo" href="/" aria-label="ECOLIVE ana sayfa">
+          <img
+            src="/assets/logo-source.png"
+            alt="ECOLIVE"
+            width="871"
+            height="368"
+            loading="lazy"
+          />
+        </a>
+        <p>Doğayla birlikte, hayatın içinde.</p>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> ECOLIVE</span
+        ><a href="#baslangic">Başa dön ↑</a>
+      </div>
+    </footer>
+
+    <dialog class="map-dialog" id="map-dialog" aria-labelledby="map-title">
+      <button
+        class="icon-button"
+        id="map-close"
+        aria-label="Yerleşim planını kapat"
+      >
+        ×
+      </button>
+      <h2 id="map-title">Kampüsün bütünü</h2>
+      <img
+        src="/assets/campus-plan.webp"
+        alt="Seralar, bahçeler ve yaşam alanlarını gösteren kavramsal kampüs planı"
+      />
+      <p>ECOLIVE yerleşim planı · Antalya, Türkiye</p>
+    </dialog>
+
+    <noscript
+      ><div class="noscript-note">
+        Tüm konu sayfalarına sayfanın altındaki bağlantılardan ulaşabilirsiniz.
+        Menü ve görsel seçici için JavaScript’i etkinleştirin.
+      </div></noscript
+    >
+  </body>
+</html>
