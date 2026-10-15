@@ -883,9 +883,38 @@ details[open] .plus:after {
   font-size: 22px;
 }
 .site-footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background: var(--forest);
   color: #f5f3ea;
   padding: 90px 5% 25px;
+}
+.site-footer::before,
+.site-footer::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: clamp(380px, 40vw, 650px);
+  aspect-ratio: 2 / 3;
+  background: url("/assets/footer-leaves.svg") center / contain no-repeat;
+  pointer-events: none;
+}
+.site-footer::before {
+  left: -200px;
+  bottom: -330px;
+  opacity: 0.1;
+  transform: rotate(18deg);
+}
+.site-footer::after {
+  right: -120px;
+  top: -310px;
+  opacity: 0.12;
+  transform: rotate(164deg);
+}
+.site-footer > * {
+  position: relative;
+  z-index: 1;
 }
 .footer-contact {
   display: grid;
@@ -1815,6 +1844,20 @@ details[open] .plus:after {
   }
   .site-footer {
     padding: 65px 28px 23px;
+  }
+  .site-footer::before,
+  .site-footer::after {
+    width: 380px;
+  }
+  .site-footer::before {
+    left: -210px;
+    bottom: -155px;
+    opacity: 0.1;
+  }
+  .site-footer::after {
+    right: -210px;
+    top: -170px;
+    opacity: 0.12;
   }
   .footer-contact {
     grid-template-columns: 1fr;

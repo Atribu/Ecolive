@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" fill="none">
+  <path d="M278 720V372A105 105 0 0 1 488 372V720Z" fill="#58735b" fill-opacity=".12"/>
+  <g stroke="#58735b" stroke-width="1.8" stroke-linecap="round">
+    <path d="M128 720V372A255 255 0 0 1 638 372V720"/>
+    <path d="M166 720V372A217 217 0 0 1 600 372V720"/>
+    <path d="M203 720V372A180 180 0 0 1 563 372V720"/>
+    <path d="M241 720V372A142 142 0 0 1 525 372V720"/>
+    <path d="M278 720V372A105 105 0 0 1 488 372V720"/>
+  </g>
+</svg>

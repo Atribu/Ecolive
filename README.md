@@ -77,7 +77,7 @@ Görseller kullanıcının sağladığı katalog ve enerji sunumundan hazırlanm
 
 ## Hareket ve geçişler
 
-Açılışın kritik indirmeleri önce tamamlanır: poster çözümlenip belge ve fontlar hazırlandıktan ve bir görüntü karesi çizildikten sonra video yüklenir. Kullanıcının erken kaydırma hareketi, poster hazır olduğunda video yüklemesini öne alır. Kaydırma alanı başlangıçta ayrıldığı için video yüklenirken bölüm yüksekliği değişmez. Mobil kategori seçeneklerinin metin kontrastı artırılmıştır.
+Açılış görseli önceliklidir: poster çözümlenip ekrana çizildikten sonra video yüklenir; ilk kaydırma, belge veya fontların tamamlanması beklenmez. Kaydırma sırasında yalnızca indirilmiş karelere geçilir; hedef kare henüz yüklenmediyse mevcut görüntü korunur ve veri geldikçe en son kaydırma konumuna yetişilir. Yavaş indirme, sabit bir süre sonunda videoyu kalıcı olarak kapatmaz. Kaydırma alanı başlangıçta ayrıldığı için video yüklenirken bölüm yüksekliği değişmez. Mobil kategori seçeneklerinin metin kontrastı artırılmıştır.
 
 Üretim derlemesi her sayfada tek CSS ve tek JavaScript dosyası sunar. Fontlar ve responsive görseller gibi bu dosyalar da içerik hash’i taşır; bir yıllık güvenli önbellek kullanabilir. HTML yeniden doğrulanır. Brotli/gzip sıkıştırması, kaynak dosyalarını düzenlenebilir bırakırken aktarım boyutunu azaltır. Ana sayfa iç sayfalara özgü `pages.css` dosyasını yüklemez. Görsel seçici, seçilen fotoğrafın `srcset` ve `sizes` bilgilerini birlikte günceller.
 

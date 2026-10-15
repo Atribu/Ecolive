@@ -6,6 +6,8 @@ Run `npm ci` once, then `npm run build`. Publish **the contents of `dist/`**, in
 
 For an accurate local production preview, run `npm run preview` (port 4173, or `PORT=4174 npm run preview`). It serves `dist/`, negotiates Brotli/gzip for text, preserves video byte ranges, and applies the same cache rules as the supplied hosting configuration. Run `npm run verify:build` after a build to check all page resources and the HTTP behavior; it launches and stops a temporary preview server on an available port.
 
+Run `npm run verify:hero` for the scroll-video controller regressions: delayed first frame, partial buffering, the latest scroll target, reverse seeking, reduced motion/data saving, media errors, and cleanup. The controller keeps the poster/last decoded frame while the requested time is still downloading; slow transfers do not permanently disable the animation. Verify forward/backward scrolling on the published URL as well, since browser preload behavior and network speed remain environment-dependent.
+
 ## Hosting configuration
 
 - Apache: `dist/.htaccess` sets caching and text compression when the corresponding modules and `AllowOverride FileInfo` are enabled. Compression uses Brotli when available, otherwise gzip. Apache itself serves video byte ranges.

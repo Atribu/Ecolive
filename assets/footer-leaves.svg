@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" fill="none">
+  <defs>
+    <g id="leaf">
+      <path d="M0 0C-44-30-77-104-32-194C24-159 53-73 0 0Z" fill="#bdcba9"/>
+      <path d="M0 0C-8-52-20-112-32-194M-8-54L-40-84M-14-91L15-122M-21-128L-45-153" stroke="#31523c" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g id="slender-leaf">
+      <path d="M0 0C-33-38-46-107-11-172C29-126 38-56 0 0Z" fill="#bdcba9"/>
+      <path d="M0 0C-4-55-8-118-11-172M-5-70L-25-99M-7-103L14-128" stroke="#31523c" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+  </defs>
+  <g stroke="#bdcba9" stroke-linecap="round">
+    <path d="M74 910C132 756 224 607 282 451C335 308 397 194 432 64" stroke-width="4"/>
+    <path d="M146 743L123 711M169 697L209 664M219 590L194 560M243 539L285 503M282 451L260 418M308 384L350 351M350 284L328 254M376 224L416 192M407 139L395 116" stroke-width="2.5"/>
+  </g>
+  <use href="#leaf" transform="translate(123 711) rotate(-49) scale(1.04)"/>
+  <use href="#leaf" transform="translate(209 664) rotate(57) scale(1.1)"/>
+  <use href="#leaf" transform="translate(194 560) rotate(-46) scale(.99)"/>
+  <use href="#leaf" transform="translate(285 503) rotate(62) scale(.98)"/>
+  <use href="#leaf" transform="translate(260 418) rotate(-49) scale(.91)"/>
+  <use href="#leaf" transform="translate(350 351) rotate(60) scale(.87)"/>
+  <use href="#slender-leaf" transform="translate(328 254) rotate(-47) scale(.9)"/>
+  <use href="#slender-leaf" transform="translate(416 192) rotate(53) scale(.83)"/>
+  <use href="#slender-leaf" transform="translate(395 116) rotate(-33) scale(.66)"/>
+  <use href="#slender-leaf" transform="translate(432 64) rotate(19) scale(.62)"/>
+</svg>

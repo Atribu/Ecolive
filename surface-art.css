@@ -1,0 +1,119 @@
+/* Only text surfaces are marked: decoration cannot extend into photo siblings. */
+[data-surface-art] {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  --surface-art-image: url("/assets/background-arches.svg");
+  --surface-art-color: #58735b;
+  --surface-art-width: clamp(460px, 45vw, 660px);
+  --surface-art-right: -210px;
+  --surface-art-left: auto;
+  --surface-art-bottom: -190px;
+  --surface-art-turn: 0deg;
+  --surface-art-opacity: 0.16;
+}
+
+[data-surface-art]::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: var(--surface-art-width);
+  aspect-ratio: 1;
+  right: var(--surface-art-right);
+  left: var(--surface-art-left);
+  bottom: var(--surface-art-bottom);
+  background-color: var(--surface-art-color);
+  mask: var(--surface-art-image) center / contain no-repeat;
+  opacity: var(--surface-art-opacity);
+  transform: rotate(var(--surface-art-turn));
+  pointer-events: none;
+}
+
+/* One restrained drawing family, with a motif suited to each subject. */
+:where(.theme-doga, .theme-uretim) [data-surface-art],
+[data-surface-art="terrain"] {
+  --surface-art-image: url("/assets/background-terrain.svg");
+  --surface-art-opacity: 0.16;
+}
+
+:where(.theme-egitim, .theme-contact) [data-surface-art],
+[data-surface-art="connections"] {
+  --surface-art-image: url("/assets/background-connections.svg");
+  --surface-art-opacity: 0.14;
+}
+
+:where(.theme-dongu, .theme-saglik) [data-surface-art],
+[data-surface-art="ripples"] {
+  --surface-art-image: url("/assets/background-ripples.svg");
+  --surface-art-opacity: 0.13;
+}
+
+.title-block[data-surface-art],
+.page-hero-copy[data-surface-art],
+.project-masthead[data-surface-art] {
+  --surface-art-left: -215px;
+  --surface-art-right: auto;
+  --surface-art-bottom: -175px;
+}
+
+.focus-heading[data-surface-art] {
+  --surface-art-width: 460px;
+  --surface-art-right: -150px;
+  --surface-art-bottom: -160px;
+}
+
+.page-intro[data-surface-art],
+.deep-essentials[data-surface-art],
+.campus-directory[data-surface-art],
+.project-timeline[data-surface-art] {
+  --surface-art-left: -280px;
+  --surface-art-right: auto;
+  --surface-art-bottom: -285px;
+}
+
+.deep-feature-reverse .deep-copy[data-surface-art],
+.together-copy[data-surface-art] {
+  --surface-art-left: -230px;
+  --surface-art-right: auto;
+}
+
+.page-quote[data-surface-art],
+.contact-follow[data-surface-art] {
+  --surface-art-right: -185px;
+  --surface-art-bottom: -315px;
+}
+
+.contact-main[data-surface-art],
+.theme-doga .page-quote[data-surface-art] {
+  --surface-art-color: #bdcba9;
+  --surface-art-opacity: 0.18;
+}
+
+/* Adapt the corner crop, while keeping each surface's chosen motif and tint. */
+@media (max-width: 760px) {
+  [data-surface-art][data-surface-art] {
+    --surface-art-width: 460px;
+    --surface-art-left: auto;
+    --surface-art-right: -205px;
+    --surface-art-bottom: -200px;
+    --surface-art-opacity: 0.12;
+  }
+
+  .page-intro[data-surface-art],
+  .deep-feature-reverse .deep-copy[data-surface-art],
+  .project-masthead[data-surface-art] {
+    --surface-art-left: -230px;
+    --surface-art-right: auto;
+  }
+
+  .contact-main[data-surface-art],
+  .theme-doga .page-quote[data-surface-art] {
+    --surface-art-opacity: 0.16;
+  }
+}
+
+@media (forced-colors: active), print {
+  [data-surface-art]::before {
+    display: none;
+  }
+}

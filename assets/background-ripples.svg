@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" fill="none">
+  <defs>
+    <path id="ripple" vector-effect="non-scaling-stroke" d="M-300 0C-308-126-170-226-12-222C146-229 300-144 307-12C322 119 181 231 22 234C-139 237-290 139-300 0Z"/>
+  </defs>
+  <g stroke="#58735b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#ripple" transform="translate(626 637) rotate(-15) scale(.18 .2)"/>
+    <use href="#ripple" transform="translate(628 638) rotate(-12) scale(.35 .38)"/>
+    <use href="#ripple" transform="translate(631 640) rotate(-10) scale(.55 .59)"/>
+    <use href="#ripple" transform="translate(634 644) rotate(-8) scale(.77 .82)"/>
+    <use href="#ripple" transform="translate(638 648) rotate(-6) scale(1.01 1.07)"/>
+    <use href="#ripple" transform="translate(641 653) rotate(-4) scale(1.27 1.34)"/>
+    <use href="#ripple" transform="translate(643 658) rotate(-2) scale(1.55 1.64)"/>
+    <use href="#ripple" transform="translate(645 663) rotate(0) scale(1.85 1.97)"/>
+    <use href="#ripple" transform="translate(646 669) rotate(2) scale(2.18 2.33)"/>
+    <use href="#ripple" transform="translate(647 675) rotate(4) scale(2.54 2.72)"/>
+    <use href="#ripple" transform="translate(648 681) rotate(6) scale(2.93 3.14)"/>
+  </g>
+</svg>

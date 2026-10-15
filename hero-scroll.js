@@ -32,11 +32,8 @@ export function initHeroScroll() {
   let pageHidden = document.hidden;
   let raf = 0;
   let startFrame = 0;
-  let loadTimeout = 0;
   let mediaStarted = false;
   let posterReady = false;
-  let criticalReady = false;
-  let scrollIntent = false;
   let seeking = false;
   let targetTime = 0;
   let selectedSource = "";
@@ -61,11 +58,6 @@ export function initHeroScroll() {
     raf = 0;
   }
 
-  function clearLoadTimeout() {
-    if (loadTimeout) clearTimeout(loadTimeout);
-    loadTimeout = 0;
-  }
-
   function cancelMediaStart() {
     if (startFrame) cancelAnimationFrame(startFrame);
     startFrame = 0;
@@ -78,8 +70,7 @@ export function initHeroScroll() {
       !pageHidden &&
       !mediaStarted &&
       allowed() &&
-      posterReady &&
-      (criticalReady || scrollIntent)
+      posterReady
     );
   }
 
@@ -89,14 +80,13 @@ export function initHeroScroll() {
     video.preload = "auto";
     video.src = selectedSource;
     video.load();
-    watchInitialLoad();
     schedule();
   }
 
   function queueMediaStart() {
     if (startFrame || !canStartMedia()) return;
     // Give the decoded poster a painted frame before the video competes for bandwidth.
-    // Scroll intent skips document/font waits, while keeping that first image visible.
+    // Begin buffering before the first scroll; unrelated page/font loads must not delay it.
     startFrame = requestAnimationFrame(() => {
       startFrame = 0;
       if (!canStartMedia()) return;
@@ -111,7 +101,6 @@ export function initHeroScroll() {
     enabled = false;
     cancelFrame();
     cancelMediaStart();
-    clearLoadTimeout();
     video.pause();
     // Removing the source also aborts an in-flight download after a preference change.
     if (video.hasAttribute("src")) {
@@ -132,23 +121,21 @@ export function initHeroScroll() {
     disable();
   }
 
-  function watchInitialLoad() {
-    clearLoadTimeout();
-    if (
-      !enabled ||
-      !mediaStarted ||
-      pageHidden ||
-      hero.classList.contains("hero-video-ready")
-    )
-      return;
-    // A stalled initial download must not leave a long, motionless poster section.
-    loadTimeout = setTimeout(fail, 20000);
-  }
-
   function frameAvailable() {
     if (!enabled || video.readyState < 2 || video.seeking || seeking) return;
     hero.classList.add("hero-video-ready");
-    clearLoadTimeout();
+  }
+
+  function targetBuffered(time) {
+    const end = Math.min(video.duration, time + 0.08);
+    for (let i = 0; i < video.buffered.length; i++) {
+      if (
+        time >= video.buffered.start(i) - epsilon &&
+        end <= video.buffered.end(i) + epsilon
+      )
+        return true;
+    }
+    return false;
   }
 
   function seekToLatest() {
@@ -157,7 +144,7 @@ export function initHeroScroll() {
       pageHidden ||
       seeking ||
       video.seeking ||
-      video.readyState < 1 ||
+      video.readyState < 2 ||
       !Number.isFinite(video.duration) ||
       video.duration <= 0
     )
@@ -168,6 +155,10 @@ export function initHeroScroll() {
       frameAvailable();
       return;
     }
+    // Seeking into missing data interrupts the sequential preload with range requests.
+    // Keep the last decoded frame until the latest scroll target is buffered.
+    // Slow loading remains recoverable; only a real media error disables the effect.
+    if (!targetBuffered(nextTime)) return;
     seeking = true;
     try {
       // Exact seeks preserve the same scene when scrolling back up; playback is never started.
@@ -241,50 +232,12 @@ export function initHeroScroll() {
     if (hidden) {
       cancelFrame();
       cancelMediaStart();
-      clearLoadTimeout();
       video.pause();
     } else {
       preferenceChanged();
       queueMediaStart();
-      watchInitialLoad();
       schedule();
     }
-  }
-
-  function requestByIntent() {
-    if (!enabled || pageHidden) return;
-    scrollIntent = true;
-    queueMediaStart();
-  }
-
-  function scrollChanged() {
-    requestByIntent();
-    schedule();
-  }
-
-  function keyIntent(event) {
-    if (
-      event.defaultPrevented ||
-      event.altKey ||
-      event.ctrlKey ||
-      event.metaKey ||
-      event.target?.closest?.(
-        "input, textarea, select, [contenteditable='true'], [role='textbox']",
-      )
-    )
-      return;
-    if (
-      [
-        "ArrowDown",
-        "ArrowUp",
-        "PageDown",
-        "PageUp",
-        "Home",
-        "End",
-        " ",
-      ].includes(event.key)
-    )
-      requestByIntent();
   }
 
   function posterSettled() {
@@ -293,21 +246,7 @@ export function initHeroScroll() {
     queueMediaStart();
   }
 
-  function documentLoaded() {
-    // Read fonts.ready after load, when the page's critical font requests are known.
-    Promise.resolve(document.fonts?.ready)
-      .catch(() => {})
-      .then(() => {
-        if (disposed) return;
-        criticalReady = true;
-        queueMediaStart();
-      });
-  }
-
-  listen(window, "scroll", scrollChanged, { passive: true });
-  listen(window, "wheel", requestByIntent, { passive: true });
-  listen(window, "touchmove", requestByIntent, { passive: true });
-  listen(window, "keydown", keyIntent);
+  listen(window, "scroll", schedule, { passive: true });
   listen(window, "resize", schedule, { passive: true });
   listen(window, "hashchange", schedule);
   listen(window, "pagehide", () => setVisibility(true));
@@ -327,6 +266,9 @@ export function initHeroScroll() {
     frameAvailable();
     schedule();
   });
+  listen(video, "progress", schedule);
+  listen(video, "canplaythrough", schedule);
+  listen(video, "suspend", schedule);
   listen(video, "seeked", () => {
     seeking = false;
     frameAvailable();
@@ -351,9 +293,6 @@ export function initHeroScroll() {
     listen(poster, "load", posterSettled, { once: true });
     listen(poster, "error", posterSettled, { once: true });
   }
-  if (document.readyState === "complete") documentLoaded();
-  else listen(window, "load", documentLoaded, { once: true });
-
   disposeHeroScroll = () => {
     disposed = true;
     disable();
