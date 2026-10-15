@@ -1,7 +1,7 @@
-import { focusAreas } from "./content.js";
-import { pageDetails } from "./page-content.js";
+import { focusAreas } from "./focus-data.js";
 import { initWaves } from "./waves.js";
 import { initMotion } from "./motion.js";
+import { initHeroScroll } from "./hero-scroll.js";
 
 const $ = (selector, parent = document) => parent.querySelector(selector);
 const $$ = (selector, parent = document) => [
@@ -82,8 +82,7 @@ if (focusOptions && focusAreas.length) {
       button.setAttribute("aria-pressed", String(buttonIndex === index)),
     );
     if (description) description.textContent = area.description;
-    if (detailLink && pageDetails[area.id])
-      detailLink.href = `/${pageDetails[area.id].slug}/`;
+    if (detailLink) detailLink.href = area.href;
     if (number)
       number.textContent = `${String(index + 1).padStart(2, "0")} / ${String(focusAreas.length).padStart(2, "0")}`;
 
@@ -91,7 +90,11 @@ if (focusOptions && focusAreas.length) {
     if (container && image) {
       const replaceImage = () => {
         container.dataset.area = area.id;
-        image.src = area.image;
+        image.sizes = area.sizes;
+        image.srcset = area.srcset || "";
+        image.src = area.src;
+        image.width = area.width;
+        image.height = area.height;
         image.alt = area.alt;
         container.classList.remove("changing");
       };
@@ -180,5 +183,6 @@ $("#copy-email")?.addEventListener("click", async () => {
   }
 });
 
+initHeroScroll();
 initWaves();
 initMotion();

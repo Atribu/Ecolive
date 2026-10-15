@@ -525,8 +525,8 @@
 .project-plan button {
   position: relative;
   display: block;
-  padding: 0;
-  background: #7a9f70;
+  padding: calc(var(--wave-height, 58px) + 16px) 16px 65px;
+  background: #fff;
 }
 .project-plan img {
   width: 100%;

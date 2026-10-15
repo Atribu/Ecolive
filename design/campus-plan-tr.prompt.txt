@@ -1,0 +1,29 @@
+Use case: text-localization.
+Asset type: ECOLIVE website architectural campus plan, edited Turkish version of the supplied image.
+Input image 1 is the EDIT TARGET, not an inspiration reference. Change ONLY its English typography to the exact professional Turkish wording below. Keep the architectural drawing, campus geometry, building footprints, roof shapes, greenhouses, paths, trees, water features, textures, color palette, white background, original margins, and every leader line and its endpoint unchanged. This is an annotation translation, not a redesign or redraw of the campus.
+Preserve the full original 75:56 landscape canvas aspect ratio and framing, with all six external area callouts. Output at the highest practical resolution, ideally 3600 x 2688; crisp small typography and detailed map.
+Typography: precise clean modern sans-serif, charcoal, consistent weight, professional architectural presentation. All Turkish diacritics must be correct (İ ı Ş ş Ğ ğ Ü ü Ö ö Ç ç î). Render ONLY the specified Turkish text; no English anywhere. Use the existing white regions for type; do not obscure any map geometry or leader line. Line wraps are permitted as specified. Match original text sizes as closely as possible while fitting cleanly.
+Replace the top English title with two balanced lines:
+"AKTİF YAŞ ALMA VE EKOLOJİK İYİ YAŞAM KAMPÜSÜ"
+"GENEL YERLEŞİM PLANI"
+The second line should be slightly smaller, with refined hierarchy and generous white space above the callouts.
+Replace upper-left label Organic Greenhouses & Medical Gardens with:
+"Organik Seralar ve"
+"Tıbbi Bitki Bahçeleri"
+Replace upper-right label Low-Rise Bungalows with:
+"Az Katlı"
+"Bungalov Konutlar"
+Replace lower-left Citrus Orchard with:
+"Narenciye Bahçesi"
+Replace the small caption SUSTAINABILITY DIAGRAM below it with:
+"SÜRDÜRÜLEBİLİRLİK ŞEMASI"
+Replace bottom-left Health Academy & Wellness Center with:
+"Sağlık Akademisi ve"
+"İyi Yaşam Merkezi"
+Replace bottom-center Central Agora & Communal Hub with:
+"Merkezî Agora ve"
+"Ortak Yaşam Alanı"
+Replace lower-right Pedestrian Pathways & Mobility with:
+"Yaya Yolları ve"
+"Kampüs İçi Ulaşım"
+Do not add logos, icons, pins, map details, labels, decorative elements, gradients or a new border. Do not change line endpoints. Only replace the text, faithfully preserving all other content.

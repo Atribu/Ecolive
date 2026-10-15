@@ -33,7 +33,11 @@ export function initMotion() {
   );
   const pending = new Set();
   const heroes = supportsIndividualTransforms
-    ? [...document.querySelectorAll(".hero-media img, .hero-photo img")]
+    ? [
+        ...document.querySelectorAll(
+          ".hero:not([data-scroll-hero]) .hero-media img, .hero-photo img",
+        ),
+      ]
     : [];
   const parallax = supportsIndividualTransforms
     ? [

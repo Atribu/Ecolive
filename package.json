@@ -8,6 +8,11 @@
     "dev": "node scripts/generate-pages.mjs && node scripts/serve.mjs",
     "start": "node scripts/generate-pages.mjs && node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
-    "check": "node --check app.js && node --check content.js && node --check page-content.js && node --check project-content.js && node --check scripts/generate-pages.mjs && node --check scripts/serve.mjs && node --check scripts/build.mjs && node --check page-enrichment.js && node --check project-enrichment.js && node --check scripts/enriched-sections.mjs && node --check waves.js && node --check motion.js"
+    "check": "node --check app.js && node --check content.js && node --check page-content.js && node --check project-content.js && node --check scripts/generate-pages.mjs && node --check scripts/serve.mjs && node --check scripts/build.mjs && node --check page-enrichment.js && node --check project-enrichment.js && node --check scripts/enriched-sections.mjs && node --check waves.js && node --check motion.js && node --check hero-scroll.js && node --check scripts/responsive-html.mjs && node --check focus-data.js && node --check deploy/verify-build.mjs",
+    "preview": "NODE_ENV=production SERVE_ROOT=dist node scripts/serve.mjs",
+    "verify:build": "node deploy/verify-build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
   }
 }

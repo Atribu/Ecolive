@@ -1,0 +1,622 @@
+{
+  "/assets/active.webp": {
+    "width": 2200,
+    "height": 1584,
+    "sourceBytes": 761112,
+    "variants": [
+      {
+        "src": "/assets/responsive/active-640.1cd4d0f1.webp",
+        "width": 640,
+        "height": 461,
+        "bytes": 71876
+      },
+      {
+        "src": "/assets/responsive/active-960.a33e3de3.webp",
+        "width": 960,
+        "height": 691,
+        "bytes": 143358
+      },
+      {
+        "src": "/assets/responsive/active-1440.18b71f78.webp",
+        "width": 1440,
+        "height": 1037,
+        "bytes": 277164
+      },
+      {
+        "src": "/assets/responsive/active-1920.2a075a9b.webp",
+        "width": 1920,
+        "height": 1382,
+        "bytes": 417738
+      }
+    ]
+  },
+  "/assets/brand-cover.webp": {
+    "width": 2200,
+    "height": 1584,
+    "sourceBytes": 22064,
+    "variants": [
+      {
+        "src": "/assets/responsive/brand-cover-640.3ce352e4.webp",
+        "width": 640,
+        "height": 461,
+        "bytes": 3046
+      },
+      {
+        "src": "/assets/responsive/brand-cover-960.61d74c72.webp",
+        "width": 960,
+        "height": 691,
+        "bytes": 5288
+      },
+      {
+        "src": "/assets/responsive/brand-cover-1440.27852e3c.webp",
+        "width": 1440,
+        "height": 1037,
+        "bytes": 8546
+      },
+      {
+        "src": "/assets/responsive/brand-cover-1920.68ff21cc.webp",
+        "width": 1920,
+        "height": 1382,
+        "bytes": 12314
+      }
+    ]
+  },
+  "/assets/campus-plan-labeled.webp": {
+    "width": 3600,
+    "height": 2688,
+    "sourceBytes": 865070,
+    "variants": [
+      {
+        "src": "/assets/responsive/campus-plan-labeled-640.e181bcad.webp",
+        "width": 640,
+        "height": 478,
+        "bytes": 54558
+      },
+      {
+        "src": "/assets/responsive/campus-plan-labeled-960.d483682f.webp",
+        "width": 960,
+        "height": 717,
+        "bytes": 105950
+      },
+      {
+        "src": "/assets/responsive/campus-plan-labeled-1440.48be4560.webp",
+        "width": 1440,
+        "height": 1075,
+        "bytes": 203080
+      },
+      {
+        "src": "/assets/responsive/campus-plan-labeled-1920.9fbb2c8f.webp",
+        "width": 1920,
+        "height": 1434,
+        "bytes": 309698
+      },
+      {
+        "src": "/assets/responsive/campus-plan-labeled-2560.47965b3b.webp",
+        "width": 2560,
+        "height": 1911,
+        "bytes": 435904
+      },
+      {
+        "src": "/assets/responsive/campus-plan-labeled-3600.80566143.webp",
+        "width": 3600,
+        "height": 2688,
+        "bytes": 663274
+      }
+    ]
+  },
+  "/assets/campus-plan-tr.png": {
+    "width": 1451,
+    "height": 1084,
+    "sourceBytes": 1871729,
+    "variants": [
+      {
+        "src": "/assets/responsive/campus-plan-tr-640.b298d129.webp",
+        "width": 640,
+        "height": 478,
+        "bytes": 58014
+      },
+      {
+        "src": "/assets/responsive/campus-plan-tr-960.831595d5.webp",
+        "width": 960,
+        "height": 717,
+        "bytes": 109994
+      },
+      {
+        "src": "/assets/responsive/campus-plan-tr-1440.012e13bb.webp",
+        "width": 1440,
+        "height": 1076,
+        "bytes": 190360
+      },
+      {
+        "src": "/assets/responsive/campus-plan-tr-1451.6d13262e.webp",
+        "width": 1451,
+        "height": 1084,
+        "bytes": 192752
+      }
+    ]
+  },
+  "/assets/campus-plan.webp": {
+    "width": 2200,
+    "height": 1584,
+    "sourceBytes": 255694,
+    "variants": [
+      {
+        "src": "/assets/responsive/campus-plan-640.80ba21fe.webp",
+        "width": 640,
+        "height": 461,
+        "bytes": 42588
+      },
+      {
+        "src": "/assets/responsive/campus-plan-960.772645fa.webp",
+        "width": 960,
+        "height": 691,
+        "bytes": 81728
+      },
+      {
+        "src": "/assets/responsive/campus-plan-1440.3f179dfd.webp",
+        "width": 1440,
+        "height": 1037,
+        "bytes": 148360
+      },
+      {
+        "src": "/assets/responsive/campus-plan-1920.d9f6181c.webp",
+        "width": 1920,
+        "height": 1382,
+        "bytes": 208240
+      },
+      {
+        "src": "/assets/responsive/campus-plan-2200.a413e3aa.webp",
+        "width": 2200,
+        "height": 1584,
+        "bytes": 247152
+      }
+    ]
+  },
+  "/assets/extra/botanic-workshop.webp": {
+    "width": 2000,
+    "height": 1493,
+    "sourceBytes": 673916,
+    "variants": [
+      {
+        "src": "/assets/responsive/botanic-workshop-640.be87bf95.webp",
+        "width": 640,
+        "height": 478,
+        "bytes": 70354
+      },
+      {
+        "src": "/assets/responsive/botanic-workshop-960.4f1a6b80.webp",
+        "width": 960,
+        "height": 717,
+        "bytes": 144352
+      },
+      {
+        "src": "/assets/responsive/botanic-workshop-1440.72e0ea9f.webp",
+        "width": 1440,
+        "height": 1075,
+        "bytes": 282992
+      },
+      {
+        "src": "/assets/responsive/botanic-workshop-1920.b5c55783.webp",
+        "width": 1920,
+        "height": 1433,
+        "bytes": 434282
+      }
+    ]
+  },
+  "/assets/extra/lakeside-landscape.webp": {
+    "width": 2000,
+    "height": 1493,
+    "sourceBytes": 532164,
+    "variants": [
+      {
+        "src": "/assets/responsive/lakeside-landscape-640.451ac295.webp",
+        "width": 640,
+        "height": 478,
+        "bytes": 56664
+      },
+      {
+        "src": "/assets/responsive/lakeside-landscape-960.de28cf29.webp",
+        "width": 960,
+        "height": 717,
+        "bytes": 119956
+      },
+      {
+        "src": "/assets/responsive/lakeside-landscape-1440.b0a2a311.webp",
+        "width": 1440,
+        "height": 1075,
+        "bytes": 232646
+      },
+      {
+        "src": "/assets/responsive/lakeside-landscape-1920.5fc33a51.webp",
+        "width": 1920,
+        "height": 1433,
+        "bytes": 345040
+      }
+    ]
+  },
+  "/assets/extra/learning-greenhouse.webp": {
+    "width": 2000,
+    "height": 1400,
+    "sourceBytes": 625270,
+    "variants": [
+      {
+        "src": "/assets/responsive/learning-greenhouse-640.e53e063a.webp",
+        "width": 640,
+        "height": 448,
+        "bytes": 68870
+      },
+      {
+        "src": "/assets/responsive/learning-greenhouse-960.ac506c3a.webp",
+        "width": 960,
+        "height": 672,
+        "bytes": 136032
+      },
+      {
+        "src": "/assets/responsive/learning-greenhouse-1440.2f65608b.webp",
+        "width": 1440,
+        "height": 1008,
+        "bytes": 265600
+      },
+      {
+        "src": "/assets/responsive/learning-greenhouse-1920.36ba1249.webp",
+        "width": 1920,
+        "height": 1344,
+        "bytes": 401980
+      }
+    ]
+  },
+  "/assets/extra/rehabilitation-interior.webp": {
+    "width": 2000,
+    "height": 1391,
+    "sourceBytes": 442264,
+    "variants": [
+      {
+        "src": "/assets/responsive/rehabilitation-interior-640.3e8f7b4a.webp",
+        "width": 640,
+        "height": 445,
+        "bytes": 44480
+      },
+      {
+        "src": "/assets/responsive/rehabilitation-interior-960.b0429058.webp",
+        "width": 960,
+        "height": 668,
+        "bytes": 86836
+      },
+      {
+        "src": "/assets/responsive/rehabilitation-interior-1440.cda85e78.webp",
+        "width": 1440,
+        "height": 1002,
+        "bytes": 173316
+      },
+      {
+        "src": "/assets/responsive/rehabilitation-interior-1920.6806c1bd.webp",
+        "width": 1920,
+        "height": 1335,
+        "bytes": 274470
+      }
+    ]
+  },
+  "/assets/extra/shared-lounge.webp": {
+    "width": 2000,
+    "height": 1493,
+    "sourceBytes": 433186,
+    "variants": [
+      {
+        "src": "/assets/responsive/shared-lounge-640.bc60912e.webp",
+        "width": 640,
+        "height": 478,
+        "bytes": 50368
+      },
+      {
+        "src": "/assets/responsive/shared-lounge-960.c86cbc1d.webp",
+        "width": 960,
+        "height": 717,
+        "bytes": 97978
+      },
+      {
+        "src": "/assets/responsive/shared-lounge-1440.c9bfc57e.webp",
+        "width": 1440,
+        "height": 1075,
+        "bytes": 188740
+      },
+      {
+        "src": "/assets/responsive/shared-lounge-1920.9debcdf6.webp",
+        "width": 1920,
+        "height": 1433,
+        "bytes": 283480
+      }
+    ]
+  },
+  "/assets/extra/wellness-treatment.webp": {
+    "width": 2000,
+    "height": 1401,
+    "sourceBytes": 292934,
+    "variants": [
+      {
+        "src": "/assets/responsive/wellness-treatment-640.14da533f.webp",
+        "width": 640,
+        "height": 448,
+        "bytes": 34620
+      },
+      {
+        "src": "/assets/responsive/wellness-treatment-960.524563d3.webp",
+        "width": 960,
+        "height": 672,
+        "bytes": 64764
+      },
+      {
+        "src": "/assets/responsive/wellness-treatment-1440.c6475f68.webp",
+        "width": 1440,
+        "height": 1009,
+        "bytes": 117846
+      },
+      {
+        "src": "/assets/responsive/wellness-treatment-1920.32b053bc.webp",
+        "width": 1920,
+        "height": 1345,
+        "bytes": 174740
+      }
+    ]
+  },
+  "/assets/generations.webp": {
+    "width": 2200,
+    "height": 1584,
+    "sourceBytes": 503106,
+    "variants": [
+      {
+        "src": "/assets/responsive/generations-640.30a168d0.webp",
+        "width": 640,
+        "height": 461,
+        "bytes": 63888
+      },
+      {
+        "src": "/assets/responsive/generations-960.74986195.webp",
+        "width": 960,
+        "height": 691,
+        "bytes": 117796
+      },
+      {
+        "src": "/assets/responsive/generations-1440.22b222b9.webp",
+        "width": 1440,
+        "height": 1037,
+        "bytes": 201560
+      },
+      {
+        "src": "/assets/responsive/generations-1920.a4435a71.webp",
+        "width": 1920,
+        "height": 1382,
+        "bytes": 284570
+      }
+    ]
+  },
+  "/assets/greenhouses.webp": {
+    "width": 1700,
+    "height": 949,
+    "sourceBytes": 429560,
+    "variants": [
+      {
+        "src": "/assets/responsive/greenhouses-640.aa57accf.webp",
+        "width": 640,
+        "height": 357,
+        "bytes": 53608
+      },
+      {
+        "src": "/assets/responsive/greenhouses-960.2a62a201.webp",
+        "width": 960,
+        "height": 536,
+        "bytes": 108352
+      },
+      {
+        "src": "/assets/responsive/greenhouses-1440.119c7058.webp",
+        "width": 1440,
+        "height": 804,
+        "bytes": 214594
+      },
+      {
+        "src": "/assets/responsive/greenhouses-1700.11429c3d.webp",
+        "width": 1700,
+        "height": 949,
+        "bytes": 288308
+      }
+    ]
+  },
+  "/assets/harvest.webp": {
+    "width": 1000,
+    "height": 562,
+    "sourceBytes": 149094,
+    "variants": [
+      {
+        "src": "/assets/responsive/harvest-640.fc51d8db.webp",
+        "width": 640,
+        "height": 360,
+        "bytes": 49874
+      },
+      {
+        "src": "/assets/responsive/harvest-960.651f2af5.webp",
+        "width": 960,
+        "height": 540,
+        "bytes": 91216
+      },
+      {
+        "src": "/assets/responsive/harvest-1000.38cb256d.webp",
+        "width": 1000,
+        "height": 562,
+        "bytes": 102224
+      }
+    ]
+  },
+  "/assets/hero.webp": {
+    "width": 2200,
+    "height": 1584,
+    "sourceBytes": 755794,
+    "variants": [
+      {
+        "src": "/assets/responsive/hero-640.219a5027.webp",
+        "width": 640,
+        "height": 461,
+        "bytes": 80878
+      },
+      {
+        "src": "/assets/responsive/hero-960.f5818f06.webp",
+        "width": 960,
+        "height": 691,
+        "bytes": 156428
+      },
+      {
+        "src": "/assets/responsive/hero-1440.3def5ab6.webp",
+        "width": 1440,
+        "height": 1037,
+        "bytes": 287714
+      },
+      {
+        "src": "/assets/responsive/hero-1920.037e95da.webp",
+        "width": 1920,
+        "height": 1382,
+        "bytes": 425666
+      }
+    ]
+  },
+  "/assets/living.webp": {
+    "width": 2200,
+    "height": 1584,
+    "sourceBytes": 437528,
+    "variants": [
+      {
+        "src": "/assets/responsive/living-640.6863379d.webp",
+        "width": 640,
+        "height": 461,
+        "bytes": 57656
+      },
+      {
+        "src": "/assets/responsive/living-960.3510d45e.webp",
+        "width": 960,
+        "height": 691,
+        "bytes": 107602
+      },
+      {
+        "src": "/assets/responsive/living-1440.21c79380.webp",
+        "width": 1440,
+        "height": 1037,
+        "bytes": 173684
+      },
+      {
+        "src": "/assets/responsive/living-1920.4df6ba9b.webp",
+        "width": 1920,
+        "height": 1382,
+        "bytes": 244770
+      }
+    ]
+  },
+  "/assets/logo-source.png": {
+    "width": 871,
+    "height": 368,
+    "sourceBytes": 109811,
+    "variants": [
+      {
+        "src": "/assets/responsive/logo-source-160.b542c793.webp",
+        "width": 160,
+        "height": 68,
+        "bytes": 8160
+      },
+      {
+        "src": "/assets/responsive/logo-source-320.563400ee.webp",
+        "width": 320,
+        "height": 135,
+        "bytes": 23222
+      }
+    ],
+    "favicon": {
+      "src": "/assets/responsive/favicon-64.ae719139.png",
+      "width": 64,
+      "height": 64,
+      "bytes": 7246
+    }
+  },
+  "/assets/solar.webp": {
+    "width": 1400,
+    "height": 1117,
+    "sourceBytes": 296994,
+    "variants": [
+      {
+        "src": "/assets/responsive/solar-640.d54537c0.webp",
+        "width": 640,
+        "height": 511,
+        "bytes": 68728
+      },
+      {
+        "src": "/assets/responsive/solar-960.1861ed5a.webp",
+        "width": 960,
+        "height": 766,
+        "bytes": 126956
+      },
+      {
+        "src": "/assets/responsive/solar-1400.d31fbdde.webp",
+        "width": 1400,
+        "height": 1117,
+        "bytes": 199314
+      }
+    ]
+  },
+  "/assets/video/home-poster.webp": {
+    "width": 1600,
+    "height": 900,
+    "sourceBytes": 336938,
+    "variants": [
+      {
+        "src": "/assets/responsive/home-poster-960.c99328ac.webp",
+        "width": 960,
+        "height": 540,
+        "bytes": 112244
+      },
+      {
+        "src": "/assets/responsive/home-poster-1440.a4ff3ad6.webp",
+        "width": 1440,
+        "height": 810,
+        "bytes": 199332
+      },
+      {
+        "src": "/assets/responsive/home-poster-1600.12f9a0ab.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 230462
+      }
+    ],
+    "mobilePoster": {
+      "src": "/assets/responsive/home-poster-mobile-720.4b7d08ac.webp",
+      "width": 720,
+      "height": 1280,
+      "bytes": 78894
+    }
+  },
+  "/assets/wellness.webp": {
+    "width": 2200,
+    "height": 1584,
+    "sourceBytes": 643812,
+    "variants": [
+      {
+        "src": "/assets/responsive/wellness-640.104533c3.webp",
+        "width": 640,
+        "height": 461,
+        "bytes": 58840
+      },
+      {
+        "src": "/assets/responsive/wellness-960.ec7bb400.webp",
+        "width": 960,
+        "height": 691,
+        "bytes": 116846
+      },
+      {
+        "src": "/assets/responsive/wellness-1440.73f8c7e1.webp",
+        "width": 1440,
+        "height": 1037,
+        "bytes": 227490
+      },
+      {
+        "src": "/assets/responsive/wellness-1920.756d4032.webp",
+        "width": 1920,
+        "height": 1382,
+        "bytes": 353864
+      }
+    ]
+  }
+}

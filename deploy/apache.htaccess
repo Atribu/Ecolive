@@ -1,0 +1,24 @@
+# Upload the contents of dist/, including this file, to the document root.
+# Apache needs AllowOverride FileInfo. Modules are optional; URL routing stays static.
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  <FilesMatch "\.(html|json)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(css|js|woff2?|ttf|otf|webp|png|jpe?g|svg|mp4|webm)$">
+    Header set Cache-Control "public, max-age=604800, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.[a-f0-9]{8,12}\.(css|js|woff2?|ttf|otf|webp|png|jpe?g|svg)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# Compress text only; images, fonts and range-addressed video are already encoded.
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/javascript application/javascript application/json image/svg+xml text/plain
+</IfModule>
+<IfModule !mod_brotli.c>
+  <IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml text/plain
+  </IfModule>
+</IfModule>

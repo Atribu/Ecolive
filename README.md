@@ -4,9 +4,10 @@ ECOLIVE proje tanıtım sitesi. Lanserhof referansındaki geniş görseller, ser
 
 ## Çalıştırma
 
-Node.js 18 veya üzeri yeterlidir. Harici JavaScript bağımlılığı bulunmaz.
+Node.js 18 veya üzeri yeterlidir. Yayındaki site harici JavaScript çalışma zamanı gerektirmez; üretim derlemesi geliştirme bağımlılığı olan esbuild kullanır.
 
 ```sh
+npm ci
 npm run dev
 ```
 
@@ -15,13 +16,15 @@ Yerel adres: http://127.0.0.1:4173/
 ```sh
 npm run check
 npm run build
+npm run verify:build
+npm run preview
 ```
 
-`dist/` dizini statik barındırma için hazır dosyaları içerir. Sunucu, klasörlerdeki `index.html` dosyalarını sunmalıdır. Başka port kullanmak için `PORT=4174 npm run dev` komutunu çalıştırın. Üretilen HTML dosyaları JavaScript olmadan da içerikleri ve sayfa bağlantılarını sunar.
+`dist/` dizini statik barındırma için hazır dosyaları içerir. `npm run preview` sıkıştırma ve önbellek ayarlarıyla bu üretim sürümünü sunar; `npm run dev` düzenlenebilir kaynak dosyalarını sunar. Aynı portta yalnızca birini çalıştırın; başka port için `PORT=4174 npm run preview` kullanın. Sunucu, klasörlerdeki `index.html` dosyalarını sunmalıdır. Üretilen HTML dosyaları JavaScript olmadan da içerikleri ve sayfa bağlantılarını sunar. Canlıya aktarımda `dist/` içeriği ve sunucu ayarları birlikte kullanılmalıdır; ayrıntılar `deploy/README.md` dosyasındadır.
 
 ## Sayfalar
 
-- `/`: Orijinal tam ekran açılış, büyük görsel/metin blokları, altı konulu seçici, kuşaklar, mekânlar, yaşam döngüsü ve proje bölümleri.
+- `/`: Kaydırmayla ilerleyen tam ekran video açılışı, büyük görsel/metin blokları, altı konulu seçici, kuşaklar, mekânlar, yaşam döngüsü ve proje bölümleri.
 - `/proje-hakkinda/`: Vizyon, yerleşim planı, yaşam yaklaşımı ve sık sorulan sorular.
 - `/yasam-ve-mimari/`: Mekânlar, erişilebilirlik ve ortak yaşam.
 - `/saglik-ve-iyi-yasam/`: Sağlık, bakım, hareket ve sosyal bağlar.
@@ -40,10 +43,12 @@ Konu sayfaları bağımsız adreslere, başlıklara ve açıklama metalarına sa
 - `pages.css`: İç sayfaların farklı masaüstü ve mobil düzenleri.
 - `interior.css`: Genişletilen iç sayfalardaki görsel anlatılar, tasarım ayrıntıları ve kampüs dizini. Yalnızca iç sayfalarda yüklenir.
 - `motion.js`, `motion.css`: İçeriklerin bir kez belirmesi, açılış görselinin yavaş yakınlaşması ve seçili görsellerin kaydırmaya verdiği hafif tepki.
+- `hero-scroll.js`, `hero-scroll.css`: Ana sayfanın sabitlenen video açılışı, kaydırma konumuna bağlı ileri/geri video ve başlığın yukarı çekilmesi.
 - `waves.js`, `waves.css`: Dokuz sayfadaki tüm ana bölüm sınırları, altbilgi ve mobilde alt alta gelen görsel/metin panelleri için sakin dalgalar.
 - `interactions.css`: Buton okları, bağlantılar ve ana menünün açılış hareketleri.
 - `app.js`: Sayfa menüsü, altı konulu görsel seçici, aktif sayfa işaretlemesi, açılır sorular, kampüs planı ve e-posta kopyalama.
 - `content.js`: Altı keşif alanının temel tanımları ve görselleri.
+- `focus-data.js`: Görsel seçici için üretilmiş küçük tarayıcı veri modülü. Tam iç sayfa metinlerini tarayıcıya taşımaz; doğrudan düzenlemeyin.
 - `page-content.js`: Altı konu sayfasının ayrıntılı Türkçe metinleri.
 - `page-enrichment.js`: Konu sayfalarının ek anlatıları, tasarım ayrıntıları ve soruları.
 - `project-content.js`: Proje süreci, sık sorulan sorular ve iletişim konuları.
@@ -52,6 +57,10 @@ Konu sayfaları bağımsız adreslere, başlıklara ve açıklama metalarına sa
 - `scripts/enriched-sections.mjs`: Ek anlatı, bölüm kısayolları ve soru bölümlerinin ortak HTML şablonları.
 - `partials/map-dialog.html`: İç proje sayfasındaki büyütülebilir kampüs planı; ana sayfada da aynı plan penceresi bulunur.
 - `assets/`: Optimize görseller, özgün logo ve yerel yazı tipleri.
+- `assets/responsive/`, `responsive-images.json`: İçerik hash’i taşıyan ekran boyutlarına uygun görseller, mobil açılış posteri, logo ve favicon.
+- `scripts/prepare-images.py`: Pillow ile kaynakları değiştirmeden görsel varyantlarını yeniden üretir; normal derleme için tekrar çalıştırılması gerekmez.
+- `scripts/responsive-html.mjs`: Görsel manifestinden `srcset`, boyut bilgileri ve eşleşen ön yükleme bağlantıları üretir. Yakın kırpılan fotoğrafların `sizes` değerleri gerçek görüntü ölçeğini korur.
+- `deploy/`: Barındırma ayarları ve üretim doğrulama betiği.
 - `asset-manifest.json`: Görsellerin kaynak belgeleri ve sayfa bilgileri.
 - `extra-assets.json`: İç sayfalara eklenen altı özgün sunum görselinin kaynak slaytları, boyutları ve kırpma önerileri.
 - `page-enrichment-sources.json`: Ek metinler için sunum ve belge kaynak notları; yayın dosyalarına kopyalanmaz.
@@ -68,7 +77,13 @@ Görseller kullanıcının sağladığı katalog ve enerji sunumundan hazırlanm
 
 ## Hareket ve geçişler
 
-Animasyon katmanı, onaylanan sayfa yerleşimlerini ve içerikleri korur. Açılışta yalnızca fotoğraf yavaşça yakınlaşır; başlıklar ve paragraflar ilk kez görünürken kısa aralıklarla belirir. Kaydırma sırasında ana sayfa ve iç sayfalardaki fotoğraflar ile bölüm dalgaları küçük hareketlerle tepki verir. Plan ve şema görselleri sabit kalır. Dalga, yeni bölümün gerçek yüzeyine uygulanan bir maske ile oluşturulur; yan yana fotoğraflar ve renk geçişli zeminler aynı eğriyi izler. Dokuz sayfadaki tüm ana bölüm sınırları, altbilgi geçişleri dahil kapsanır. Ayrıca tam genişlikteki kart alanları ve mobilde alt alta gelen görsel/metin panelleri de dalgayla bağlanır. Kısa yönlendirme alanlarında, yazıların eğriler tarafından örtülmemesi için ek boşluk bırakılır. Kartların ve bağlantıların metinleri ayrı olarak belirir; kontroller kullanılabilir kalır.
+Açılışın kritik indirmeleri önce tamamlanır: poster çözümlenip belge ve fontlar hazırlandıktan ve bir görüntü karesi çizildikten sonra video yüklenir. Kullanıcının erken kaydırma hareketi, poster hazır olduğunda video yüklemesini öne alır. Kaydırma alanı başlangıçta ayrıldığı için video yüklenirken bölüm yüksekliği değişmez. Mobil kategori seçeneklerinin metin kontrastı artırılmıştır.
+
+Üretim derlemesi her sayfada tek CSS ve tek JavaScript dosyası sunar. Fontlar ve responsive görseller gibi bu dosyalar da içerik hash’i taşır; bir yıllık güvenli önbellek kullanabilir. HTML yeniden doğrulanır. Brotli/gzip sıkıştırması, kaynak dosyalarını düzenlenebilir bırakırken aktarım boyutunu azaltır. Ana sayfa iç sayfalara özgü `pages.css` dosyasını yüklemez. Görsel seçici, seçilen fotoğrafın `srcset` ve `sizes` bilgilerini birlikte günceller.
+
+Ana sayfada kullanıcının sağladığı `Home Video.mp4` videosunun 10 saniyelik web sürümü kullanılır. Masaüstünde yaklaşık 1,2 ekran, mobilde 0,7 ekran kaydırma boyunca görüntü sabitlenir; video konumu kaydırmayla ileri/geri değişir, başlık yukarı çekilip silinir ve ardından dalgalı bölüm görünür. Otomatik oynatma, ses veya kaydırmayı ele geçiren bir kontrol yoktur. `assets/video/` altında 1600×900 masaüstü MP4 (7,31 MB), 960×540 mobil MP4 (2,49 MB) ve ilk kare WebP bulunur. Bir ziyarette yalnızca uygun video sürümü yüklenir. H.264 dosyaları 24 fps, kısa anahtar kare aralığı ve faststart ile hazırlanmıştır. Yerel sunucu video için byte-range isteklerini destekler; yayın sunucusu da MP4 MIME türünü ve byte-range isteklerini desteklemelidir. Azaltılmış hareket/veri tasarrufu tercihinde veya video yüklenemediğinde normal boydaki sabit görsel kullanılır. İç sayfalar video indirmez.
+
+Animasyon katmanı, onaylanan sayfa yerleşimlerini ve içerikleri korur. İç sayfaların açılış fotoğrafı yavaşça yakınlaşır; başlıklar ve paragraflar ilk kez görünürken kısa aralıklarla belirir. Kaydırma sırasında ana sayfa ve iç sayfalardaki fotoğraflar ile bölüm dalgaları küçük hareketlerle tepki verir. Plan ve şema görselleri sabit kalır. Dalga, yeni bölümün gerçek yüzeyine uygulanan bir maske ile oluşturulur; yan yana fotoğraflar ve renk geçişli zeminler aynı eğriyi izler. Dokuz sayfadaki tüm ana bölüm sınırları, altbilgi geçişleri dahil kapsanır. Ayrıca tam genişlikteki kart alanları ve mobilde alt alta gelen görsel/metin panelleri de dalgayla bağlanır. Kısa yönlendirme alanlarında, yazıların eğriler tarafından örtülmemesi için ek boşluk bırakılır. Kartların ve bağlantıların metinleri ayrı olarak belirir; kontroller kullanılabilir kalır.
 
 Kaydırma takibi pasif dinleyiciler ve tek planlanan animasyon karesiyle yapılır. Mobilde hareket mesafeleri küçülür. `prefers-reduced-motion` tercihinde içerikler doğrudan görünür ve dekoratif hareketler kapatılır. JavaScript çalışmadığında metinler varsayılan olarak görünür kalır.
 

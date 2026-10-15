@@ -1,9 +1,9 @@
 {
   "prepared_on": "2026-10-13",
-  "purpose": "Local ECOLIVE website prototype; source extraction and format optimization only.",
-  "source_integrity": "Original supplied documents and images were not modified. No generated imagery, creative retouching, cropping, or upscaling.",
+  "purpose": "Local ECOLIVE website assets; source extraction, format optimization and a separately documented Turkish campus-plan localization.",
+  "source_integrity": "Original supplied documents and images were not modified. Extracted originals are retained. The Turkish campus plan is a separate Imagegen text-localization derivative.",
   "catalogue_structure": "All 26 pages contain a single flattened raster. No independent photo or logo objects were available.",
-  "total_bytes": 4364569,
+  "total_bytes": 7101368,
   "assets": [
     {
       "file": "assets/hero.webp",
@@ -252,6 +252,42 @@
       "quality_note": "Exact original PNG bytes extracted from the presentation. Dark green and sage artwork with original transparent alpha channel. No recoloring, alpha changes, crop, or redrawing.",
       "operations": [
         "exact embedded media byte extraction"
+      ]
+    },
+    {
+      "file": "assets/campus-plan-labeled.webp",
+      "width": 3600,
+      "height": 2688,
+      "bytes": 865070,
+      "source": {
+        "file": "vazMASTER TEM.png",
+        "collection": "png vaziyet ECOLIVE",
+        "width": 7200,
+        "height": 5376
+      },
+      "alt_tr": "Seralar, narenciye bahçeleri, bungalovlar, sağlık merkezi, merkez agora ve yaya yollarının açıklama çizgileriyle gösterildiği ECOLIVE yerleşim planı.",
+      "quality_note": "Original English labels and leader lines retained. Same campus arrangement as the unannotated catalogue rendering. Full artwork retained without crop or recoloring.",
+      "operations": [
+        "proportional downsample to 3600 px wide",
+        "WebP compression"
+      ]
+    },
+    {
+      "file": "assets/campus-plan-tr.png",
+      "width": 1451,
+      "height": 1084,
+      "bytes": 1871729,
+      "source": {
+        "file": "assets/campus-plan-labeled.webp",
+        "original": "vazMASTER TEM.png",
+        "tool": "Built-in Imagegen",
+        "prompt": "design/campus-plan-tr.prompt.txt"
+      },
+      "alt_tr": "Organik seralar, tıbbi bitki bahçeleri, bungalov konutlar, narenciye bahçesi, sağlık akademisi, merkezî agora ve yaya yollarını Türkçe açıklamalarla gösteren ECOLIVE yerleşim planı.",
+      "quality_note": "Turkish text-localization derivative. Overall campus arrangement and callout positions visually reviewed; this is not a pixel-identical technical drawing.",
+      "operations": [
+        "Imagegen Turkish text localization",
+        "lossless copy of generated PNG; responsive WebP derivatives produced separately"
       ]
     }
   ]

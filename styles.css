@@ -467,7 +467,7 @@ summary:focus-visible {
   padding: 14px 40px 14px 48px;
   text-align: left;
   background: transparent;
-  color: #82867a;
+  color: #5f6658;
   font-size: 20px;
   font-weight: 400;
   border-top: 1px solid transparent;
@@ -606,6 +606,7 @@ summary:focus-visible {
   gap: 2px;
 }
 .place-card {
+  display: block;
   position: relative;
   height: 560px;
   overflow: hidden;
@@ -842,14 +843,16 @@ details[open] .plus:after {
   position: relative;
   overflow: hidden;
   padding: 0;
-  background: #729870;
+  background: #fff;
   min-height: 690px;
 }
 .campus-map > img {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  padding: 60px 24px 110px;
+  object-fit: contain;
   object-position: center;
   max-width: none;
   transition: transform 0.8s;
@@ -867,13 +870,13 @@ details[open] .plus:after {
   justify-content: space-between;
   font-size: 10px;
   letter-spacing: 0.18em;
-  color: #fff;
+  color: var(--forest);
 }
 .map-expand {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #ffffff60;
+  border: 1px solid #254d3d60;
   border-radius: 50%;
   width: 38px;
   height: 38px;
@@ -1025,7 +1028,7 @@ details[open] .plus:after {
   display: flex;
   align-items: center;
   gap: 24px;
-  margin-bottom: 53px;
+  margin-bottom: 28px;
 }
 .icon-button {
   width: 36px;
@@ -1053,8 +1056,8 @@ details[open] .plus:after {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
-  font-size: 24px;
+  padding: 8px 0;
+  font-size: 21px;
   font-weight: 500;
   line-height: 1.3;
 }
@@ -1062,6 +1065,13 @@ details[open] .plus:after {
   font-size: 10px;
   color: #93988b;
   transition: transform 0.2s;
+}
+.main-nav a[aria-current="page"],
+.main-nav a[aria-current="page"] > span:last-child {
+  color: var(--green);
+}
+.main-nav a[aria-current="page"] > span:last-child {
+  font-weight: 700;
 }
 .main-nav a:hover {
   color: #6a795a;
@@ -1071,12 +1081,12 @@ details[open] .plus:after {
 }
 .menu-bottom {
   margin-top: auto;
-  padding-top: 42px;
+  padding-top: 28px;
 }
 .menu-bottom p {
   font-size: 18px;
   line-height: 1.3;
-  margin-bottom: 25px;
+  margin-bottom: 14px;
 }
 .menu-bottom em {
   font-size: 25px;
@@ -1229,14 +1239,23 @@ details[open] .plus:after {
 }
 .map-dialog img {
   width: 100%;
+  height: auto;
   max-height: 72svh;
   object-fit: contain;
-  background: #729870;
+  background: #fff;
 }
 .map-dialog p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
   font-size: 11px;
   margin: 15px 0 0;
   color: #5d6b57;
+}
+.map-original {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 .noscript-note {
   background: #eee;
@@ -1786,7 +1805,7 @@ details[open] .plus:after {
     height: 440px;
   }
   .campus-map > img {
-    object-fit: cover;
+    padding: 55px 12px 95px;
   }
   .map-caption {
     left: 23px;
@@ -1865,20 +1884,20 @@ details[open] .plus:after {
     padding: 20px 26px 30px;
   }
   .menu-top {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
   .menu-top .micro {
     margin-left: auto;
   }
   .main-nav a {
-    font-size: 25px;
-    padding: 11px 0;
+    font-size: 21px;
+    padding: 8px 0;
   }
   .menu-bottom {
-    padding-top: 40px;
+    padding-top: 25px;
   }
   .menu-bottom p {
-    font-size: 17px;
+    font-size: 16px;
     margin-bottom: 12px;
   }
   .menu-bottom > a:not(.button) {

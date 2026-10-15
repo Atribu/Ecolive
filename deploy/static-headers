@@ -1,0 +1,9 @@
+# Netlify/Cloudflare Pages-style headers. Other hosts need equivalent settings.
+# Hosts negotiate compression themselves. Build adds explicit HTML and asset
+# rules to avoid overlapping wildcard Cache-Control values on these platforms.
+/*
+  X-Content-Type-Options: nosniff
+/assets/build/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/responsive/*
+  Cache-Control: public, max-age=31536000, immutable
