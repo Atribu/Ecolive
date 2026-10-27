@@ -39,6 +39,7 @@ export function initHeroScroll() {
   let selectedSource = "";
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
   const allowed = () => supported && !reduced.matches && !connection?.saveData;
+  const motionPaused = () => document.documentElement?.dataset.motion === "paused";
   const listen = (target, type, handler, options) => {
     target.addEventListener(type, handler, options);
     cleanupListeners.push(() =>
@@ -70,6 +71,7 @@ export function initHeroScroll() {
       !pageHidden &&
       !mediaStarted &&
       allowed() &&
+      !motionPaused() &&
       posterReady
     );
   }
@@ -141,6 +143,7 @@ export function initHeroScroll() {
   function seekToLatest() {
     if (
       !enabled ||
+      motionPaused() ||
       pageHidden ||
       seeking ||
       video.seeking ||
@@ -171,7 +174,7 @@ export function initHeroScroll() {
 
   function update() {
     raf = 0;
-    if (disposed || !enabled || pageHidden) return;
+    if (disposed || !enabled || pageHidden || motionPaused()) return;
     const rect = hero.getBoundingClientRect();
     const range = Math.max(1, hero.offsetHeight - stage.offsetHeight);
     const progress = clamp(-rect.top / range, 0, 1);
@@ -197,7 +200,7 @@ export function initHeroScroll() {
   }
 
   function schedule() {
-    if (!raf && !disposed && enabled && !pageHidden)
+    if (!raf && !disposed && enabled && !pageHidden && !motionPaused())
       raf = requestAnimationFrame(update);
   }
 
@@ -252,6 +255,17 @@ export function initHeroScroll() {
   listen(window, "pagehide", () => setVisibility(true));
   listen(window, "pageshow", () => setVisibility(document.hidden));
   listen(document, "visibilitychange", () => setVisibility(document.hidden));
+  listen(document, "ecolive:motionchange", () => {
+    if (motionPaused()) {
+      cancelFrame();
+      cancelMediaStart();
+      // The frozen scene keeps its track, while its title and links stay readable.
+      variables.forEach((name) => hero.style.removeProperty(name));
+    } else {
+      queueMediaStart();
+      schedule();
+    }
+  });
   listenMedia(reduced, preferenceChanged);
   listenMedia(compact, schedule);
   if (connection?.addEventListener)

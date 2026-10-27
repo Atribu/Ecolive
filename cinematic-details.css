@@ -1,0 +1,65 @@
+/* A frame opens once; the photograph itself is never resized or recolored. */
+.cinematic-frame.cinematic-waiting {
+  clip-path: inset(7% 7% 0 round 46% 46% 2% 2%);
+}
+.cinematic-frame.cinematic-entering {
+  animation: cinematic-frame-open 1550ms cubic-bezier(.22, .72, .18, 1) both;
+}
+@keyframes cinematic-frame-open {
+  from { clip-path: inset(7% 7% 0 round 46% 46% 2% 2%); }
+  to { clip-path: inset(0 0 0 round 0 0 0 0); }
+}
+
+/* One hand-drawn line beneath each standalone quotation. Text stays intact. */
+.page-quote > .cinematic-quotation { position: relative; }
+.cinematic-signature {
+  position: absolute;
+  left: 50%;
+  bottom: -43px;
+  width: clamp(145px, 26vw, 260px);
+  height: 32px;
+  transform: translateX(-50%);
+  overflow: visible;
+  color: currentColor;
+  opacity: .58;
+  pointer-events: none;
+}
+.cinematic-signature path {
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+.cinematic-quotation.cinematic-waiting .cinematic-signature path { stroke-dashoffset: 1; }
+.cinematic-quotation.cinematic-entering .cinematic-signature path {
+  animation: cinematic-signature-draw 1550ms cubic-bezier(.3, .65, .3, 1) 180ms both;
+}
+@keyframes cinematic-signature-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+html.cinematic-hidden .cinematic-entering,
+html.cinematic-hidden .cinematic-entering .cinematic-signature path {
+  animation-play-state: paused;
+}
+html[data-motion="paused"] .cinematic-frame,
+html[data-motion="paused"] .cinematic-signature path {
+  animation: none !important;
+  clip-path: none !important;
+  stroke-dashoffset: 0 !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-frame,
+  .cinematic-signature path {
+    animation: none !important;
+    clip-path: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+}
+@media (forced-colors: active), print {
+  .cinematic-frame { animation: none !important; clip-path: none !important; }
+  .cinematic-signature { display: none; }
+}

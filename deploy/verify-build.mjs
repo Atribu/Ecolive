@@ -106,6 +106,21 @@ try {
     }
   }
 
+  // Dynamic imports must remain resolvable after fingerprinting and deployment.
+  const scriptFiles = new Set([...Object.values(manifest.scripts), ...(manifest.chunks || [])]);
+  for (const path of scriptFiles) {
+    const response = await get(path, { "Accept-Encoding": "br" });
+    check(response.status === 200, `${path} is available`);
+    check(response.headers["content-type"].includes("javascript"), `${path} has JavaScript MIME type`);
+    check(response.headers["cache-control"].includes("immutable"), `${path} is immutable`);
+    check(response.headers["content-encoding"] === "br", `${path} is compressed`);
+    const source = brotliDecompressSync(response.body).toString();
+    for (const [, reference] of source.matchAll(/["'](\.\/[^"']+\.js)["']/g)) {
+      const destination = new URL(reference, `https://ecolive.test${path}`).pathname;
+      check(scriptFiles.has(destination), `${path} imports a published chunk: ${reference}`);
+    }
+  }
+
   const plain = await get("/");
   check(plain.headers["cache-control"] === "no-cache", "HTML revalidates");
   for (const [encoding, decode] of [
@@ -200,7 +215,10 @@ try {
       "Responsive images are immutable",
     );
 
-  const videoPath = "/assets/video/home-scroll.mp4";
+  const videoPath = /data-src="(\/assets\/video\/[^"?]+\.mp4)"/.exec(
+    plain.body.toString(),
+  )?.[1];
+  check(Boolean(videoPath), "Homepage references its current video asset");
   const video = await readFile(join("dist", videoPath));
   const videoHead = await get(
     videoPath,
@@ -221,7 +239,7 @@ try {
   check(
     videoHead.headers["cache-control"] ===
       "public, max-age=604800, must-revalidate",
-    "Unversioned video revalidates after 7 days",
+    "Video revalidates after 7 days",
   );
   for (const [range, expected, contentRange] of [
     ["bytes=0-31", video.subarray(0, 32), `bytes 0-31/${video.length}`],

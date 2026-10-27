@@ -1,0 +1,264 @@
+/* A quiet, explorable map of the relationships behind the ECOLIVE campus. */
+.living-cycle {
+  --cycle-accent: #dfc78e;
+  position: relative;
+  isolation: isolate;
+  background: #193d2e;
+  color: #f3f1e6;
+  padding: clamp(72px, 8vw, 132px) clamp(28px, 6.5vw, 120px);
+  overflow: clip;
+  scroll-margin-top: 90px;
+}
+.living-cycle::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 22% 62%, #5d79572c, transparent 56%);
+}
+.living-cycle__heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1480px;
+  margin: 0 auto clamp(30px, 4vw, 64px);
+}
+.living-cycle .micro { color: #bdcbb7; font-size: 10px; }
+.living-cycle__heading h2 {
+  max-width: 650px;
+  margin: 22px 0 0;
+  font: 400 clamp(48px, 5.3vw, 86px)/.98 var(--serif);
+  letter-spacing: -.035em;
+}
+.living-cycle__heading h2 em { display: block; color: #d5d9ba; }
+.living-cycle__heading > p {
+  max-width: 290px;
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 0 0 4px;
+  color: #c5cec1;
+}
+.living-cycle__body {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: clamp(35px, 6.5vw, 110px);
+  max-width: 1480px;
+  margin: auto;
+}
+.living-cycle__map { min-width: 0; }
+.living-cycle__constellation {
+  position: relative;
+  width: 100%;
+  max-width: 690px;
+  margin: auto;
+  aspect-ratio: 600 / 520;
+}
+.living-cycle__lines { position: absolute; width: 100%; height: 100%; inset: 0; overflow: visible; }
+.living-cycle__contour { stroke: #c8d4b9; stroke-opacity: .09; stroke-width: .8; }
+.living-cycle__route { stroke: #c8d4b9; stroke-opacity: .3; stroke-width: .9; }
+.living-cycle__current { stroke: var(--cycle-accent); stroke-opacity: 0; stroke-width: 1.2; transition: stroke-opacity .5s, stroke .5s; }
+.living-cycle__current[data-active="true"] { stroke-opacity: .7; }
+.living-cycle__flow { fill: #d2dbbc; opacity: .35; transition: opacity .4s, fill .4s; }
+.living-cycle__flow[data-active="true"] { fill: var(--cycle-accent); opacity: 1; }
+.living-cycle__center {
+  position: absolute;
+  left: 50%;
+  top: 49%;
+  transform: translate(-50%, -50%);
+  width: 49%;
+  text-align: center;
+  pointer-events: none;
+}
+.living-cycle__center > span:not(.living-cycle__seed) { display: block; font: 400 clamp(25px, 2.5vw, 42px)/1.05 var(--serif); letter-spacing: -.02em; }
+.living-cycle__center em { color: #cdd5b6; }
+.living-cycle__center small { display: block; font-size: 8px; letter-spacing: .3em; margin-top: 18px; color: #acbea5; }
+.living-cycle__seed { display: block; width: 8px; height: 16px; margin: 0 auto 20px; border: 1px solid #d4d9ba; border-radius: 100% 0 100% 0; transform: rotate(30deg); }
+.living-cycle__node {
+  position: absolute;
+  left: var(--node-x);
+  top: var(--node-y);
+  transform: translate(-50%, -27px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  width: 108px;
+  min-height: 80px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #d1dac8;
+  border-radius: 28px;
+  z-index: 2;
+}
+.living-cycle__node-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border: 1px solid #b6c4a966;
+  border-radius: 50%;
+  background: #234634;
+  color: var(--node-color);
+  transition: background .4s, border-color .4s, box-shadow .4s, transform .4s;
+}
+.living-cycle__node-icon svg { width: 27px; height: 27px; }
+.living-cycle__node-label { font-size: 12px; font-weight: 400; letter-spacing: .035em; }
+.living-cycle__node[aria-pressed="true"] .living-cycle__node-icon {
+  color: #193d2e;
+  background: var(--node-color);
+  border-color: var(--node-color);
+  box-shadow: 0 0 0 6px #ced6b813, 0 0 0 7px #ced6b818;
+}
+.living-cycle__node[aria-pressed="true"] .living-cycle__node-label { color: #fff8e7; }
+.living-cycle__node:focus-visible { outline: 2px solid #e5d69d; outline-offset: 8px; }
+@media (hover: hover) {
+  .living-cycle__node:hover .living-cycle__node-icon { transform: translateY(-3px); border-color: var(--node-color); }
+  .living-cycle__link:hover > span:last-child { transform: translate(3px, -3px); }
+}
+.living-cycle__map-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 19px;
+  color: #bdcbb7;
+  font-size: 10px;
+  letter-spacing: .02em;
+  line-height: 1.7;
+  margin: 8px 0 0;
+}
+.living-cycle__map-note > span:first-child { font: 400 30px/1 var(--serif); color: #9fb39b; }
+.living-cycle__detail { min-width: 0; padding: 0; }
+.living-cycle__image {
+  position: relative;
+  margin: 0 0 32px;
+  aspect-ratio: 1.8;
+  overflow: hidden;
+  border-radius: 60px 4px 60px 4px;
+  background: #284c3c;
+}
+.living-cycle__image img { width: 100%; height: 100%; object-fit: cover; }
+.living-cycle__image::after { content: ""; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, #112c219e); pointer-events: none; }
+.living-cycle__image figcaption {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 19px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: white;
+  font-size: 8px;
+  letter-spacing: .14em;
+  line-height: 1.5;
+}
+.living-cycle__copy { min-height: 244px; }
+.living-cycle__copy .micro { color: var(--cycle-accent); }
+.living-cycle__copy h3 { margin: 14px 0 17px; max-width: 510px; font: 400 clamp(31px, 2.65vw, 43px)/1.08 var(--serif); letter-spacing: -.02em; }
+.living-cycle__copy > p { font-size: 13px; line-height: 1.9; color: #d0d8c9; max-width: 510px; margin-bottom: 23px; }
+.living-cycle__relationship { display: block; color: #c7d1bd; font-size: 10px; letter-spacing: .015em; margin: 0 0 27px; }
+.living-cycle__link { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 17px 0; border-top: 1px solid #c4d0b938; color: #f1f1df; font-size: 11px; }
+.living-cycle__link > span:last-child { font-size: 23px; line-height: 1; transition: transform .3s; }
+.living-cycle--compact.resource-diagram { display: block; align-self: stretch; padding: clamp(55px, 5vw, 80px) clamp(24px, 3.5vw, 68px); }
+.living-cycle--compact .living-cycle__heading { display: block; margin-bottom: 20px; }
+.living-cycle--compact .living-cycle__heading h2 { font-size: clamp(43px, 3.8vw, 64px); }
+.living-cycle--compact .living-cycle__heading > p { max-width: 310px; margin-top: 24px; font-size: 12px; }
+.living-cycle--compact .living-cycle__body { display: block; }
+.living-cycle--compact .living-cycle__constellation { max-width: 500px; }
+.living-cycle--compact .living-cycle__center > span:not(.living-cycle__seed) { font-size: clamp(24px, 2.4vw, 36px); }
+.living-cycle--compact .living-cycle__map-note { margin: 0 0 38px; }
+.living-cycle--compact .living-cycle__image { aspect-ratio: 2.25; margin-bottom: 28px; }
+.living-cycle--compact .living-cycle__copy { min-height: 235px; }
+.living-cycle--compact .living-cycle__copy h3 { font-size: 36px; }
+@media (max-width: 1100px) and (min-width: 761px) {
+  .living-cycle { padding-left: 40px; padding-right: 40px; }
+  .living-cycle__body { gap: 38px; }
+  .living-cycle__heading > p { max-width: 250px; }
+  .living-cycle__node { width: 85px; }
+  .living-cycle__node-icon { width: 48px; height: 48px; }
+  .living-cycle__node-label { font-size: 11px; }
+  .living-cycle__copy { min-height: 285px; }
+  .living-cycle--compact .living-cycle__node { transform: translate(-50%, -23px); }
+  .living-cycle--compact .living-cycle__node-icon { width: 46px; height: 46px; }
+  .living-cycle--compact .living-cycle__copy { min-height: 295px; }
+}
+@media (max-width: 760px) {
+  .living-cycle, .living-cycle--compact.resource-diagram { padding: 66px 25px 55px; }
+  .living-cycle__heading { display: block; margin-bottom: 32px; }
+  .living-cycle__heading h2, .living-cycle--compact .living-cycle__heading h2 { font-size: clamp(46px, 12.4vw, 69px); margin-top: 20px; max-width: 510px; }
+  .living-cycle__heading > p, .living-cycle--compact .living-cycle__heading > p { max-width: 320px; font-size: 12px; margin-top: 25px; }
+  .living-cycle__body { display: block; }
+  .living-cycle__constellation { max-width: 500px; }
+  .living-cycle__node { width: 78px; transform: translate(-50%, -23px); gap: 7px; min-height: 73px; }
+  .living-cycle__node-icon { width: 46px; height: 46px; }
+  .living-cycle__node-icon svg { width: 24px; height: 24px; }
+  .living-cycle__node-label { font-size: 11px; }
+  .living-cycle__center > span:not(.living-cycle__seed), .living-cycle--compact .living-cycle__center > span:not(.living-cycle__seed) { font-size: clamp(25px, 6.5vw, 35px); }
+  .living-cycle__center small { font-size: 7px; margin-top: 14px; }
+  .living-cycle__seed { margin-bottom: 13px; }
+  .living-cycle__map-note, .living-cycle--compact .living-cycle__map-note { margin: 17px 0 37px; font-size: 10px; }
+  .living-cycle__image, .living-cycle--compact .living-cycle__image { aspect-ratio: 1.65; border-radius: 45px 3px 45px 3px; margin-bottom: 28px; }
+  .living-cycle__copy, .living-cycle--compact .living-cycle__copy { min-height: 268px; }
+  .living-cycle__copy h3, .living-cycle--compact .living-cycle__copy h3 { font-size: 35px; margin-top: 14px; }
+  .living-cycle__copy > p { font-size: 13px; line-height: 1.85; }
+  .living-cycle__relationship { font-size: 9px; }
+  .living-cycle__link { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .living-cycle *, .living-cycle *::before, .living-cycle *::after { transition: none !important; }
+}
+html[data-motion="paused"] .living-cycle * { transition: none !important; }
+
+/* Topic-specific explorations share the same calm interaction language. */
+.living-cycle--yasam { background-color: #293f31; }
+.living-cycle--saglik { background-color: #23433c; }
+.living-cycle--egitim { background-color: #344335; }
+.living-cycle--uretim { background-color: #3a4431; }
+.living-cycle--doga { background-color: #284737; }
+.living-cycle--contact { background-color: #354438; }
+.living-cycle--experience .living-cycle__detail { scroll-margin-top: 115px; }
+.living-cycle--experience .living-cycle__node-label { line-height: 1.4; }
+.living-cycle__node-label small { font-size: 8px; opacity: .65; margin-right: 3px; }
+.living-cycle--journey .living-cycle__route { stroke-dasharray: 3 5; }
+.living-cycle--journey .living-cycle__center small { letter-spacing: .15em; }
+.living-cycle__navigator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin: 32px auto 0;
+  max-width: 320px;
+}
+.living-cycle__navigator button {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border: 1px solid #b6c4a955;
+  border-radius: 50%;
+  background: transparent;
+  color: #e5e9d7;
+  font: 18px var(--sans);
+  transition: background .2s, border-color .2s;
+}
+.living-cycle__navigator button:hover { background: #ced6b812; border-color: #c8d3b9; }
+.living-cycle__navigator button:focus-visible { outline: 2px solid #e5d69d; outline-offset: 4px; }
+.living-cycle__selection { min-width: 130px; text-align: center; color: #d7deca; font-size: 11px; }
+.living-cycle__detail-jump { display: none; }
+.living-cycle__fallback { max-width: 1480px; margin: 50px auto 0; padding: 0; list-style: none; }
+.living-cycle__fallback li { padding: 24px 0; border-top: 1px solid #b6c4a944; }
+.living-cycle__fallback p { max-width: 650px; font-size: 14px; line-height: 1.8; }
+.living-cycle__fallback a { text-decoration: underline; }
+@media (max-width: 760px) {
+  .living-cycle--experience .living-cycle__heading h2 { font-size: clamp(43px, 11.5vw, 68px); }
+  .living-cycle--experience .living-cycle__copy { min-height: 295px; }
+  .living-cycle--experience .living-cycle__center > span:not(.living-cycle__seed) { font-size: clamp(25px, 6.3vw, 35px); }
+  .living-cycle--experience[data-node-count="6"] .living-cycle__center { width: 43%; }
+  .living-cycle--experience[data-node-count="6"] .living-cycle__map-note { margin-top: 27px; }
+  .living-cycle__navigator { margin-top: 24px; }
+  .living-cycle__detail-jump { display: flex; justify-content: center; gap: 14px; margin: 24px 0 36px; font-size: 11px; color: #d7deca; }
+}

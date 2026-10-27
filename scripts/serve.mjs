@@ -71,7 +71,7 @@ function compressionPreference(value = "") {
 function cacheControl(file) {
   if (!production) return "no-cache";
   if (
-    /\.[a-f0-9]{8,12}\.(?:css|js|woff2?|ttf|otf|webp|png|jpe?g|svg)$/.test(file)
+    /\.(?:[a-f0-9]{8,12}|[A-Z0-9]{8})\.(?:css|js|woff2?|ttf|otf|webp|png|jpe?g|svg)$/.test(file)
   ) {
     return "public, max-age=31536000, immutable";
   }

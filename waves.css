@@ -23,6 +23,39 @@
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
+/* Keep sticky scenes and moving gallery images out of a page-sized mask.
+   Only the shallow curved background needs masking; the body stays solid. */
+.motion-wave-active.motion-wave-active:is(.immersive-journey, .spatial-gallery) {
+  background-color: transparent;
+  -webkit-mask: none;
+  mask: none;
+}
+.motion-wave-active:is(.immersive-journey, .spatial-gallery)::before,
+.motion-wave-active:is(.immersive-journey, .spatial-gallery)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  pointer-events: none;
+  background: var(--wave-background, var(--cream));
+}
+.motion-wave-active:is(.immersive-journey, .spatial-gallery)::before {
+  top: 0;
+  height: calc(var(--wave-height) + 16px);
+  -webkit-mask-image: var(--wave-mask);
+  mask-image: var(--wave-mask);
+  -webkit-mask-size: 100% calc(var(--wave-height) * var(--wave-scale, 1) + 8px);
+  mask-size: 100% calc(var(--wave-height) * var(--wave-scale, 1) + 8px);
+  -webkit-mask-position: 0 var(--wave-shift, 0px);
+  mask-position: 0 var(--wave-shift, 0px);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.motion-wave-active:is(.immersive-journey, .spatial-gallery)::after {
+  top: calc(var(--wave-height) + 1px);
+  bottom: 0;
+}
 /* Short navigation/status strips need clear space on both curved edges. */
 .inner-page .page-guide.motion-wave-active,
 .stage-note.motion-wave-active {
@@ -89,5 +122,12 @@
     -webkit-mask: none;
     mask: none;
     margin-top: 0;
+  }
+  .motion-wave-active.motion-wave-active:is(.immersive-journey, .spatial-gallery) {
+    background-color: var(--wave-background, var(--cream));
+  }
+  .motion-wave-active:is(.immersive-journey, .spatial-gallery)::before,
+  .motion-wave-active:is(.immersive-journey, .spatial-gallery)::after {
+    display: none;
   }
 }

@@ -1,9 +1,16 @@
+import { renderSceneHero } from "./scene-layout.mjs";
+import { sceneHeroes } from "../experience-content.js";
+import { renderSpatialGallery } from "./spatial-gallery.mjs";
+import { renderCampusExplorer } from "./campus-explorer.mjs";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { focusAreas } from "../content.js";
 import { pageDetails } from "../page-content.js";
 import { projectContent, contactTopics } from "../project-content.js";
 import { pageEnrichment } from "../page-enrichment.js";
 import { projectEnrichment, contactEnrichment } from "../project-enrichment.js";
+import { experiences, renderExperience } from "./living-experiences.mjs";
+import { renderDayRhythm } from "./day-rhythm.mjs";
+import { renderImmersiveJourney, journeyForPage } from "./immersive-journey.mjs";
 import {
   enhanceResponsiveImages,
   responsiveImage,
@@ -45,7 +52,7 @@ const esc = (value) =>
     .replaceAll('"', "&quot;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;");
-const home = enhanceResponsiveImages(await readFile("index.html", "utf8"));
+const home = enhanceResponsiveImages((await readFile("index.html", "utf8")).replace(/<!-- spatial-gallery:start -->[\s\S]*?<!-- spatial-gallery:end -->/, `<!-- spatial-gallery:start -->${renderSpatialGallery()}<!-- spatial-gallery:end -->`).replace(/<!-- campus-explorer:start -->[\s\S]*?<!-- campus-explorer:end -->/, `<!-- campus-explorer:start -->${renderCampusExplorer()}<!-- campus-explorer:end -->`).replace(/<!-- day-rhythm:start -->[\s\S]*?<!-- day-rhythm:end -->/, `<!-- day-rhythm:start -->${renderDayRhythm()}<!-- day-rhythm:end -->`).replace(/<!-- immersive-journey:start -->[\s\S]*?<!-- immersive-journey:end -->/, `<!-- immersive-journey:start -->${renderImmersiveJourney()}<!-- immersive-journey:end -->`));
 await writeFile("index.html", home);
 await writeFile(
   "focus-data.js",
@@ -67,6 +74,11 @@ await writeFile(
     2,
   )};\n`,
 );
+await writeFile("scene-images.js", `// Generated from the page openings.
+export const sceneImages = ${JSON.stringify([
+  { href: "/", ...responsiveImage("assets/video/home-poster.webp", "(max-width:760px) 100vw, 50vw"), alt: "ECOLIVE yaşam alanlarının proje görselleştirmesi" },
+  ...Object.entries(sceneHeroes).map(([slug, scene]) => ({ href: `/${slug}/`, ...responsiveImage(scene.image, "(max-width:760px) 100vw, 50vw"), alt: scene.alt })),
+], null, 2)};\n`);
 const header = home.match(/<header[\s\S]*?<\/header>/)[0];
 const menu = home.match(/<dialog id="navigation"[\s\S]*?<\/dialog>/)[0];
 const footer = home.match(/<footer[\s\S]*?<\/footer>/)[0];
@@ -94,7 +106,7 @@ const related = (ids) =>
     .join("")}</div></section>`;
 
 function shell(label, description, image, body, cls = "", extra = "") {
-  return `<!doctype html><html lang="tr"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="theme-color" content="#234c38"/><title>${esc(label)} — ECOLIVE</title><meta name="description" content="${esc(description)}"/><meta property="og:title" content="${esc(label)} — ECOLIVE"/><meta property="og:description" content="${esc(description)}"/><meta property="og:type" content="website"/><meta property="og:locale" content="tr_TR"/><meta property="og:image" content="${image}"/><link rel="icon" href="/assets/logo-source.png" type="image/png"/>${cls.includes("theme-contact") || cls.includes("theme-project") ? "" : `<link rel="preload" href="${image}" as="image"/>`}<link rel="stylesheet" href="/assets/fonts/fonts.css"/><link rel="stylesheet" href="/styles.css"/><link rel="stylesheet" href="/pages.css"/><link rel="stylesheet" href="/interior.css"/><link rel="stylesheet" href="/waves.css"/><link rel="stylesheet" href="/motion.css"/><link rel="stylesheet" href="/interactions.css"/><link rel="stylesheet" href="/surface-art.css"/><script src="/app.js" type="module"></script></head><body class="inner-page ${cls}"><a class="skip-link" href="#icerik">İçeriğe geç</a>${header}${menu}<main id="icerik"><div id="baslangic"></div>${body}</main>${footer}${extra}</body></html>`;
+  return `<!doctype html><html lang="tr"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="theme-color" content="#234c38"/><title>${esc(label)} — ECOLIVE</title><meta name="description" content="${esc(description)}"/><meta property="og:title" content="${esc(label)} — ECOLIVE"/><meta property="og:description" content="${esc(description)}"/><meta property="og:type" content="website"/><meta property="og:locale" content="tr_TR"/><meta property="og:image" content="${image}"/><link rel="icon" href="/assets/logo-source.png" type="image/png"/>${cls.includes("theme-contact") || cls.includes("theme-project") ? "" : `<link rel="preload" href="${image}" as="image"/>`}<link rel="stylesheet" href="/assets/fonts/fonts.css"/><link rel="stylesheet" href="/styles.css"/><link rel="stylesheet" href="/pages.css"/><link rel="stylesheet" href="/interior.css"/><link rel="stylesheet" href="/waves.css"/><link rel="stylesheet" href="/motion.css"/><link rel="stylesheet" href="/interactions.css"/><link rel="stylesheet" href="/surface-art.css"/><link rel="stylesheet" href="/organic.css"/><link rel="stylesheet" href="/living-cycle.css"/><link rel="stylesheet" href="/living-campus.css"/><link rel="stylesheet" href="/day-rhythm.css"/><link rel="stylesheet" href="/living-details.css"/><link rel="stylesheet" href="/immersive-journey.css"/><link rel="stylesheet" href="/ambient-details.css"/><link rel="stylesheet" href="/cinematic-details.css"/><link rel="stylesheet" href="/experience.css"/><link rel="stylesheet" href="/scene-navigation.css"/><link rel="stylesheet" href="/campus-explorer.css"/><link rel="stylesheet" href="/spatial-gallery.css"/><script src="/app.js" type="module"></script></head><body class="inner-page ${cls}"><a class="skip-link" href="#icerik">İçeriğe geç</a>${header}${menu}<main id="icerik"><div id="baslangic"></div>${body}</main>${footer}${extra}</body></html>`;
 }
 async function save(slug, html) {
   await mkdir(slug, { recursive: true });
@@ -112,8 +124,11 @@ async function save(slug, html) {
 for (const area of focusAreas) {
   const p = pageDetails[area.id];
   const enrichment = pageEnrichment[area.id];
+  const experience = experiences.find((item) => item.slug === p.slug);
   const guide = renderPageGuide([
     { id: "yaklasim", label: "Yaklaşım" },
+    ...(experience ? [{ id: experience.id, label: "Canlı keşif" }] : []),
+    { id: journeyForPage(p.slug).id, label: "Görsel yolculuk" },
     { id: "yakindan", label: "Yakından tanıyın" },
     { id: "ayrintilar", label: "Tasarım ayrıntıları" },
     { id: "sorular", label: "Sorular" },
@@ -126,12 +141,7 @@ for (const area of focusAreas) {
     renderFeature(enrichment.features[1], featureVisuals[area.id][1], {
       reverse: true,
     });
-  const style = ["yasam", "dongu"].includes(area.id)
-    ? "split"
-    : area.id === "egitim"
-      ? "editorial"
-      : "immersive";
-  const hero = `<section class="page-hero hero-${style}" data-area="${area.id}">${photo(area, "hero-photo", true)}<div class="page-hero-copy"${style === "immersive" ? "" : " data-surface-art"}>${breadcrumb(area.title)}<span class="micro">${esc(area.eyebrow)}</span>${title(p.heroItalic, p.heroUpper)}<a class="page-scroll" href="#yaklasim">Yaklaşımı keşfedin <span>↓</span></a></div></section>`;
+  const hero = renderSceneHero(p.slug);
   let middle;
   if (area.id === "dongu") {
     middle = `<section class="resource-story"><div class="resource-diagram"><span class="micro">BİRBİRİNİ BESLEYEN BİR DÖNGÜ</span><div class="resource-ring"><span>Güneş & enerji</span><span>Su & yaşam</span><span>Toprak & üretim</span><span>Organik kaynaklar</span><em>ECOLIVE</em></div><p>Yaşam alanları ve üretim, birlikte düşünülen kaynaklar.</p></div><div class="chapter-list">${p.chapters.map(chapter).join("")}</div></section>`;
@@ -165,41 +175,44 @@ for (const area of focusAreas) {
     shell(
       area.title,
       area.description,
-      asset(area.image),
+      asset(sceneHeroes[p.slug].image),
       hero +
         guide +
         intro(p) +
+        renderExperience(p.slug) +
         middle +
+        renderImmersiveJourney(p.slug) +
         deeperStory +
+        renderSpatialGallery(p.slug) +
         quote(p) +
         renderQuestions(enrichment.faqs) +
         related(p.related),
-      `theme-${area.id} ${style === "editorial" || style === "split" ? "light-header" : ""}`,
+      `theme-${area.id}`,
     ),
   );
 }
-const projectBody = `<section class="project-masthead" data-surface-art>${breadcrumb("Proje hakkında")}<span class="micro">ANTALYA’DA BİR YAŞAM FİKRİ</span>${title("Birlikte düşünüldü.", "BİRLİKTE BİR GELECEK.")}<p>${esc(projectContent.intro)}</p><a class="button dark" href="#yasam-yaklasimi">Yaşam yaklaşımını keşfedin <span>↓</span></a></section><section class="project-plan"><div><span class="micro">KAMPÜSÜN BÜTÜNÜ</span><h2>Her parçası <em>birbirine bağlı.</em></h2><p>Yaşam, sağlık, eğitim ve üretimi aynı yerleşkede buluşturan kampüs düzeni.</p></div><button id="map-open" aria-label="Kampüsün açıklamalı yerleşim planını büyütün"><img src="/assets/campus-plan-tr.png" alt="ECOLIVE Türkçe açıklamalı yerleşim planı" loading="lazy" sizes="(max-width: 760px) 100vw, 68vw"/><span>Yerleşim planını büyütün ↗</span></button></section><section class="project-principles"><span class="micro">TASARIMIN TEMELİNDE</span><div class="chapter-columns">${projectContent.principles.map(chapter).join("")}</div></section>${renderFeature(projectEnrichment.features[0], visuals["shared-lounge"])}${renderCampus(
+const projectBody = `${renderSceneHero("proje-hakkinda")}${renderCampusExplorer()}<section class="project-principles"><span class="micro">TASARIMIN TEMELİNDE</span><div class="chapter-columns">${projectContent.principles.map(chapter).join("")}</div></section>${renderExperience("proje-hakkinda")}${renderImmersiveJourney("proje-hakkinda")}${renderFeature(projectEnrichment.features[0], visuals["shared-lounge"])}${renderCampus(
   projectEnrichment.campus,
   focusAreas.map((area) => href(area.id)),
-)}${renderFeature(projectEnrichment.features[1], visuals["lakeside-landscape"], { reverse: true })}<section class="project-timeline" data-surface-art="connections" id="yasam-yaklasimi"><div><span class="micro">YAŞAM YAKLAŞIMI</span><h2>Hayatın merkezinde <em>insan ve doğa.</em></h2><p>Kişisel alan, kuşaklar arası paylaşım ve doğayla kurulan bağ; ECOLIVE’ın yaşam yaklaşımında birbirini tamamlıyor.</p></div><ol>${projectContent.stages.map((s, i) => `<li><span class="timeline-mark">${"0" + (i + 1)}</span><div><span class="micro">${esc(s.status)}</span><h3>${esc(s.title)}</h3><p>${esc(s.text)}</p></div></li>`).join("")}</ol></section><section class="faq-section" id="sorular"><div><span class="micro">MERAK ETTİKLERİNİZ</span><h2>Projeye <em>daha yakından.</em></h2></div><div class="cycle-accordion">${projectContent.faqs.map((f, i) => `<details ${i === 0 ? "open" : ""}><summary>${esc(f.question)}<span class="plus"></span></summary><p>${esc(f.answer)}</p></details>`).join("")}</div></section>${related(["yasam", "dongu"])}`;
+)}${renderFeature(projectEnrichment.features[1], visuals["lakeside-landscape"], { reverse: true })}${renderDayRhythm()}${renderSpatialGallery("proje-hakkinda")}<section class="project-timeline" data-surface-art="connections" id="yasam-yaklasimi"><div><span class="micro">YAŞAM YAKLAŞIMI</span><h2>Hayatın merkezinde <em>insan ve doğa.</em></h2><p>Kişisel alan, kuşaklar arası paylaşım ve doğayla kurulan bağ; ECOLIVE’ın yaşam yaklaşımında birbirini tamamlıyor.</p></div><ol>${projectContent.stages.map((s, i) => `<li><span class="timeline-mark">${"0" + (i + 1)}</span><div><span class="micro">${esc(s.status)}</span><h3>${esc(s.title)}</h3><p>${esc(s.text)}</p></div></li>`).join("")}</ol></section><section class="faq-section" id="sorular"><div><span class="micro">MERAK ETTİKLERİNİZ</span><h2>Projeye <em>daha yakından.</em></h2></div><div class="cycle-accordion">${projectContent.faqs.map((f, i) => `<details ${i === 0 ? "open" : ""}><summary>${esc(f.question)}<span class="plus"></span></summary><p>${esc(f.answer)}</p></details>`).join("")}</div></section>${related(["yasam", "dongu"])}`;
 await save(
   "proje-hakkinda",
   shell(
     "Proje hakkında",
     projectContent.intro,
-    "/assets/campus-plan-tr.png",
+    "/assets/hero.webp",
     projectBody,
-    "light-header theme-project",
+    "theme-project",
     mapDialog,
   ),
 );
-const contactBody = `<section class="contact-masthead"><div class="contact-main" data-surface-art>${breadcrumb("İletişim")}<span class="micro">ECOLIVE · ANTALYA</span>${title("Birlikte konuşalım.", "BURADAN BAŞLAYALIM.")}<p>Bir yaşam fikrini tanımak, bir soruyu paylaşmak ya da yeni bir iş birliğini konuşmak için.</p><a class="contact-email" href="mailto:info@ecolive.com.tr">info@ecolive.com.tr <span>↗</span></a><button class="copy-email" id="copy-email">E-posta adresini kopyala <span aria-hidden="true">⧉</span></button><p class="copy-status" id="copy-status" role="status"></p><div class="contact-location"><span class="micro">BULUŞMA NOKTAMIZ</span><p>Antalya, Türkiye</p></div></div><div class="contact-topics"><span class="micro">HANGİ KONUDA GÖRÜŞELİM?</span>${contactTopics.map((t, i) => `<a class="contact-topic" href="mailto:info@ecolive.com.tr?subject=${encodeURIComponent(t.subject)}"><span class="chapter-number">0${i + 1}</span><div><h2>${esc(t.title)}</h2><p>${esc(t.description)}</p><span class="text-link">E-posta ile iletişime geçin ↗</span></div></a>`).join("")}</div></section>${renderContactGuide(contactEnrichment, visuals["shared-lounge"])}${renderQuestions(contactEnrichment.faqs, { title: "İletişim öncesi", emphasis: "merak ettikleriniz." })}<section class="contact-follow" data-surface-art><span class="micro">İLK ADIM: PROJEYİ TANIMAK</span><h2>Önce biraz <em>keşfetmek isterseniz.</em></h2><a class="button dark" href="/proje-hakkinda/#sorular">Sık sorulan sorular <span>↗</span></a></section>`;
+const contactBody = `${renderSceneHero("iletisim")}<section class="contact-masthead" id="birlikte-konusalim"><div class="contact-main" data-surface-art>${breadcrumb("İletişim")}<span class="micro">ECOLIVE · ANTALYA</span>${title("Sizi dinliyoruz.", "Buradan başlayalım.", "h2")}<p>Bir yaşam fikrini tanımak, bir soruyu paylaşmak ya da yeni bir iş birliğini konuşmak için.</p><a class="contact-email" href="mailto:info@ecolive.com.tr">info@ecolive.com.tr <span>↗</span></a><button class="copy-email" id="copy-email">E-posta adresini kopyala <span aria-hidden="true">⧉</span></button><p class="copy-status" id="copy-status" role="status"></p><div class="contact-location"><span class="micro">BULUŞMA NOKTAMIZ</span><p>Antalya, Türkiye</p></div></div><div class="contact-topics"><span class="micro">HANGİ KONUDA GÖRÜŞELİM?</span>${contactTopics.map((t, i) => `<a class="contact-topic" href="mailto:info@ecolive.com.tr?subject=${encodeURIComponent(t.subject)}"><span class="chapter-number">0${i + 1}</span><div><h2>${esc(t.title)}</h2><p>${esc(t.description)}</p><span class="text-link">E-posta ile iletişime geçin ↗</span></div></a>`).join("")}</div></section>${renderExperience("iletisim")}${renderContactGuide(contactEnrichment, visuals["shared-lounge"])}${renderImmersiveJourney("iletisim")}${renderSpatialGallery("iletisim")}${renderQuestions(contactEnrichment.faqs, { title: "İletişim öncesi", emphasis: "merak ettikleriniz." })}<section class="contact-follow" data-surface-art><span class="micro">İLK ADIM: PROJEYİ TANIMAK</span><h2>Önce biraz <em>keşfetmek isterseniz.</em></h2><a class="button dark" href="/proje-hakkinda/#sorular">Sık sorulan sorular <span>↗</span></a></section>`;
 await save(
   "iletisim",
   shell(
     "İletişim",
     "ECOLIVE projesi, yaşam olanakları, yatırım ve kurumsal iş birlikleri hakkında info@ecolive.com.tr üzerinden iletişime geçin.",
-    "/assets/hero.webp",
+    "/assets/extra/shared-lounge.webp",
     contactBody,
     "theme-contact",
   ),

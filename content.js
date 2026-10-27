@@ -2,15 +2,15 @@ export const focusAreas = [
   {
     id: "yasam",
     title: "Yaşam ve Mimari",
-    eyebrow: "Kendine ait bir yer",
+    eyebrow: "Kişisel konfor, ortak yaşam",
     image: "assets/living.webp",
     alt: "Narenciye ağaçları ve peyzaj içinde, ahşap ve taş yüzeyli yaşam alanlarının proje görselleştirmesi",
     description:
-      "Bahçeye açılan yaşam alanları, yürüyerek ulaşılabilen ortak mekânlar ve günün farklı ritimlerine yer veren bir yerleşke. ECOLIVE’ın mimari yaklaşımı, kişisel alanın huzurunu komşulukla ve doğayla yakın bir yaşam düşüncesiyle bir araya getiriyor.",
-    detailTitle: "Hayatın farklı dönemlerine yer açan mimari",
+      "Bahçeye açılan yaşam alanları, yakın çevredeki ortak mekânlar ve doğal malzemelerle şekillenen bir yerleşke. ECOLIVE’ın mimari yaklaşımı, mahremiyet ve konforu komşuluk ilişkileriyle bir arada ele alıyor; doğayı günlük yaşamın merkezine taşıyor.",
+    detailTitle: "Farklı yaşam ihtiyaçlarına duyarlı mimari",
     paragraphs: [
-      "ECOLIVE’ın mimari tasarımı, konaklama alanlarını bahçeler ve ortak yaşam mekânlarıyla birlikte ele alıyor. Ahşabın sıcaklığı, taşın dokusu ve doğal ışık, mimari dilin temelini oluşturuyor. İç ve dış mekân arasındaki ilişki, doğayı gündelik yaşamın bir parçası hâline getirmek üzere kurgulandı.",
-      "Yerleşkede kişisel alan ile bir arada olma ihtiyacı birlikte düşünülüyor. Bir terasta dinlenmek, bahçe yolunda karşılaşmak ya da ortak sofraya katılmak aynı yaşamın farklı anları olarak tasarlandı. Erişilebilir geçişler ve anlaşılır dolaşım, farklı yaş ve ihtiyaçlar için mimari yaklaşımın önemli parçaları.",
+      "ECOLIVE’ın mimari tasarımında konaklama alanları, bahçeler ve ortak mekânlar bir bütün oluşturuyor. Ahşabın sıcaklığı, taşın dokusu ve doğal ışık bu tasarımın karakterini belirliyor. Teraslar ve bahçeye açılan geçişler, iç mekândaki yaşamın açık havada devam etmesine olanak tanıyacak biçimde düzenlendi.",
+      "Yerleşim planı, kişisel alan ile sosyal yaşam arasında dengeli bir mesafe kuruyor. Konaklama birimlerinin sakinliği, bahçe yolları ve ortak sofralarla tamamlanıyor. Erişilebilir geçişler ve kolay anlaşılır dolaşım düzeni, farklı yaş ve hareket ihtiyaçları için tasarımın temel ölçütleri arasında yer alıyor.",
     ],
     highlights: [
       "Doğaya açılan mekânlar",
@@ -21,15 +21,15 @@ export const focusAreas = [
   {
     id: "saglik",
     title: "Sağlık ve İyi Yaşam",
-    eyebrow: "Her yaşta hayatın içinde",
+    eyebrow: "Bireye odaklanan bakım",
     image: "assets/wellness.webp",
     alt: "Bahçeyle bütünleşen fizik tedavi ve iyi yaşam alanlarının proje görselleştirmesi",
     description:
-      "Sağlık, bakım ve iyi yaşam alanları; hareket, sosyal bağlar ve doğayla temas üzerinden birlikte düşünülüyor. Proje, ileri yaşta da gündelik hayata katılımı önemseyen, bireyin tercihlerini ve farklı destek ihtiyaçlarını gözeten bir yaşam çerçevesi sunuyor.",
-    detailTitle: "Bakımın gündelik yaşamla buluştuğu bir çevre",
+      "Sağlık ve bakım alanları; hareket, dinlenme ve sosyal yaşamla birlikte planlandı. ECOLIVE’ın ileri yaşa yaklaşımı, bireyin tercihlerini ve destek ihtiyaçlarını gözetirken aile ilişkilerinin ve günlük alışkanlıklarının sürekliliğini önemsiyor.",
+    detailTitle: "Günlük yaşamla bütünleşen bakım",
     paragraphs: [
-      "Projenin sağlık ve bakım yaklaşımı, bireyin ihtiyaçlarını yaşam çevresiyle birlikte değerlendiriyor. Tasarımda fizik tedavi ve rehabilitasyon alanlarının yanı sıra hareket, dinlenme ve sosyalleşmeye ayrılan mekânlar bulunuyor. Bu birliktelik, ileri yaştaki bireylerin günlük yaşama katılabilecekleri farklı alanlar oluşturma düşüncesine dayanıyor.",
-      "Terapötik bahçeler, yürüyüş rotaları ve ortak mekânlar, kampüsün bakım yaklaşımını tamamlıyor. Ailelerle bağı korumak ve kişinin kendi yaşamı üzerindeki söz hakkını gözetmek bu yaklaşımın merkezinde. Kişinin ihtiyaç duyduğu destekle sosyal yaşam arasındaki bağ, mekânların birbiriyle kurduğu ilişkide de gözetiliyor.",
+      "ECOLIVE’ın sağlık programı, bireysel ihtiyaçları kişinin yaşadığı çevreyle birlikte değerlendiriyor. Fizik tedavi ve rehabilitasyon alanları; hareket, dinlenme ve sosyalleşmeye ayrılan mekânlarla aynı yerleşkede planlandı. Bu düzen, ihtiyaç duyulan desteğin günlük yaşamın diğer yönleriyle birlikte ele alınmasını sağlıyor.",
+      "Terapötik bahçeler, yürüyüş rotaları ve ortak mekânlar bakım programını tamamlıyor. Kişinin kendi yaşamıyla ilgili kararlara katılması, mahremiyetinin korunması ve ailesiyle ilişkilerini sürdürebilmesi bu yaklaşımın temel ilkeleri. Sağlık birimleri ile sosyal alanların konumu da bu önceliklere göre belirlendi.",
     ],
     highlights: [
       "Aktif yaş alma",
@@ -40,15 +40,15 @@ export const focusAreas = [
   {
     id: "egitim",
     title: "Eğitim ve Kuşaklar",
-    eyebrow: "Deneyim paylaştıkça çoğalır",
+    eyebrow: "Kuşaklar arasında öğrenme",
     image: "assets/generations.webp",
     alt: "Çocuklarla ileri yaştaki bireylerin bahçede birlikte üretimini betimleyen proje görselleştirmesi",
     description:
-      "Bir çocuğun merakıyla bir büyüğün deneyiminin aynı bahçede buluşması. ECOLIVE, eğitimi doğayla temasın, üretime katılmanın ve kuşaklar arasındaki günlük karşılaşmaların zenginleştirdiği; farklı yaşların birbirinden öğrenmesine alan açan bir yerleşke olarak tasarlandı.",
-    detailTitle: "Öğrenmenin yaşamın içinde sürdüğü bir yer",
+      "Çocukların merakı ve ileri yaştaki bireylerin deneyimi, ortak bahçelerde ve atölyelerde buluşuyor. Kreş, okul ve uygulamalı eğitim alanlarını içeren ECOLIVE, öğrenmeyi doğayı gözlemleme, üretime katılma ve kuşaklar arası paylaşımla zenginleştiren bir kampüs olarak tasarlandı.",
+    detailTitle: "Deneyimle zenginleşen eğitim",
     paragraphs: [
-      "Kreş ve okul alanları, çocukların çevrelerini gözlemleyebilecekleri ve üretim süreçlerini tanıyabilecekleri bir kampüsün parçası olarak düşünüldü. Bahçede yetişen bir bitki, birlikte yapılan bir iş ya da paylaşılan bir hikâye, sınıftaki öğrenmeyi günlük yaşamla ilişkilendiren deneyimlere dönüşebilir.",
-      "Kuşaklar arasındaki karşılaşmalar için ortak bahçeler ve sosyal alanlar tasarlandı. Proje ayrıca sağlık ve bakım alanlarında uygulamalı öğrenmeye yer veren bir eğitim yaklaşımı içeriyor. Eğitim alanlarının kampüsün diğer işlevleriyle ilişkisi, bilgiyi gündelik deneyimle buluşturma düşüncesini destekliyor.",
+      "Kreş ve okul alanları, bahçeler ve üretim mekânlarıyla bağlantılı olarak planlandı. Bitkilerin gelişimini izlemek, ortak bir üretim çalışmasına katılmak ve farklı kuşakların deneyimlerini dinlemek, sınıfta edinilen bilgiyi günlük yaşamla ilişkilendiren öğrenme olanakları arasında yer alıyor.",
+      "Ortak bahçeler, atölyeler ve sosyal alanlar, kuşakların düzenli olarak bir araya gelebileceği mekânlar oluşturuyor. Sağlık ve bakım disiplinlerinde öngörülen uygulamalı eğitim de kampüsün eğitim programını genişletiyor. Eğitim birimleri ile diğer alanların yakınlığı, gözleme ve deneyime dayalı öğrenmeyi destekliyor.",
     ],
     highlights: [
       "Kuşaklar arası paylaşım",
@@ -59,30 +59,30 @@ export const focusAreas = [
   {
     id: "uretim",
     title: "Tarım ve Üretim",
-    eyebrow: "Toprakla kurulan gündelik bağ",
+    eyebrow: "Topraktan günlük yaşama",
     image: "assets/greenhouses.webp",
     alt: "Narenciye bahçeleriyle çevrili sera ve tarımsal üretim alanlarının proje görselleştirmesi",
     description:
-      "Narenciye bahçeleri, seralar ve ortak üretim alanları kampüsün yaşam dokusunu oluşturuyor. Toprağı tanımak, mevsimleri izlemek ve üretime katılmak; beslenmeyle, eğitimle ve sosyal yaşamla bağlantı kuran, farklı kuşakların paylaşabileceği günlük deneyimler olarak düşünülüyor.",
-    detailTitle: "Üretimin yaşamla yan yana olduğu bir kampüs",
+      "Narenciye bahçeleri, seralar ve ortak üretim alanları ECOLIVE’ın yerleşim planını şekillendiriyor. Ekimden hasada uzanan süreç; beslenme, eğitim ve sosyal yaşamla birlikte değerlendiriliyor. Farklı kuşakların üretime katılabilmesi, tarım yaklaşımının temel unsurlarından biri.",
+    detailTitle: "Üretimle iç içe bir yerleşke",
     paragraphs: [
-      "ECOLIVE’ın yerleşiminde tarım, konaklama ve sosyal alanlarla doğrudan ilişki kuruyor. Seralar ile narenciye bahçeleri, kampüsün üretim yaklaşımının temel bileşenleri. Bahçeler arasında kurulan yollar ve ortak kullanım alanları, insanların yetişen ürünleri ve üretimin farklı aşamalarını gündelik yaşamlarında gözlemleyebilmesine olanak verecek şekilde tasarlandı.",
-      "Ortak bahçeler, yaşa ve ilgiye göre farklı katılım biçimlerine alan açıyor. Birlikte ekim yapmak, bakım vermek veya hasadı paylaşmak, kuşaklar arasında doğal karşılaşmalar oluşturabilir. Tarımsal üretimin su, enerji ve organik atık yönetimiyle ilişkisi de projenin kaynak döngüsü yaklaşımı içinde ele alınıyor.",
+      "Seralar ve narenciye bahçeleri, ECOLIVE’ın üretim alanlarını oluşturuyor. Konaklama ve sosyal mekânlar bu alanlarla bağlantılı olarak yerleştirildi. Bahçe yolları, yetişen ürünlerin ve mevsimlere göre değişen üretim süreçlerinin günlük yaşamda gözlemlenebileceği bir dolaşım düzeni sunmak üzere tasarlandı.",
+      "Ortak bahçelerde yaşa, ilgiye ve hareket olanaklarına göre farklı katılım biçimleri öngörülüyor. Ekim, bitki bakımı ve hasat, kuşakların birlikte çalışabileceği uğraşlar arasında. Tarımsal üretimin su, enerji ve organik atık ihtiyaçları ise kampüsün kaynak yönetimiyle birlikte planlanıyor.",
     ],
     highlights: ["Narenciye bahçeleri", "Sera üretimi", "Ortak bahçe deneyimi"],
   },
   {
     id: "doga",
     title: "Doğa ve Peyzaj",
-    eyebrow: "Günün ritmini doğa belirlesin",
+    eyebrow: "Doğayla bütünleşen açık alanlar",
     image: "assets/hero.webp",
     alt: "Yeşil alanlar, bahçe yolları ve doğayla bütünleşen kampüs yapılarının proje görselleştirmesi",
     description:
-      "Gölge veren ağaçlar, mevsimle değişen bahçeler, yürüyüş yolları ve açık havada buluşma alanları. Peyzaj, ECOLIVE’da mimariyi çevreleyen bir arka plan olmanın ötesinde; dinlenmenin, hareketin ve birlikte geçirilen zamanın yer bulduğu bir yaşam alanı.",
-    detailTitle: "Bahçelerin arasında şekillenen gündelik hayat",
+      "Ağaç gölgeleri, mevsimlerle değişen bahçeler ve açık hava buluşma alanları, yerleşkenin peyzajını oluşturuyor. Yürüyüş yollarıyla birbirine bağlanan bu alanlar; dinlenme, hareket ve sosyal yaşam için farklı ölçeklerde mekânlar sunacak biçimde tasarlandı.",
+    detailTitle: "Bahçelerle şekillenen günlük yaşam",
     paragraphs: [
-      "Peyzaj tasarımı, kampüsün farklı alanlarını birbirine bağlayan bir süreklilik kuruyor. Narenciye ağaçları, bitki yatakları ve dinlenme noktaları, yürüyüşü gündelik yaşamın doğal bir parçası olarak ele alıyor. Yapılarla açık alanların ilişkisi, hem birlikte vakit geçirmeye hem de sakin bir köşede dinlenmeye yer veriyor.",
-      "Doğayla temasın farklı duyulara ve ihtiyaçlara hitap etmesi hedefleniyor. Bitkilerin kokusu, gölgenin serinliği ve mevsimlerin değişimi, yerleşkenin deneyimini şekillendiriyor. Erişilebilir rotalar ve ortak bahçeler, çocuklardan ileri yaştaki bireylere kadar farklı kullanıcıların açık alanlarda rahatça zaman geçirebilmesi düşüncesiyle tasarlandı.",
+      "Peyzaj tasarımı, kampüsün farklı alanları arasında kesintisiz bir açık alan düzeni kuruyor. Narenciye ağaçları, bitki yatakları ve dinlenme noktaları yürüyüş rotalarını tamamlıyor. Ortak buluşma alanlarının yanında daha sakin bahçe köşelerine de yer verilerek farklı kullanım ihtiyaçları gözetildi.",
+      "Bitkilerin kokusu ve dokusu, gölgenin serinliği ve mevsimsel değişimler, peyzajın duyusal niteliğini belirliyor. Erişilebilir rotalar ve ortak bahçeler, çocukların ve ileri yaştaki bireylerin açık alanları rahatça kullanabilmesi amacıyla planlandı. Bu düzen, doğayla temasın günlük yaşam boyunca sürmesini hedefliyor.",
     ],
     highlights: [
       "Mevsimlerle değişen peyzaj",
@@ -93,15 +93,15 @@ export const focusAreas = [
   {
     id: "dongu",
     title: "Enerji ve Kaynaklar",
-    eyebrow: "Birlikte düşünülen sistemler",
+    eyebrow: "Bütünleşik kaynak yönetimi",
     image: "assets/solar.webp",
     alt: "Güneş enerjisi ve yeşil çatılarla birlikte tasarlanan kampüs yapılarının proje görselleştirmesi",
     description:
-      "Enerji, su, ısı ve organik atıklar birbirine bağlı kaynaklar olarak ele alınıyor. ECOLIVE’ın sistem yaklaşımı; tarımsal üretimin ve yaşam alanlarının ihtiyaçlarını birlikte değerlendirerek kaynakların verimli kullanımını ve uygun süreçlerde yeniden değerlendirilmesini hedefliyor.",
-    detailTitle: "Kaynakların birbirini desteklediği bir düzen",
+      "Enerji üretimi, ısı yönetimi, su kullanımı ve organik atıklar aynı altyapı yaklaşımında ele alınıyor. ECOLIVE, yaşam alanlarının ve tarımsal üretimin ihtiyaçlarını birlikte planlayarak verimli kullanımı ve uygun süreçlerde kaynakların yeniden değerlendirilmesini hedefliyor.",
+    detailTitle: "Üretimden yeniden kullanıma",
     paragraphs: [
-      "Projenin enerji yaklaşımı, güneşten yararlanmayı, ısı yönetimini ve üretim alanlarının ihtiyaçlarını birlikte değerlendiriyor. Seralarla yaşam alanları arasındaki ilişkiler, altyapının bir bütün olarak ele alınmasını sağlıyor. Amaç, farklı sistemlerin birbirini desteklediği ve kaynak kullanımının izlenebildiği bir kampüs düzeni geliştirmek.",
-      "Su yönetimi ve organik atıkların yeniden değerlendirilmesi de bu bütünün parçaları. Yağmur suyu, uygun geri kullanım süreçleri ve kompost yaklaşımı, bahçelerle tarımsal alanların döngüsüne bağlanıyor. Bu yaklaşım, kaynakları tek bir kullanımın ötesinde düşünerek üretim, tüketim ve yeniden kullanım arasındaki bağı güçlendirmeyi amaçlıyor.",
+      "ECOLIVE’ın enerji planlaması, güneşten yararlanmayı ve ısı yönetimini kampüsün toplam ihtiyaçlarıyla birlikte değerlendiriyor. Seraların üretim koşulları ve yaşam alanlarının konfor gereksinimleri bu planlamanın temel girdileri. Sistemlerin birlikte çalışması ve tüketimin izlenebilmesi, altyapı tasarımının öncelikleri arasında.",
+      "Yağmur suyu hasadı, uygun su geri kullanım süreçleri ve kompost, kaynak yönetiminin diğer bileşenlerini oluşturuyor. Bahçelerin ve tarımsal alanların ihtiyaçları; suyun toplanması, işlenmesi ve organik artıkların değerlendirilmesiyle birlikte ele alınıyor. Amaç, üretimden tüketime ve yeniden kullanıma uzanan süreçleri aynı plan içinde yönetmek.",
     ],
     highlights: [
       "Güneşten yararlanma",

@@ -1,5 +1,5 @@
-// Mask the actual incoming surface, including its photographs and gradients.
-// No duplicate images, guessed photo colours, or extra children enter the layout.
+// Match each curve to the incoming surface. Long cinematic/gallery sections
+// mask only a shallow background edge in CSS, leaving their moving media unmasked.
 let wavesInitialized = false;
 
 export function initWaves() {
@@ -26,11 +26,6 @@ export function initWaves() {
     add(section.firstElementChild, section.lastElementChild);
   });
   add(
-    document.querySelector(".intro .title-block"),
-    document.querySelector(".intro .body-block"),
-    "desktop",
-  );
-  add(
     document.querySelector(".focus-options"),
     document.querySelector(".focus-description"),
     "desktop",
@@ -38,7 +33,6 @@ export function initWaves() {
 
   // Follow the mobile visual order, including the two display:contents panels.
   const mobileFlows = [
-    [".intro .title-block", ".intro .section-image", ".intro .body-block"],
     [".focus-options", ".focus-image", ".focus-description"],
     [".together-copy", ".together-photo"],
     [".cycle-copy", ".cycle-image"],

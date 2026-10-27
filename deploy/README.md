@@ -2,7 +2,7 @@
 
 Run `npm ci` once, then `npm run build`. Publish **the contents of `dist/`**, including `.htaccess` where supported. No Node runtime is required by the published website. `npm run dev` continues to serve readable authoring files for development.
 
-`npm run build` combines styles in their original order, bundles browser modules, minifies both, fingerprints CSS/JS/fonts, and writes compressed text sidecars. Responsive images carry their own content hashes. `build-manifest.json` records generated URLs for diagnostics. New builds update HTML references automatically; never edit the generated files.
+`npm run build` combines styles in their original order, splits browser modules into a shared entry and on-demand feature chunks, minifies both, fingerprints CSS/JS/fonts, and writes compressed text sidecars. Responsive images carry their own content hashes. `build-manifest.json` records generated URLs for diagnostics. New builds update HTML references automatically; never edit the generated files.
 
 For an accurate local production preview, run `npm run preview` (port 4173, or `PORT=4174 npm run preview`). It serves `dist/`, negotiates Brotli/gzip for text, preserves video byte ranges, and applies the same cache rules as the supplied hosting configuration. Run `npm run verify:build` after a build to check all page resources and the HTTP behavior; it launches and stops a temporary preview server on an available port.
 

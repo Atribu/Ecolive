@@ -1,7 +1,13 @@
+import { initExperience } from "./experience.js";
+import { initSceneNavigation } from "./scene-navigation.js";
+import { loadWhenNear } from "./deferred-features.js";
 import { focusAreas } from "./focus-data.js";
 import { initWaves } from "./waves.js";
 import { initMotion } from "./motion.js";
 import { initHeroScroll } from "./hero-scroll.js";
+import { initImmersiveJourney } from "./immersive-journey.js";
+import { initOrganic } from "./organic.js";
+import { initLivingCycle } from "./living-cycle.js";
 
 const $ = (selector, parent = document) => parent.querySelector(selector);
 const $$ = (selector, parent = document) => [
@@ -12,6 +18,7 @@ const navigation = $("#navigation");
 const mapDialog = $("#map-dialog");
 const dialogs = [navigation, mapDialog].filter(Boolean);
 let previousFocus;
+const navigationScene = initSceneNavigation();
 
 function openDialog(dialog) {
   if (!dialog || dialog.open) return;
@@ -23,7 +30,8 @@ function openDialog(dialog) {
 }
 
 function closeDialog(dialog) {
-  dialog?.close();
+  if (dialog === navigation && navigationScene) navigationScene.close();
+  else dialog?.close();
 }
 
 dialogs.forEach((dialog) => {
@@ -54,7 +62,11 @@ $("#map-open")?.addEventListener("click", () => openDialog(mapDialog));
 $("#map-close")?.addEventListener("click", () => closeDialog(mapDialog));
 if (navigation) {
   $$("a[href]", navigation).forEach((link) =>
-    link.addEventListener("click", () => closeDialog(navigation)),
+    link.addEventListener("click", (event) => {
+      const destination = new URL(link.href, location.href);
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (destination.origin !== location.origin || destination.pathname === location.pathname) closeDialog(navigation);
+    }),
   );
 }
 
@@ -98,7 +110,7 @@ if (focusOptions && focusAreas.length) {
         image.alt = area.alt;
         container.classList.remove("changing");
       };
-      if (initial || matchMedia("(prefers-reduced-motion: reduce)").matches)
+      if (initial || matchMedia("(prefers-reduced-motion: reduce)").matches || document.documentElement.dataset.motion === "paused")
         replaceImage();
       else {
         container.classList.add("changing");
@@ -183,6 +195,21 @@ $("#copy-email")?.addEventListener("click", async () => {
   }
 });
 
+initOrganic();
+initExperience();
+// The cycle creates static sections used by the wave/reveal observers.
+initLivingCycle();
+// These two reserve scroll-track heights before fragment navigation settles.
+// Their media remain deferred inside each controller.
 initHeroScroll();
+initImmersiveJourney();
 initWaves();
 initMotion();
+
+loadWhenNear("[data-campus-explorer]", () => import("./campus-explorer.js").then(module => module.initCampusExplorer()));
+loadWhenNear("[data-spatial-gallery]", () => import("./spatial-gallery.js").then(module => module.initSpatialGallery()));
+loadWhenNear("#map-open", () => import("./living-campus.js").then(module => module.initLivingCampus()));
+loadWhenNear("[data-day-rhythm]", () => import("./day-rhythm.js").then(module => module.initDayRhythm()));
+loadWhenNear(".deep-essentials-list, .project-timeline", () => import("./living-details.js").then(module => module.initLivingDetails()));
+loadWhenNear("[data-surface-art]", () => import("./ambient-details.js").then(module => module.initAmbientDetails()));
+loadWhenNear(".section-image, .deep-image, .page-quote", () => import("./cinematic-details.js").then(module => module.initCinematicDetails()));

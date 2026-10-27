@@ -3,20 +3,20 @@ export const pageEnrichment = {
     features: [
       {
         eyebrow: "FARKLI YAŞAM BİÇİMLERİ",
-        title: "Kişiye ve ihtiyaca göre değişen mekânlar",
+        title: "Farklı ihtiyaçlara uygun konaklama",
         paragraphs: [
-          "Konaklama tasarımında tek kişilik yaşam, birlikte yaşama ve rehabilitasyon desteği için farklı mekânsal seçenekler bulunuyor. Pavilion Suite, kişisel kullanıma odaklanan bir rezidans yaklaşımı taşırken Courtyard Grand, avlu çevresinde gelişen ortak yaşama alan açıyor. Longevity Care ise bakım gereksinimleriyle ilişkili bir oda kurgusunu temsil ediyor. Bu çeşitlilik, aynı kampüste farklı gündelik düzenlerin karşılık bulması için düşünüldü.",
-          "Mutfak ve oda donanımları da kullanım biçimiyle birlikte ele alınıyor. Gizlenebilir indüksiyonlu ocak ve yüksekliği ayarlanabilir tezgâh gibi çözümler, kişisel yaşam alanının tasarımında yer alıyor. Avlulu tipte engelsiz ada mutfak öne çıkıyor. Rehabilitasyona yönelik odalarda ise medikal altyapının mimariyle bütünleşmesi amaçlanıyor. Her seçeneğin ayrıntıları, mekânın işlevi ile kullanıcının ihtiyaçları arasındaki ilişkiyi gözetiyor.",
+          "ECOLIVE’ın konaklama programı, bireysel yaşam, birlikte konaklama ve rehabilitasyon desteği için farklı birim tipleri içeriyor. Pavilion Suite kişisel kullanıma odaklanırken Courtyard Grand, avlu çevresinde ortak yaşamı esas alıyor. Longevity Care ise bakım gereksinimlerine göre düzenlenen oda tipini tanımlıyor. Bu seçenekler, aynı kampüste farklı yaşam düzenlerinin ve destek ihtiyaçlarının karşılanabilmesi için geliştirildi.",
+          "Mutfak ve oda donanımları, her birim tipinin kullanımına göre farklılaşıyor. Gizlenebilir indüksiyonlu ocak ve yüksekliği ayarlanabilir tezgâh, kişisel yaşam birimlerinde öngörülen çözümler arasında. Avlulu tipte erişilebilir ada mutfak yer alıyor. Rehabilitasyon odalarında ise medikal altyapının mekân düzeniyle bütünleşmesi amaçlanıyor. Donanım seçimlerinde işlev, hareket kolaylığı ve mimari bütünlük birlikte gözetiliyor.",
         ],
         imageHint:
           "Konaklama süiti, avlulu yaşam birimi veya iç mekândan bahçeye bakış",
       },
       {
         eyebrow: "MEKÂNIN KARAKTERİ",
-        title: "Yerel hafıza ve yalın tasarım",
+        title: "Yerel kimlik, yalın mimari",
         paragraphs: [
-          "ECOLIVE’ın tasarım dili, Türk kültürel mirasının mekânla kurduğu ilişkiyi İskandinav yalınlığıyla birlikte değerlendiriyor. Yerel kimlik ve tarihsel hafıza, işlevsel düzenle aynı çerçevede düşünülüyor. Bu yaklaşım, ortak yaşamın günlük alışkanlıklarına ve mekânın insanda uyandırdığı duyguya önem veriyor. Sade bir düzen içinde malzemenin, ışığın ve bahçeyle ilişkinin belirgin olması, mimari anlatımın temel tercihlerinden biri.",
-          "Teknolojik donanımın da bu mimari dilin içinde yer bulması hedefleniyor. Akıllı düşme algılama, aydınlatma ve iklimlendirme gibi başlıklar, konaklama konforuyla birlikte ele alınıyor. Tasarımın insan odaklı yaklaşımı, bir cihazın varlığından önce günlük kullanımdaki rolüne bakıyor. Ortaya konan çerçeve, teknik ihtiyaçların estetik bütünlükle ve kişinin kendisini bulunduğu mekâna ait hissetmesiyle birlikte değerlendirilmesine dayanıyor.",
+          "ECOLIVE’ın mimari dili, Türk kültürel mirasının mekân anlayışını İskandinav tasarımının yalınlığıyla birleştiriyor. Yerel kimlik, ortak yaşam alışkanlıkları ve işlevsel düzen, tasarımın temel referanslarını oluşturuyor. Malzemelerin doğal dokusu, gün ışığı ve bahçeye açılan mekânlar bu yaklaşımı görünür kılıyor. Amaç, günlük kullanımı kolaylaştıran ve bulunduğu çevrenin karakterini taşıyan bir mimari oluşturmak.",
+          "Akıllı düşme algılama, aydınlatma ve iklimlendirme çözümleri, konaklama tasarımında öngörülen teknolojik bileşenler arasında. Bu donanımların günlük kullanımdaki işlevi, oda düzeni ve estetik bütünlükle birlikte değerlendiriliyor. Teknoloji, mekânın sakin karakterini ve kişinin alışkanlıklarını gözeten bir destek olarak ele alınıyor. Teknik altyapının mimariyle birlikte çözülmesi, konfor yaklaşımının tamamlayıcı bir parçası.",
         ],
         imageHint:
           "Ahşap ve taş dokuların görüldüğü ortak yaşam salonu veya konaklama iç mekânı",
@@ -24,37 +24,37 @@ export const pageEnrichment = {
     ],
     essentials: {
       eyebrow: "TASARIMIN AYRINTILARI",
-      title: "Konforu oluşturan kararlar",
+      title: "Günlük konforun ayrıntıları",
       items: [
         {
-          title: "Oda içinde hareket",
-          text: "Kapı açıklıkları ve manevra alanları, oda kullanımının bir parçası olarak değerlendiriliyor. Tekerlekli sandalye kullanımına ilişkin ihtiyaçlar, konaklama tasarımında dolaşım ve mobilyalar arasındaki ilişkiyle birlikte ele alınıyor.",
+          title: "Hareket ve kullanım kolaylığı",
+          text: "Kapı açıklıkları, manevra alanları ve mobilya yerleşimi, tekerlekli sandalye kullanımı dâhil farklı hareket ihtiyaçlarına göre değerlendiriliyor. Oda içindeki dolaşım, konaklama tasarımının temel ölçütlerinden biri.",
         },
         {
           title: "Işık ve yön bulma",
-          text: "Aydınlatma ile görsel kontrast, iç mekânın anlaşılır olması için tasarımda yer verilen başlıklar. Günlük kullanımda mekânı tanımayı ve yönünü bulmayı gözeten bir çevre oluşturma yaklaşımını tamamlıyorlar.",
+          text: "Aydınlatma ve görsel kontrast, iç mekânın kolay anlaşılması ve yön bulmanın desteklenmesi için birlikte planlanıyor. Bu ayrıntılar, odaların ve ortak alanların günlük kullanımını kolaylaştırmayı amaçlıyor.",
         },
         {
-          title: "Bakımla ilişkili konaklama",
-          text: "Rehabilitasyon odası yaklaşımında raylı lift ve gizli medikal altyapı gibi çözümler bulunuyor. Bu donanımlar, bakım ihtiyaçlarını oda düzeni ve mimari bütünlük içinde değerlendiren tasarımın belirli bir parçasını oluşturuyor.",
+          title: "Bakıma uygun oda düzeni",
+          text: "Rehabilitasyon odalarında raylı lift ve gizli medikal altyapı öngörülüyor. Bakım donanımları, odanın hareket alanı, kullanım düzeni ve mimari karakteriyle birlikte ele alınıyor.",
         },
       ],
     },
     faqs: [
       {
-        question: "Konaklama alanlarının hepsi aynı biçimde mi tasarlandı?",
+        question: "Hangi konaklama tipleri tasarlandı?",
         answer:
-          "Tasarımdaki oda tipleri kişisel yaşam, avlulu ortak yaşam ve rehabilitasyon gereksinimlerine göre farklılaşıyor. Mekânsal çeşitlilik, kampüsün farklı ihtiyaçlara yer verme yaklaşımını yansıtıyor. Oda düzenleri ve donanımları, kişisel alanla ortak yaşam arasında farklı dengeler kuruyor.",
+          "Pavilion Suite bireysel yaşam, Courtyard Grand avlu çevresinde ortak yaşam, Longevity Care ise bakım ve rehabilitasyon gereksinimleri için geliştirildi. Oda düzeni ve donanımlar, her tipin kullanım amacına ve destek ihtiyaçlarına göre farklılaşıyor.",
       },
       {
         question: "Kampüsün mimari kimliği hangi yaklaşımları birleştiriyor?",
         answer:
-          "Türk kültürel mirası ve İskandinav tasarımının yalın işlevselliği birlikte ele alınıyor. Yerel malzemeler, kültürel hafıza ve insana duyarlı teknoloji, ECOLIVE’ın mimari karakterinde birbirini tamamlayan tasarım başlıkları olarak tanımlanıyor.",
+          "Türk kültürel mirasının mekân anlayışı ile İskandinav tasarımının yalın işlevselliği bir arada değerlendiriliyor. Yerel malzemeler, doğal ışık ve günlük kullanımı destekleyen teknoloji, bu mimari karakteri tamamlıyor.",
       },
       {
         question: "Konfor anlayışında hangi ihtiyaçlar öne çıkıyor?",
         answer:
-          "Konfor, oda donanımıyla birlikte hareket kolaylığını, ışığı, iklimlendirmeyi ve bahçeyle ilişkiyi kapsıyor. Konaklama alanları, kişinin kendi günlük düzenini kurabileceği ve ihtiyaç duyduğu desteğe göre farklılaşabilen mekânlar olarak tasarlandı.",
+          "Hareket kolaylığı, aydınlatma, iklimlendirme ve bahçeyle bağlantı, oda donanımlarıyla birlikte değerlendiriliyor. Farklı konaklama tipleri, kişisel alışkanlıkları ve destek ihtiyaçlarını gözeten kullanım seçenekleri oluşturuyor.",
       },
     ],
   },
@@ -62,40 +62,40 @@ export const pageEnrichment = {
     features: [
       {
         eyebrow: "REHABİLİTASYON VE MEKÂN",
-        title: "Uzman desteğine uygun bir çevre",
+        title: "Rehabilitasyon için bütünleşik mekânlar",
         paragraphs: [
-          "Hareket ve bakım ihtiyaçları, kampüsün sağlık programında birlikte değerlendiriliyor. Kişiselleştirilmiş fizik tedavi ve rehabilitasyon yaklaşımıyla modüler sağlık kabinleri, proje kapsamında ele alınan bileşenler arasında bulunuyor. Rehabilitasyona ayrılan konaklama tipi de bu programla ilişki kuruyor. Böylece sağlık birimlerinin çalışma ihtiyaçlarıyla kişinin konakladığı çevre, aynı yerleşke içinde birbirini gözeten alanlar olarak tasarlanıyor.",
-          "Bakım gereksinimlerine yönelik oda tasarımında raylı lift sistemi ve gizli medikal altyapı öngörülüyor. Bu yaklaşımın odağında, teknik donanımın yaşam alanının düzeniyle birlikte çözülmesi var. Doğayla kurulan görsel ilişki de odanın mimari çerçevesinde yer alıyor. Kişiye uygun desteğin belirlenmesinde sağlık profesyonellerinin bireysel değerlendirmesi esas alınıyor. Mimari program, bu uzmanlıkla yürütülecek çalışmalara yer ayırıyor.",
+          "Kişiye göre değerlendirilen fizik tedavi ve rehabilitasyon, modüler sağlık kabinleri ve bakıma uygun konaklama birimleri, projenin sağlık programında yer alıyor. Bu alanlar, uzmanların çalışma gereksinimleriyle kişinin günlük yaşamını aynı yerleşim içinde ele alıyor. Sağlık birimleri ile konaklama alanlarının yakınlığı, ihtiyaç duyulan desteğin mekânsal olarak bütünleşmesini sağlayacak biçimde planlandı.",
+          "Bakım gereksinimlerine yönelik oda tipinde raylı lift sistemi ve gizli medikal altyapı öngörülüyor. Donanımlar, odanın kullanım düzeni ve bahçeyle kurduğu görsel ilişkiyle birlikte ele alınıyor. Bu yaklaşım, teknik ihtiyaçların yaşam alanının niteliğini koruyarak çözülmesini amaçlıyor. Kişiye uygun desteğin sağlık profesyonellerince değerlendirilmesi esas alınırken mimari program, bu çalışmaların yürütülebileceği alanları tanımlıyor.",
         ],
         imageHint:
           "Fizik tedavi merkezi, rehabilitasyon havuzu veya bahçeye açılan bakım odası",
       },
       {
-        eyebrow: "GÜNLÜK YAŞAMIN RİTMİ",
-        title: "Hareketin yanında sakinliğe de yer var",
+        eyebrow: "GÜNLÜK YAŞAM VE İYİLİK HÂLİ",
+        title: "Hareket ve dinlenme arasında denge",
         paragraphs: [
-          "İyi yaşam programında yoga ve meditasyon gibi pratikler de düşünülüyor. Bu başlıklar, fizik tedavi ve sağlık hizmetleriyle birlikte kampüsün farklı ihtiyaçlara yer veren yaklaşımında bulunuyor. Dinlenme, hareket ve doğayla temas arasında kurulacak günlük düzen, kişilerin tercihlerini gözetme düşüncesine dayanıyor. Sakin bir bahçede geçirilen zamanla ortak bir etkinliğe katılım, aynı yaşam çevresinin birbirini tamamlayan deneyimleri olarak ele alınıyor.",
-          "Dengeli beslenme, anlamlı günlük rutin ve sosyal bağlar, projenin iyi yaşam anlayışında yan yana ele alınıyor. Ortak üretime katılmak veya başka bir kuşakla zaman geçirmek, bu çevrede düşünülen deneyimler arasında. İleri yaştaki bireylerin deneyim ve rehberlik sunabilmesi de önemseniyor. Bakım yaklaşımı, kişinin gündelik hayatta katılımcı olabilmesine ve kendisini bu yaşamın değerli bir parçası olarak görebilmesine odaklanıyor.",
+          "Yoga, meditasyon ve açık havada hareket için ayrılan mekânlar, ECOLIVE’ın iyi yaşam programını tamamlıyor. Günlük düzenin kişinin tercihine ve ihtiyaçlarına göre şekillenmesi bu yaklaşımın temel ilkesi. Sakin bir bahçede dinlenmek ve ortak bir etkinliğe katılmak, aynı çevrede öngörülen farklı seçenekler arasında. Bu alanlar, sağlık ve rehabilitasyon programıyla birlikte yerleşim planına dâhil edildi.",
+          "Dengeli beslenme, kişisel uğraşlar ve sosyal ilişkilerin sürekliliği, iyi yaşam yaklaşımının diğer unsurları. Ortak üretim alanları ve kuşakları buluşturan mekânlar, ileri yaştaki bireylerin deneyimlerini paylaşabilmesi için planlandı. Günlük hayata katılım, kişinin ilgi alanlarını ve kararlarını gözeterek ele alınıyor. Böylece bakım, bireyin sosyal çevresi ve yaşam alışkanlıklarıyla birlikte değerlendiriliyor.",
         ],
         imageHint:
           "Yoga ve hareket alanı, doğada dinlenme veya ortak sofrada sosyal yaşam",
       },
     ],
     essentials: {
-      eyebrow: "BİR ARADA DÜŞÜNÜLEN İHTİYAÇLAR",
-      title: "Bakım yaklaşımının üç odağı",
+      eyebrow: "BAKIMIN TEMEL İLKELERİ",
+      title: "Bireysel ihtiyaçlar, bütüncül yaklaşım",
       items: [
         {
-          title: "Kişiye göre değerlendirme",
-          text: "Proje programındaki kişiselleştirilmiş fizik tedavi yaklaşımı, hizmetin bireysel ihtiyaçlara göre ele alınmasını öngörüyor. Sağlık profesyonellerinin bireysel değerlendirmesi, kişinin hareket ihtiyaçları ve günlük yaşamı arasındaki ilişkiyi gözeten bu yaklaşımın temelinde yer alıyor.",
+          title: "Bireysel değerlendirme",
+          text: "Fizik tedavi ve rehabilitasyon yaklaşımı, ihtiyaçların sağlık profesyonelleri tarafından kişiye özel değerlendirilmesini esas alıyor. Hareket olanakları ve günlük yaşam gereksinimleri bu değerlendirmenin parçaları.",
         },
         {
-          title: "Anlamlı bir günlük rutin",
-          text: "Bakım modelinde günlük yaşama katılım ve sosyal bağlar önemseniyor. Ortak alanların tasarımı, kişinin dinlenmenin yanında ilgi duyduğu uğraşlara ve başkalarıyla paylaştığı zamana da yer verebilmesi düşüncesini taşıyor.",
+          title: "Günlük yaşama katılım",
+          text: "Ortak alanlar; dinlenme, kişisel uğraşlar ve sosyal ilişkiler için farklı seçenekler oluşturuyor. Kişinin ilgi duyduğu etkinlikleri seçebilmesi ve günlük alışkanlıklarını sürdürebilmesi gözetiliyor.",
         },
         {
-          title: "Ailelerle kurulan güven",
-          text: "Yaşlı bireylerin ve ailelerinin uzun vadeli güven duyabileceği bir yaşam çevresi, projenin temel hedefleri arasında. Saygılı bir ortam ve bakımın insani boyutu, hizmet yaklaşımının değerlendirilmesinde öne çıkıyor.",
+          title: "Aile ilişkilerinin sürekliliği",
+          text: "Bireyin ve ailesinin güven duyabileceği, saygılı bir yaşam çevresi oluşturmak projenin hedefleri arasında. Mahremiyet, kişisel tercihler ve ailelerle iletişim, bakım yaklaşımının temel ilkelerini tamamlıyor.",
         },
       ],
     },
@@ -103,38 +103,38 @@ export const pageEnrichment = {
       {
         question: "Sağlık programında hangi alanlara yer veriliyor?",
         answer:
-          "Proje kapsamında kişiye göre değerlendirilen fizik tedavi ve rehabilitasyon desteğiyle wellness başlıkları bulunuyor. Yoga, meditasyon ve dengeli beslenme de iyi yaşam yaklaşımında ele alınıyor. Bireyin ihtiyaçları ve tercihleri, bu alanların birlikte ele alınmasında belirleyici.",
+          "Proje programı fizik tedavi, rehabilitasyon ve iyi yaşam alanlarını kapsıyor. Yoga, meditasyon ve dengeli beslenme de bu program içinde değerlendiriliyor. Destek seçeneklerinin bireysel ihtiyaçlara ve sağlık profesyonellerinin değerlendirmesine göre ele alınması öngörülüyor.",
       },
       {
-        question: "Sağlık yaklaşımı ileri yaştaki bireyleri nasıl ele alıyor?",
+        question: "İleri yaşa yaklaşımın temelinde ne var?",
         answer:
-          "İleri yaş, deneyimin ve toplumsal katkının devam edebildiği bir yaşam dönemi olarak değerlendiriliyor. Tasarım, destek ihtiyacını gözetirken kişinin gündelik uğraşlarını, diğer kuşaklarla ilişkilerini ve sosyal yaşama katılımını da önemsiyor.",
+          "Kişinin kararlarına, alışkanlıklarına ve deneyimine saygı göstermek. Destek ihtiyaçlarıyla birlikte kişisel uğraşların, aile ilişkilerinin ve sosyal katılımın sürdürülmesi de önemseniyor. Farklı kuşaklarla paylaşım, bu yaklaşımın tamamlayıcı bir parçası.",
       },
       {
         question: "Bakım alanları günlük yaşamla nasıl ilişki kuruyor?",
         answer:
-          "Sağlık ve rehabilitasyon alanları, konaklama birimleri, terapötik bahçeler ve sosyal mekânlarla aynı yerleşke içinde tasarlandı. Bu yakınlık, ihtiyaç duyulan desteğin kişinin gündelik uğraşları, aile ilişkileri ve doğayla temasıyla birlikte düşünülmesini sağlıyor.",
+          "Sağlık ve rehabilitasyon alanları; konaklama birimleri, terapötik bahçeler ve sosyal mekânlarla bağlantılı olarak planlandı. Bu düzen, ihtiyaç duyulan desteği günlük uğraşlar, aile ilişkileri ve açık havada geçirilen zamanla birlikte ele alıyor.",
       },
     ],
   },
   egitim: {
     features: [
       {
-        eyebrow: "AKADEMİK YAŞAMIN YERİ",
-        title: "Kampüsle ilişki kuran eğitim alanları",
+        eyebrow: "MESLEKİ EĞİTİM VE UYGULAMA",
+        title: "Sağlık ve bakım alanlarında öğrenme",
         paragraphs: [
-          "Projenin eğitim programında gerontoloji, fizik tedavi, yaşlı bakımı ve hemşirelik gibi disiplinlerle ilişkili bir sağlık yüksekokulu yaklaşımı yer alıyor. Bu alanların kampüsün sağlık ve bakım birimleriyle yakın düşünülmesi, uygulamalı öğrenme hedefinden kaynaklanıyor. Öğrencilerin mesleki bilgiyi insanın gündelik ihtiyaçlarıyla birlikte değerlendirebilmesi, akademik yaşamın yerleşke içindeki konumunu belirleyen temel düşünceler arasında bulunuyor.",
-          "Rehabilitasyon, wellness koçluğu ve sağlık takibi, öngörülen uygulamalı eğitim başlıkları arasında sayılıyor. Buradaki yaklaşım, öğrencilerin teorik derslerden sonra farklı çalışma ortamlarıyla ilişki kurabilmesine dayanıyor. Eğitimle bakımın aynı kampüste bulunması, ortak mekânların ve günlük karşılaşmaların önemini artırıyor. Mesleki öğrenmenin insani ilişkilerle birlikte düşünülmesi, yerleşkenin eğitim yaklaşımına yön veriyor.",
+          "Projenin eğitim programında gerontoloji, fizik tedavi, yaşlı bakımı ve hemşirelik disiplinleriyle ilişkili bir sağlık yüksekokulu öngörülüyor. Eğitim birimlerinin sağlık ve bakım alanlarıyla yakın planlanması, uygulamalı öğrenmeyi desteklemeyi amaçlıyor. Bu düzen, öğrencilerin mesleki bilgiyi bireyin günlük ihtiyaçlarıyla birlikte değerlendirebileceği bir eğitim çevresi oluşturuyor.",
+          "Rehabilitasyon, iyi yaşam koçluğu ve sağlık takibi, öngörülen uygulamalı eğitim başlıkları arasında. Teorik bilginin farklı çalışma ortamlarındaki gözlem ve deneyimle tamamlanması hedefleniyor. Eğitim ile bakım alanlarının aynı kampüste bulunması, mesleki öğrenmenin insani ilişkilerle birlikte ele alınmasına olanak tanıyor. Ortak mekânlar ve günlük karşılaşmalar da bu eğitim çevresinin parçaları olarak planlandı.",
         ],
         imageHint:
           "Sağlık yüksekokulu, eğitim atölyesi veya öğrencilerle sakinlerin ortak alanı",
       },
       {
         eyebrow: "DERSLİĞİN DIŞINDA",
-        title: "Beslenmeden sorumluluğa uzanan öğrenme",
+        title: "Doğayı tanıyarak sorumluluk geliştirmek",
         paragraphs: [
-          "Sebze üretim alanları, eğitim yaklaşımında beslenme, ekoloji ve sorumluluk konularının birlikte ele alınabileceği canlı öğrenme ortamları olarak tanımlanıyor. Bir ürünün yetişmesine tanık olmak, günlük yaşamda tüketilen gıdayla bağ kurmaya yönelik bir deneyim sunabilir. Kreş ve okul programının üretimle ilişkisi bu düşünceye dayanıyor. Çocukların çevrelerini tanıması, ortak emeği fark etmesi ve bakım vermeyi deneyimlemesi önemseniyor.",
-          "Amfitiyatro, ortak kütüphane ve el sanatları atölyeleri, farklı kuşakların ilgi alanları etrafında buluşabileceği mekânlar olarak düşünülüyor. Bu çeşitlilik, bir arada geçirilen zamanı yalnızca eğitim saatleriyle sınırlamayan bir yerleşim yaklaşımı oluşturuyor. Paylaşılan bilgi kadar birlikte yapılan bir işin kendisi de değer taşıyor. Sosyal meydan, öğrencilerle sakinlerin kampüs içindeki günlük karşılaşmalarına alan açan ortak merkez olarak tasarlandı.",
+          "Sebze üretim alanları, beslenme ve ekoloji konularının uygulama yoluyla öğrenilebileceği mekânlar olarak ele alınıyor. Bir ürünün yetişme sürecini izlemek ve bakımına katılmak, tüketilen gıdanın kaynağını tanımaya yönelik deneyimler arasında. Kreş ve okulun üretim alanlarıyla bağlantısı bu amaçla planlandı. Ortak emeğin değerini fark etmek ve çevreye karşı sorumluluk geliştirmek, eğitim yaklaşımının temel hedefleri.",
+          "Amfitiyatro, ortak kütüphane ve el sanatları atölyeleri, farklı kuşakların ortak ilgi alanlarında buluşabileceği mekânlar olarak tasarlandı. Bu alanlar, eğitimi ders saatlerinin ötesine taşıyan kültürel ve sosyal olanaklar oluşturuyor. Birlikte yürütülen çalışmalar, bilgi ve deneyim paylaşımını günlük yaşama katıyor. Sosyal meydan ise öğrencilerle sakinlerin bir araya gelebileceği ortak merkez olarak yerleşim planında yer alıyor.",
         ],
         imageHint:
           "Kütüphane, el sanatları atölyesi veya sebze bahçesinde kuşakların buluşması",
@@ -142,19 +142,19 @@ export const pageEnrichment = {
     ],
     essentials: {
       eyebrow: "ÖĞRENME ORTAMLARI",
-      title: "Farklı yaşlar için ortak bir çevre",
+      title: "Çocukluktan mesleki eğitime",
       items: [
         {
-          title: "Erken yaşta çevreyle ilişki",
-          text: "Kreş ve okul, doğayla temasın ve üretime tanıklığın gündelik eğitimle birleştiği mekânlar olarak ele alınıyor. Çocukların ortak yaşama ilişkin sorumlulukları tanıması, bu eğitim yaklaşımının temel amaçları arasında.",
+          title: "Doğayla tanışan çocuklar",
+          text: "Kreş ve okulun bahçeler ve üretim alanlarıyla bağlantısı, doğayı gözlemleme ve ortak sorumlulukları tanıma olanağı sunmak üzere planlandı. Günlük deneyimler, sınıftaki öğrenmeyi tamamlıyor.",
         },
         {
-          title: "Deneyimin paylaşılması",
-          text: "İleri yaştaki bireylerin rehberliği ve deneyimi, kuşaklar arasındaki öğrenme fikrinde değer taşıyor. Çocuklarla kurulan ilişki, karşılıklı paylaşımın ve toplumsal dayanışmanın gelişebileceği bir kampüs çevresi oluşturma hedefinin parçası.",
+          title: "Kuşaklar arası deneyim",
+          text: "İleri yaştaki bireylerin deneyimleri ve çocukların merakı, ortak uğraşlar üzerinden buluşuyor. Bahçeler ve atölyeler, karşılıklı öğrenmeyi ve kuşaklar arası dayanışmayı desteklemek üzere tasarlandı.",
         },
         {
-          title: "Mesleki bilgiyle yaşamın bağı",
-          text: "Sağlık ve bakım disiplinlerinin uygulamayla ilişkisi, akademik yaşamın kampüsteki yerini belirliyor. Eğitim alanları, öğrencilerin mesleki konuları sakinlerin gündelik yaşamıyla birlikte görebilmesine yönelik bir tasarım düşüncesi içinde yer alıyor.",
+          title: "Uygulamalı mesleki eğitim",
+          text: "Sağlık ve bakım alanlarıyla bağlantılı eğitim birimleri, mesleki bilgiyi günlük ihtiyaçlarla birlikte değerlendirmeyi amaçlıyor. Gözlem, uygulama ve bireye duyarlılık bu yaklaşımın temel unsurları.",
         },
       ],
     },
@@ -162,38 +162,38 @@ export const pageEnrichment = {
       {
         question: "Eğitim yaklaşımı yalnızca çocuklara mı yönelik?",
         answer:
-          "Kreş ve okulun yanında sağlık ve bakım disiplinlerinde uygulamalı eğitim düşüncesi de bulunuyor. Öğrencilerin, çocukların ve ileri yaştaki bireylerin farklı biçimlerde yer aldığı bir öğrenme çevresi amaçlanıyor.",
+          "Kreş ve okulun yanında sağlık ve bakım disiplinlerinde uygulamalı eğitim de öngörülüyor. Ortak bahçeler, atölyeler ve sosyal alanlar ise çocukların, öğrencilerin ve ileri yaştaki bireylerin deneyimlerini paylaşabilecekleri mekânlar olarak planlandı.",
       },
       {
-        question: "Uygulamalı eğitim için hangi disiplinler düşünülüyor?",
+        question: "Uygulamalı eğitim hangi disiplinleri kapsıyor?",
         answer:
-          "Gerontoloji, fizik tedavi, yaşlı bakımı ve hemşirelik disiplinleri eğitim programının çerçevesinde yer alıyor. Rehabilitasyon, wellness koçluğu ve sağlık takibi ise uygulamalı öğrenmeyle ilişkilendirilen başlıklar arasında. Eğitim mekânlarının sağlık birimleriyle ilişkisi, bilgi ile gözlem arasında bağ kurmayı amaçlıyor.",
+          "Gerontoloji, fizik tedavi, yaşlı bakımı ve hemşirelik, öngörülen eğitim programının temel disiplinleri arasında. Rehabilitasyon, iyi yaşam koçluğu ve sağlık takibi de uygulamalı öğrenme başlıkları olarak değerlendiriliyor. Eğitim alanlarının sağlık birimleriyle yakınlığı, teorik bilginin gözlemle tamamlanmasını amaçlıyor.",
       },
       {
         question: "Kuşaklar nerelerde bir araya gelebilecek?",
         answer:
-          "Tasarımdaki ortak üretim bahçeleri, el sanatları atölyeleri, kütüphane ve sosyal meydan farklı yaşların karşılaşabileceği alanlar olarak düşünülüyor. Bu mekânlar, ortak ilgi alanları ve gündelik uğraşlar üzerinden paylaşım kurulmasına yer ayırıyor.",
+          "Ortak üretim bahçeleri, el sanatları atölyeleri, kütüphane, amfitiyatro ve sosyal meydan, farklı yaşları buluşturan mekânlar olarak tasarlandı. Bu alanlar, ortak ilgi ve uğraşlar etrafında günlük paylaşımlara olanak tanımayı amaçlıyor.",
       },
     ],
   },
   uretim: {
     features: [
       {
-        eyebrow: "TOPRAĞIN SÜREKLİLİĞİ",
-        title: "Ürünün yanında yetiştiği çevreyi düşünmek",
+        eyebrow: "TOPRAK VE ÜRETİM",
+        title: "Toprak verimliliğini gözeten yetiştiricilik",
         paragraphs: [
-          "Biyolojik üretim yaklaşımı, sebze yetiştiriciliğiyle birlikte toprak verimliliğini ve organik döngüleri ele alıyor. Üretim alanlarının ihtiyaç duyduğu su, enerji ve bakım, aynı planlamanın parçaları olarak değerlendiriliyor. Bu bakış, bir yetiştirme alanını yalnızca elde edilen ürün üzerinden tanımlamıyor. Toprağın kullanımı ve kaynaklarla kurduğu ilişki, kampüsün tarımsal yaklaşımını belirleyen temel konular arasında yer alıyor.",
-          "Permakültür alanları, organik seralar ve narenciye bahçeleri, proje programında farklı üretim ortamları olarak tanımlanıyor. Her birinin peyzajla ve yerleşkenin diğer işlevleriyle ilişkisi düşünülüyor. Tarımın eğitim, konaklama ve sosyal yaşamla aynı çevrede bulunması, üretim süreçlerinin görünür olmasına yönelik bir tercih. Bahçelerin bakımından hasada uzanan süreç, çevreyle kurulan ilişkiyi günlük hayatın içinde tutma düşüncesini tamamlıyor.",
+          "ECOLIVE’ın biyolojik üretim yaklaşımı, sebze yetiştiriciliğini toprak verimliliği ve organik döngülerle birlikte ele alıyor. Su, enerji ve bakım ihtiyaçları, üretim planlamasının temel girdileri arasında. Toprağın niteliğinin korunması ve kaynakların verimli kullanılması, elde edilecek ürünle birlikte değerlendiriliyor. Bu bütünlük, tarımsal alanların uzun vadeli bakımını ve üretim sürekliliğini gözeten bir yaklaşım oluşturuyor.",
+          "Permakültür alanları, organik seralar ve narenciye bahçeleri, projenin farklı yetiştirme ortamlarını oluşturuyor. Bu alanlar, konaklama ve eğitim birimleriyle aynı çevrede planlandı. Bahçe bakımından hasada uzanan süreçlerin günlük yaşamda gözlemlenebilmesi, yerleşimin temel amaçlarından biri. Tarımın peyzaj ve sosyal alanlarla yakınlığı, üretimi kampüsün gündelik deneyimine katıyor.",
         ],
         imageHint:
           "Sebze serası, yükseltilmiş üretim yatakları veya permakültür bahçesi",
       },
       {
         eyebrow: "ÜRETİMİN KAMPÜSTEKİ YERİ",
-        title: "Narenciye dokusunun içinden geçen hayat",
+        title: "Narenciye bahçelerinde günlük yaşam",
         paragraphs: [
-          "Kampüs akışında narenciye ve sera alanları, sosyal meydanla aktif yaşlı konaklaması arasında ilişki kuran bileşenler olarak ele alınıyor. Bu yerleşim fikri, üretimi günlük hareketin içinde görünür kılıyor. Bahçeye ulaşmak ve yetiştirilen ürünlerin çevresinde zaman geçirmek, kampüsün farklı işlevleri arasında kurulan bağın parçası. Narenciye koruma ve hasat rotası da peyzaj programında bu yaklaşımı tamamlıyor.",
-          "Üretim alanlarının ortak kullanımla ilişkisi, beslenme ve toplumsal sorumluluk başlıklarına da uzanıyor. Tasarımdaki eko-restoran ve sosyal meydan, tarımın yer aldığı yaşam çevresini tamamlayan ortak mekânlar arasında. Birlikte üretme düşüncesi, çocukların ve ileri yaştaki bireylerin karşılaşmalarıyla ilişkilendiriliyor. Böylece tarım, kampüsün ekonomik veya teknik bir bileşeni olarak ele alınmasının yanında, paylaşım ve öğrenme için de yer oluşturuyor.",
+          "Narenciye bahçeleri ve seralar, sosyal meydan ve ileri yaştaki bireyler için tasarlanan konaklama alanlarıyla bağlantılı olarak planlandı. Bahçe yolları, üretim alanlarını yerleşkenin günlük dolaşımına katacak biçimde düzenlendi. Yetişen ürünleri gözlemlemek ve bahçelerde zaman geçirmek, bu yerleşim kararının sunduğu olanaklar arasında. Narenciye koruma ve hasat rotası, üretimle peyzaj arasındaki sürekliliği tamamlıyor.",
+          "Projedeki eko-restoran ve sosyal meydan, tarımı beslenme ve ortak yaşamla buluşturan mekânlar olarak planlandı. Çocuklarla ileri yaştaki bireylerin üretim çalışmalarına birlikte katılması, öğrenme ve deneyim paylaşımını destekliyor. Tarımsal alanlar bu nedenle teknik ve ekonomik işlevleriyle birlikte sosyal değerleri açısından da ele alınıyor. Ortak emek ve sorumluluk, üretim yaklaşımının tamamlayıcı unsurları.",
         ],
         imageHint:
           "Narenciye hasat rotası, seraların yanındaki sosyal alan veya ortak yemek mekânı",
@@ -201,19 +201,19 @@ export const pageEnrichment = {
     ],
     essentials: {
       eyebrow: "ÜRETİM YAKLAŞIMI",
-      title: "Birbiriyle ilişkili üç başlık",
+      title: "Toprak, kaynaklar ve katılım",
       items: [
         {
           title: "Toprak verimliliği",
-          text: "Sebze üretimiyle birlikte toprağın verimliliği ve organik döngülerin kurulması önemseniyor. Tarımsal alanların kaynak kullanımı, kampüsün biyolojik üretim yaklaşımı içinde bakım ve süreklilik gerektiren bir ilişki olarak değerlendiriliyor.",
+          text: "Sebze yetiştiriciliği, toprağın verimliliği ve organik döngülerle birlikte planlanıyor. Bakım, su kullanımı ve organik artıkların değerlendirilmesi, tarımsal üretimin sürekliliği açısından ele alınıyor.",
         },
         {
           title: "Sera ve ısı yönetimi",
-          text: "Seraların kontrollü ve verimli biçimde ısıtılması, enerji sistemiyle birlikte ele alınıyor. Üretimin ihtiyaç duyduğu koşulların yaşam alanlarının ihtiyaçlarıyla beraber değerlendirilmesi, kampüsün bütünleşik altyapı düşüncesinin önemli bir parçası.",
+          text: "Seraların ısı gereksinimleri, kampüsün enerji sistemiyle birlikte değerlendiriliyor. Yaşam alanlarıyla üretimin ihtiyaçlarını aynı planda ele almak, kontrollü ve verimli ısı yönetiminin temelini oluşturuyor.",
         },
         {
-          title: "Hasatla kurulan temas",
-          text: "Narenciye koruma ve hasat rotası, üretimin peyzajla buluştuğu tasarım bileşenleri arasında. Bu rota, tarımsal alanların kampüs içindeki yerini görünür kılan ve günlük yaşamla ilişkisini güçlendirmeyi amaçlayan bir yaklaşım taşıyor.",
+          title: "Narenciye ve hasat rotası",
+          text: "Narenciye koruma ve hasat rotası, üretim alanlarını peyzaj ve günlük dolaşımla birleştiriyor. Bahçelerin mevsimsel değişimlerinin gözlemlenmesi ve üretime katılım, bu rotanın tasarım amaçları arasında.",
         },
       ],
     },
@@ -221,58 +221,58 @@ export const pageEnrichment = {
       {
         question: "Kampüste hangi üretim alanları tasarlandı?",
         answer:
-          "Proje programında narenciye bahçeleri, sebze yetiştiriciliği, organik seralar ve permakültür alanları bulunuyor. Erişilebilir hobi bahçeleri de ortak katılım düşüncesine yer veriyor. Bu alanlar, üretimi öğrenme ve sosyal yaşamla buluşturan yerleşim yaklaşımının parçaları.",
+          "Proje programı narenciye bahçelerini, sebze üretim alanlarını, organik seraları ve permakültür alanlarını kapsıyor. Erişilebilir hobi bahçeleri ise farklı yaş ve hareket ihtiyaçları için ortak üretim olanakları oluşturmak üzere tasarlandı.",
       },
       {
         question: "Üretim yaklaşımında toprak nasıl ele alınıyor?",
         answer:
-          "Proje, sebze üretimini toprağın verimliliği, suyun etkin kullanımı ve organik döngülerle birlikte değerlendiriyor. Permakültür alanları da bu çerçevede yer alıyor. Kompost ve suyun geri kullanımı, toprağın ihtiyaçlarıyla kaynak yönetimi arasında bağ kuran tasarım bileşenleri.",
+          "Toprak verimliliği, suyun etkin kullanımı ve organik döngüler, üretim planlamasının temel ölçütleri. Permakültür, kompost ve uygun su geri kullanım süreçleri, bu ölçütlere göre değerlendirilen tasarım bileşenleri arasında.",
       },
       {
         question: "Tarım alanlarının eğitimle ilişkisi nasıl kuruluyor?",
         answer:
-          "Sebze üretim alanları beslenme, ekoloji ve sorumluluğun birlikte ele alınabileceği öğrenme ortamları olarak düşünülüyor. Çocuklarla ileri yaştaki bireylerin ortak üretimde karşılaşması, kampüsün eğitim ve sosyal dayanışma yaklaşımını birbirine bağlıyor.",
+          "Sebze bahçeleri ve seralar, beslenme, ekoloji ve ortak sorumlulukların deneyim yoluyla öğrenilebileceği alanlar olarak planlandı. Çocuklarla ileri yaştaki bireylerin üretime birlikte katılması, bu öğrenmeyi kuşaklar arası deneyim paylaşımıyla tamamlıyor.",
       },
     ],
   },
   doga: {
     features: [
       {
-        eyebrow: "DUYULARLA TANIŞILAN PEYZAJ",
-        title: "Kokuya, dokuya ve harekete yer açmak",
+        eyebrow: "DUYUSAL PEYZAJ",
+        title: "Koku, doku ve yön duygusu",
         paragraphs: [
-          "Peyzaj programında dokunsal ve kokusal öğelere özel olarak yer veriliyor. Bitkilerle kurulan ilişki, bahçenin farklı kullanıcılar tarafından deneyimlenebilmesi düşüncesiyle ele alınıyor. Hissedilebilir zemin kılavuzları da bu yaklaşımın dolaşımla ilgili parçası. Açık alanların tasarımında yönünü bulmak, çevreyi fark etmek ve kendi hızında hareket etmek birbirini tamamlayan ihtiyaçlar olarak değerlendiriliyor. Bu kararlar, kampüsün erişilebilirlik anlayışını dış mekâna taşıyor.",
-          "Yükseltilmiş bitki yatakları ve erişilebilir hobi bahçeleri, bitkilerle daha yakından ilişki kurulabilecek alanlar olarak tasarlandı. Narenciye koruma ve hasat rotası, peyzajın üretimle bağını sürdürüyor. Bahçenin farklı bölümleri, dolaşımın yanında gözlem ve katılım için de düşünülüyor. Terapötik bahçecilik yaklaşımı bu çeşitliliğin bir parçası olarak yer alıyor; bitkilerle geçirilen zaman, kampüsün yaşam programında kendine alan buluyor.",
+          "Kokulu bitkiler, dokunsal öğeler ve hissedilebilir zemin kılavuzları, peyzajın farklı duyularla deneyimlenmesini amaçlayan tasarım bileşenleri. Bahçelerde yön bulmak, çevreyi tanımak ve rahat hareket etmek aynı düzen içinde değerlendiriliyor. Bu ayrıntılar, erişilebilirlik yaklaşımını yapıların dışına taşıyor. Açık alanların farklı kullanıcılar tarafından anlaşılır ve kullanılabilir olması, peyzaj tasarımının temel ölçütlerinden biri.",
+          "Yükseltilmiş bitki yatakları ve erişilebilir hobi bahçeleri, bitki bakımına katılım için planlanan alanlar arasında. Narenciye koruma ve hasat rotası, bahçelerin üretimle bağlantısını sürdürüyor. Gözlem, dolaşım ve ortak uğraşlar için ayrılan bu mekânlar, terapötik bahçecilik yaklaşımıyla birlikte ele alınıyor. Bitkilerle ilgilenmek ve açık havada zaman geçirmek, kampüsün günlük yaşam programında öngörülen seçenekleri çeşitlendiriyor.",
         ],
         imageHint:
           "Terapötik bahçeler, dokunsal yönlendirme yolu veya yükseltilmiş bitki yatakları",
       },
       {
         eyebrow: "YERLEŞKENİN DOĞAL ÇEVRESİ",
-        title: "Arazinin özellikleriyle birlikte tasarlamak",
+        title: "Antalya’nın doğasıyla uyumlu tasarım",
         paragraphs: [
-          "Yerel iklim, topografya, güneş ve rüzgâr, projenin mimari yaklaşımında bitki örtüsüyle birlikte ele alınıyor. Bu çevresel özellikler, yapılarla açık alanlar arasındaki ilişkinin temelini oluşturuyor. Suyun korunması ve yerel kaynakların kullanımı da aynı çerçevede değerlendiriliyor. Yerleşkenin tasarım düşüncesi, yaşam alanlarının bulunduğu çevreyi tanıyan ve onun özellikleriyle uyum kurmayı hedefleyen bir yaklaşımı esas alıyor.",
-          "Arazi programında tarımsal ve terapötik alanların yanında ekosistem korumaya ayrılan bir bölüm de bulunuyor. Konaklama, eğitim ve sosyal işlevlerin bu alanlarla ilişkisi, yerleşkenin bütününde düşünülüyor. Koruma yaklaşımı, doğanın kampüs kimliğindeki yerini belirleyen kararlardan biri. Tasarımın hedefi, farklı kullanım alanlarını bir araya getirirken doğal çevreye gösterilen özeni yerleşkenin gelişimi boyunca sürdürmek ve mekânsal kararların parçası hâline getirmek.",
+          "Yerel iklim, topografya, güneş, rüzgâr ve bitki örtüsü, ECOLIVE’ın yerleşim kararlarına yön veren çevresel veriler arasında. Yapıların konumu ve açık alanların düzeni bu koşullarla birlikte değerlendiriliyor. Suyun korunması ve yerel kaynakların kullanımı da aynı planın parçası. Amaç, mimariyi bulunduğu çevreyle uyumlu biçimde geliştirmek ve doğal koşulları günlük kullanımın niteliğini destekleyecek şekilde değerlendirmek.",
+          "Arazi programında tarımsal ve terapötik alanların yanında ekosistem korumaya ayrılan alanlar da bulunuyor. Konaklama, eğitim ve sosyal mekânlar bu alanlarla birlikte planlandı. Doğal dokunun korunması, yerleşkenin kullanım kararlarıyla eş zamanlı ele alınıyor. Bu yaklaşım, farklı işlevleri bir araya getirirken çevrenin özelliklerini korumayı ve peyzajın sürekliliğini gözetmeyi amaçlıyor.",
         ],
         imageHint:
           "Kuşbakışı kampüs peyzajı, narenciye dokusu veya yapıların çevresindeki yeşil alanlar",
       },
     ],
     essentials: {
-      eyebrow: "AÇIK ALANLARIN DİLİ",
-      title: "Peyzajın farklı katmanları",
+      eyebrow: "AÇIK ALAN TASARIMI",
+      title: "Duyulara ve ihtiyaçlara duyarlı peyzaj",
       items: [
         {
           title: "Duyusal deneyim",
-          text: "Dokunsal ve kokusal peyzaj öğeleri, bahçeyi farklı duyularla tanımaya yönelik tasarım kararları arasında. Bu öğeler, bitkilerle kurulan ilişkiyi ve açık alanda geçirilen zamanın çeşitliliğini önemseyen bir yaklaşımı yansıtıyor.",
+          text: "Kokulu bitkiler ve dokunsal öğeler, bahçelerin farklı duyularla tanınabilmesi için planlandı. Bitkilerin mevsimsel değişimleri ve dokuları, açık alanda geçirilen zamanın deneyimini çeşitlendiriyor.",
         },
         {
-          title: "Anlaşılır dolaşım",
-          text: "Engelsiz doğa rotaları ve hissedilebilir zemin kılavuzları, kampüsün açık alanlarında yön bulmayla ilişkilendiriliyor. Dolaşımın erişilebilir olması, peyzaj ile mimariyi birleştiren ve farklı kullanıcı ihtiyaçlarını gözeten tasarım ölçütlerinden biri.",
+          title: "Erişilebilir dolaşım",
+          text: "Engelsiz rotalar ve hissedilebilir zemin kılavuzları, açık alanlarda hareketi ve yön bulmayı desteklemek üzere tasarlandı. Yapılardan bahçelere uzanan erişilebilirlik, farklı kullanıcı ihtiyaçlarına göre ele alınıyor.",
         },
         {
           title: "Korunan doğal doku",
-          text: "Narenciye koruma rotası ve ekosistem koruma alanları, yerleşkenin doğayla ilişkisinde ayrı bir yere sahip. Üretim, konaklama ve sosyal yaşamla birlikte düşünülerek kampüsün bütünsel arazi yaklaşımına dâhil ediliyorlar.",
+          text: "Narenciye koruma rotası ve ekosistem koruma alanları, arazi planının temel bileşenleri arasında. Konaklama, tarım ve sosyal mekânların yerleşimi, bu doğal alanlarla birlikte değerlendiriliyor.",
         },
       ],
     },
@@ -280,17 +280,17 @@ export const pageEnrichment = {
       {
         question: "Terapötik bahçe yaklaşımı hangi alanları kapsıyor?",
         answer:
-          "Yükseltilmiş bitki yatakları, erişilebilir hobi bahçeleri ve narenciye rotası bu yaklaşımın tasarım bileşenleri. Bitkilerle temas ve ortak uğraşlar, kampüsün açık hava yaşamı ve sosyal katılım düşüncesiyle birlikte ele alınıyor.",
+          "Yükseltilmiş bitki yatakları, erişilebilir hobi bahçeleri ve narenciye rotası, terapötik bahçecilik yaklaşımıyla birlikte planlandı. Bitki bakımı, gözlem ve ortak uğraşlar, açık havada geçirilen zamanı çeşitlendiren olanaklar arasında.",
       },
       {
         question: "Peyzajda erişilebilirlik nasıl ele alınıyor?",
         answer:
-          "Dış mekân rotaları, hissedilebilir kılavuzlar ve dokunsal öğeler birlikte düşünülüyor. Kullanıcıların yönünü bulması ve bahçelerde farklı biçimlerde zaman geçirebilmesi, yapıların içindeki erişilebilirlik yaklaşımının açık alanlarda da sürdürülmesiyle ilişkilendiriliyor.",
+          "Dış mekân rotaları, hissedilebilir zemin kılavuzları ve dokunsal öğeler birlikte tasarlandı. Bu çözümler, yön bulmayı ve bahçelerde hareketi destekleyerek yapı içindeki erişilebilirlik yaklaşımını açık alanlara taşıyor.",
       },
       {
         question: "Yeşil alanlar yalnızca üretime mi ayrılıyor?",
         answer:
-          "Arazi programı tarımsal alanları terapötik bahçeler, sosyal kullanım ve ekosistem koruma yaklaşımıyla birlikte ele alıyor. Bu farklı işlevler, peyzajın üretim kadar gündelik yaşam ve doğal çevreyle bağ kurmasına da yer veriyor.",
+          "Yeşil alanlar tarımsal üretimin yanında terapötik bahçeleri, dinlenme ve buluşma alanlarını ve ekosistem koruma alanlarını kapsıyor. Peyzaj, üretimle günlük yaşamı ve doğal çevrenin korunmasını aynı arazi planında birleştiriyor.",
       },
     ],
   },
@@ -298,20 +298,20 @@ export const pageEnrichment = {
     features: [
       {
         eyebrow: "TASARIMDAN BAŞLAYAN VERİMLİLİK",
-        title: "Enerji üretimini yapıyla birlikte düşünmek",
+        title: "Mimariyle bütünleşen enerji planlaması",
         paragraphs: [
-          "Çatı tipi güneş enerjisi sistemleri ve küçük rüzgâr türbinleri, projenin yenilenebilir enerji yaklaşımında yer alıyor. Bu üretim seçenekleri, kampüsün elektrik ihtiyacını değerlendiren bir çerçeve içinde düşünülüyor. Güneşten ısı ve sıcak su elde edilmesi de kaynak planlamasının ayrı bir başlığı. Farklı enerji ihtiyaçlarını aynı yerleşke ölçeğinde ele almak, sistemlerin birbiriyle ilişkisini görünür kılıyor.",
-          "Pasif ısıtma ve soğutma stratejileri, enerji yaklaşımının mimariyle bağlantısını kuruyor. Yerel iklim, güneş ve rüzgârla uyumlu tasarım, teknik sistemler kadar yapı kararlarının da kaynak kullanımı üzerindeki yerini önemsiyor. Seraların ve yaşam alanlarının kontrollü ısıtılması aynı bütün içinde değerlendiriliyor. Enerji üretimiyle ihtiyacın birlikte ele alınması, verimliliği yalnızca donanımla sınırlamayan bütünleşik bir tasarım anlayışı oluşturuyor.",
+          "Çatı tipi güneş enerjisi sistemleri ve küçük rüzgâr türbinleri, projenin yenilenebilir elektrik üretimi seçenekleri arasında. Güneşten ısı ve sıcak su elde edilmesi de kaynak planlamasının parçası. Bu sistemler, konaklama alanlarıyla tarımsal üretimin ihtiyaçlarına göre birlikte değerlendiriliyor. Yerleşke ölçeğindeki planlama, enerji üretimi ile kullanım arasındaki ilişkinin bütün olarak ele alınmasını sağlıyor.",
+          "Pasif ısıtma ve soğutma stratejileri, enerji planlamasını mimari tasarımla tamamlıyor. Güneşin, rüzgârın ve yerel iklimin değerlendirilmesi, yapı kararlarının kaynak kullanımındaki rolünü belirliyor. Seraların kontrollü ısıtılmasıyla yaşam alanlarının konfor ihtiyaçları aynı altyapı içinde ele alınıyor. Verimlilik, teknik donanımlarla birlikte mekânsal kararların ve kullanım gereksinimlerinin uyumuna dayandırılıyor.",
         ],
         imageHint:
           "Güneş panelli çatılar, seralar ve enerji sistemlerini birlikte gösteren kampüs görseli",
       },
       {
-        eyebrow: "GÜNLÜK HAREKET VE GERİ KULLANIM",
-        title: "Altyapıyla yaşam arasındaki bağlantılar",
+        eyebrow: "ULAŞIM VE YENİDEN KULLANIM",
+        title: "Günlük ihtiyaçlara karşılık veren altyapı",
         paragraphs: [
-          "Kampüs içi ulaşım yaklaşımında elektrikli küçük araçlar ve bisikletler yer alıyor. Fosil yakıt kullanımını azaltma yönündeki tasarım hedefi, günlük hareketin nasıl düzenleneceği sorusuyla birlikte ele alınıyor. Mikromobilite, enerji sisteminden ayrı bir konu olarak düşünülmüyor. Yerleşkenin farklı alanları arasındaki ulaşım da kaynak kullanımıyla ilişkili bir karar olarak projenin genel yaklaşımına dâhil ediliyor.",
-          "Su yönetiminde yağmur suyu hasadına ek olarak gri suyun geri değerlendirilmesi öngörülüyor. Çatılardan toplanan suyun filtrelenerek sera ve bahçelerde kullanılması, tasarımdaki kaynak ilişkilerinden biri. Organik artıkların kompostla toprağa dönmesi de bu yaklaşımı tamamlıyor. Toplama, filtreleme ve yeniden kullanım arasındaki bağ, suyun ve organik kaynakların yerleşke içindeki döngüsünü kurma düşüncesine dayanıyor.",
+          "Kampüs içi ulaşım için elektrikli küçük araçlar ve bisikletler öngörülüyor. Yerleşkenin bölümleri arasındaki ulaşım düzeni, fosil yakıt kullanımını azaltma hedefiyle birlikte planlanıyor. Bu araçların günlük dolaşımdaki yeri, kampüsün enerji yaklaşımıyla bağlantılı olarak değerlendiriliyor. Böylece ulaşım, teknik altyapı ve açık alan kullanımı aynı yerleşim kararlarının parçaları hâline geliyor.",
+          "Su yönetiminde yağmur suyu hasadı ve gri suyun uygun arıtma süreçleriyle yeniden değerlendirilmesi öngörülüyor. Çatı sularının toplanması, filtrelenmesi ve sera ile bahçelerin ihtiyaçlarında kullanılması, sistem tasarımında yer alıyor. Organik artıkların kompost yoluyla değerlendirilmesi de bu kaynak döngüsünü tamamlıyor. Toplama, işleme ve yeniden kullanım adımları, üretim alanlarının ihtiyaçlarıyla birlikte planlanıyor.",
         ],
         imageHint:
           "Elektrikli kampüs ulaşımı, su döngüsü şeması veya sera sulama sistemi",
@@ -319,19 +319,19 @@ export const pageEnrichment = {
     ],
     essentials: {
       eyebrow: "SİSTEMİN BİLEŞENLERİ",
-      title: "Üretimden kullanıma uzanan kararlar",
+      title: "Enerji, su ve organik kaynaklar",
       items: [
         {
           title: "Yenilenebilir enerji seçenekleri",
-          text: "Çatı tipi güneş enerjisi ve küçük rüzgâr türbinleri, proje kapsamında değerlendirilen üretim seçenekleri. Elektrik üretimi, seraların ve yaşam alanlarının enerji ihtiyaçlarıyla birlikte ele alınarak bütünleşik altyapı yaklaşımına dâhil ediliyor.",
+          text: "Çatı tipi güneş enerjisi sistemleri ve küçük rüzgâr türbinleri, değerlendirilen elektrik üretimi seçenekleri arasında. Sistem planlaması, seraların ve yaşam alanlarının enerji ihtiyaçlarına dayanıyor.",
         },
         {
           title: "Gri su ve yağmur suyu",
-          text: "Yağmur suyu hasadı ve gri suyun geri kullanımı, kampüsün su yaklaşımında birlikte yer alıyor. Toplama, filtreleme ve kullanım alanları arasındaki ilişki, sera ve bahçelerin ihtiyaçlarıyla beraber değerlendiriliyor.",
+          text: "Yağmur suyunun toplanması ve gri suyun uygun süreçlerle yeniden kullanımı, su yönetiminin iki bileşeni. Depolama, arıtma ve kullanım noktaları, sera ve bahçelerin ihtiyaçlarına göre ele alınıyor.",
         },
         {
           title: "Biyokütle ve kompost",
-          text: "Tarımsal üretim ve mutfak kaynaklı organik artıkların değerlendirilmesi için biyokütle ve kompost birimi öngörülüyor. Bu bileşen, kampüs içindeki üretimle atık yönetimi arasında ilişki kurmayı amaçlayan sistem tasarımının parçası.",
+          text: "Tarımsal üretim ve mutfak kaynaklı organik artıklar için biyokütle ve kompost birimi öngörülüyor. Bu birim, üretim alanlarıyla atık yönetimini aynı kaynak planı içinde birleştiriyor.",
         },
       ],
     },
@@ -340,17 +340,17 @@ export const pageEnrichment = {
         question:
           "Yenilenebilir enerji yaklaşımında hangi sistemler yer alıyor?",
         answer:
-          "Çatı tipi güneş enerjisi sistemleri ve küçük rüzgâr türbinleri, tasarımın elektrik üretimi seçenekleri arasında. Güneşten ısı ve sıcak su elde edilmesi de kaynak yaklaşımında yer alıyor. Bu sistemler, tarımsal üretim ve yaşam alanlarının ihtiyaçlarıyla birlikte düşünülüyor.",
+          "Çatı tipi güneş enerjisi sistemleri ve küçük rüzgâr türbinleri, elektrik üretimi için değerlendirilen seçenekler. Güneşten ısı ve sıcak su elde edilmesi de planlamaya dâhil. Sistemler, yaşam alanlarıyla tarımsal üretimin ihtiyaçları birlikte değerlendirilerek ele alınıyor.",
       },
       {
-        question: "Enerji verimliliği mimariyle nasıl ilişki kuruyor?",
+        question: "Mimari tasarım enerji verimliliğini nasıl gözetiyor?",
         answer:
-          "Yerel iklim, güneş ve rüzgâr, yapı kararlarıyla birlikte ele alınıyor. Pasif ısıtma ve soğutma yaklaşımı, teknik sistemleri mimari tasarımla tamamlıyor. Seraların ve konaklama alanlarının ısı ihtiyaçları da aynı yerleşke ölçeğinde değerlendiriliyor.",
+          "Yerel iklim, güneş ve rüzgâr, yapıların yerleşimi ve kullanım ihtiyaçlarıyla birlikte değerlendiriliyor. Pasif ısıtma ve soğutma stratejileri, teknik sistemleri tamamlıyor. Seraların ve konaklama alanlarının ısı gereksinimleri aynı altyapı planı içinde ele alınıyor.",
       },
       {
         question: "Kaynak yaklaşımı günlük yaşama nasıl yansıyor?",
         answer:
-          "Kampüs içindeki elektrikli ulaşım düşüncesi, bahçelerin su ihtiyacı ve üretim artıklarının değerlendirilmesi bu ilişkinin örnekleri. Tasarım, yaşamın farklı ihtiyaçlarını ayrı başlıklar yerine birbirini etkileyen kaynak kararları olarak birlikte ele alıyor.",
+          "Elektrikli kampüs ulaşımı, bahçelerin sulanması ve organik artıkların değerlendirilmesi, kaynak yönetiminin günlük yaşamla doğrudan ilişkili başlıkları. Bu ihtiyaçlar, tüketimin izlenmesi ve verimli kullanım hedefiyle birlikte planlanıyor.",
       },
     ],
   },

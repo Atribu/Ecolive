@@ -19,7 +19,7 @@ const pages = [
 ];
 const fingerprint = (contents) =>
   createHash("sha256").update(contents).digest("hex").slice(0, 12);
-const manifest = { scripts: {}, styles: {}, fonts: {} };
+const manifest = { scripts: {}, chunks: [], modulePreloads: [], styles: {}, fonts: {} };
 
 await rm(output, { recursive: true, force: true });
 await mkdir(join(output, bundleDirectory), { recursive: true });
@@ -31,22 +31,36 @@ async function emitHashed(name, extension, contents) {
   return `/${path}`;
 }
 
-// Every page shares a single module. Bundling removes the dependency waterfall
-// and minifies only the browser code, keeping the authoring files readable.
+// Keep the shared entry small; below-fold experiences load when approached.
 const javascript = await build({
   entryPoints: ["app.js"],
   bundle: true,
   minify: true,
   format: "esm",
+  splitting: true,
+  outdir: join(output, bundleDirectory),
+  entryNames: "[name].[hash]",
+  chunkNames: "[name].[hash]",
+  metafile: true,
   target: ["es2020"],
   legalComments: "none",
   write: false,
 });
-manifest.scripts["/app.js"] = await emitHashed(
-  "app",
-  ".js",
-  javascript.outputFiles[0].contents,
-);
+for (const file of javascript.outputFiles) {
+  const path = `${bundleDirectory}/${basename(file.path)}`;
+  await writeFile(join(output, path), file.contents);
+  const metadata = javascript.metafile.outputs[join(output, path)];
+  if (metadata?.entryPoint === "app.js") manifest.scripts["/app.js"] = `/${path}`;
+  else manifest.chunks.push(`/${path}`);
+}
+if (!manifest.scripts["/app.js"]) throw new Error("Missing app entry bundle");
+const eagerModules = new Set([`${output}${manifest.scripts["/app.js"]}`]);
+for (const path of eagerModules) {
+  for (const dependency of javascript.metafile.outputs[path]?.imports || []) {
+    if (dependency.kind === "import-statement" && !dependency.external) eagerModules.add(dependency.path);
+  }
+}
+manifest.modulePreloads = [...eagerModules].slice(1).map(path => `/${path.slice(output.length + 1)}`);
 
 async function stylesheetSource(url) {
   const file = url.replace(/^\//, "").split(/[?#]/)[0];
@@ -80,9 +94,22 @@ async function stylesheetSource(url) {
 const stylesheetBundles = new Map();
 for (const page of pages) {
   let html = await readFile(page, "utf8");
-  const links = [...html.matchAll(/<link\b[^>]*>/gi)].filter((match) =>
+  const allLinks = [...html.matchAll(/<link\b[^>]*>/gi)].filter((match) =>
     /\brel\s*=\s*["']stylesheet["']/i.test(match[0]),
   );
+  // Exclude whole optional features, never selectors inside a stylesheet.
+  const featureStyles = {
+    "/day-rhythm.css": /data-day-rhythm/,
+    "/campus-explorer.css": /data-campus-explorer/,
+    "/living-campus.css": /id="map-dialog"/,
+    "/living-cycle.css": /data-living-experience|resource-diagram|cycle-section/,
+  };
+  const links = allLinks.filter(match => {
+    const url = /\bhref\s*=\s*["']([^"']+)["']/i.exec(match[0])?.[1];
+    if (!featureStyles[url] || featureStyles[url].test(html)) return true;
+    html = html.replace(match[0], "");
+    return false;
+  });
   const urls = links.map((match) => {
     const url = /\bhref\s*=\s*["']([^"']+)["']/i.exec(match[0])?.[1];
     if (!url?.startsWith("/") || url.startsWith("//")) {
@@ -114,6 +141,7 @@ for (const page of pages) {
     /(<script\b[^>]*\bsrc=["'])\/app\.js(["'])/g,
     `$1${manifest.scripts["/app.js"]}$2`,
   );
+  html = html.replace("</head>", `${manifest.modulePreloads.map(url => `<link rel="modulepreload" href="${url}">`).join("")}</head>`);
   for (const [source, target] of Object.entries(manifest.fonts)) {
     html = html.replaceAll(`"${source}"`, `"${target}"`);
     html = html.replaceAll(`'${source}'`, `'${target}'`);
@@ -176,5 +204,5 @@ async function compressDirectory(directory) {
 }
 await compressDirectory(output);
 console.log(
-  `ECOLIVE production: ${pages.length} pages, ${stylesheetBundles.size} CSS bundles, 1 JS bundle → dist/`,
+  `ECOLIVE production: ${pages.length} pages, ${stylesheetBundles.size} CSS bundles, 1 JS entry + ${manifest.chunks.length} chunks → dist/`,
 );

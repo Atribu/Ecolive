@@ -1,90 +1,90 @@
 export const projectEnrichment = {
   features: [
     {
-      eyebrow: "AYNI YERLEŞKEDE, BİRBİRİYLE İLİŞKİLİ",
-      title: "Gündelik hayatın parçaları aynı planda",
+      eyebrow: "BÜTÜNLEŞİK YERLEŞİM",
+      title: "Günlük yaşamı bir araya getiren plan",
       paragraphs: [
-        "ECOLIVE’ın yerleşim yaklaşımı, bir alanda başlayan deneyimin kampüsün diğer alanlarıyla kurduğu ilişkiye dayanıyor. Konaklama birimleri bahçelere açılırken ortak yemek alanları, atölyeler ve sosyal mekânlar karşılaşmalara yer veriyor. Sağlık ve bakım alanları da bu gündelik çevrenin içinde düşünülüyor. Böylece kişisel yaşam, ihtiyaç duyulan destek ve birlikte geçirilen zaman aynı tasarımın parçaları hâline geliyor.",
-        "Bu ilişki eğitim ve üretim alanlarında da sürüyor. Seralar ve narenciye bahçeleri, yetişen ürünleri gözlemleme ve mevsimleri tanıma olanağı taşıyor. Kreş, okul ve uygulamalı eğitim yaklaşımı, kampüsün diğer işlevlerinden beslenebilecek şekilde ele alındı. Bahçe yolları ve ortak açık alanlar, öğrenme ile gündelik yaşam arasında süreklilik kuran bu yerleşim anlayışını tamamlıyor.",
+        "ECOLIVE’ın yerleşim planı, günlük ihtiyaçlar arasındaki mesafeleri ve mekânların birbirleriyle ilişkisini temel alıyor. Konaklama birimleri bahçelere açılırken ortak yemek alanları, atölyeler ve sosyal mekânlar aynı çevrede konumlanıyor. Sağlık ve bakım alanlarının bu düzene katılması, kişisel yaşamla ihtiyaç duyulan desteğin birlikte değerlendirilmesini sağlıyor.",
+        "Eğitim ve üretim alanları da yerleşimin ayrılmaz parçaları. Seralar ve narenciye bahçeleri, ürünlerin gelişiminin ve mevsimsel değişimlerin gözlemlenebileceği alanlar olarak planlandı. Kreş, okul ve uygulamalı eğitim birimlerinin bu alanlarla yakınlığı, derslikteki bilgiyi günlük deneyimlerle tamamlamayı amaçlıyor. Bahçe yolları ve ortak açık alanlar, kampüsün farklı bölümleri arasında süreklilik kuruyor.",
       ],
     },
     {
       eyebrow: "ANTALYA’NIN DOĞASIYLA BİRLİKTE",
-      title: "Farklı kuşaklara açılan bahçeler",
+      title: "Antalya’nın bahçelerinde ortak yaşam",
       paragraphs: [
-        "Antalya’nın narenciye dokusu, ECOLIVE’ın yaşam fikrinde belirgin bir yere sahip. Yapılar, bahçe yolları ve açık hava buluşma alanları bu çevreyle birlikte tasarlandı. Gölge, doğal ışık ve mevsimlerle değişen peyzaj; dinlenmek, yürümek veya üretime katılmak için farklı ortamlar oluşturma düşüncesini destekliyor. İç mekândan bahçeye uzanan geçişler, doğayla günlük temasın sürekliliğini gözetiyor.",
-        "Ortak alanlarda bir çocuğun merakıyla ileri yaştaki bir bireyin deneyiminin buluşması hedefleniyor. Birlikte bir bitkiye bakmak, atölyede zaman geçirmek veya bahçede sohbet etmek, kuşaklar arasındaki paylaşım için düşünülen olanaklar arasında. Bu yaklaşım, kişinin kendi ritmini ve tercihlerini de önemsiyor. Erişilebilir yollar ve dinlenme noktaları, farklı ihtiyaçları olan insanların aynı çevrede yer bulabilmesi için tasarlandı.",
+        "Antalya’nın narenciye bahçeleri, ECOLIVE’ın mekânsal karakterini belirleyen unsurlar arasında. Yapılar, yürüyüş yolları ve açık hava buluşma alanları bu peyzajla birlikte tasarlandı. Gölge ve doğal ışığın kullanımı; dinlenme, yürüyüş ve üretim için ayrılan alanların düzenini şekillendiriyor. İç mekândan bahçeye uzanan geçişler, açık havayı günlük yaşamın doğal bir devamı olarak ele alıyor.",
+        "Ortak bahçeler ve atölyeler, çocuklarla ileri yaştaki bireylerin deneyimlerini paylaşabileceği mekânlar olarak planlandı. Bitki bakımı, birlikte üretim ve sohbet için ayrılan alanlar, kuşaklar arası iletişimi destekliyor. Kişisel tercihler ve dinlenme ihtiyacı da bu düzenin bir parçası. Erişilebilir yollar ve dinlenme noktaları, çeşitli hareket ihtiyaçlarını gözetiyor.",
       ],
     },
   ],
   campus: {
     eyebrow: "KAMPÜSÜ OLUŞTURAN ALANLAR",
-    title: "Her alanın bütüne kattığı bir değer var",
+    title: "Altı alanda bütünleşen yaşam",
     intro:
-      "Yerleşim planında altı ana başlık birbirini tamamlıyor. Yaşam mekânlarından üretime uzanan bu yapı, hem insanların gündelik ihtiyaçlarını hem de yerleşkenin kaynak kullanımını birlikte ele alıyor. Her alan, doğayla bağ kuran ve farklı kuşaklara yer açan ortak bir yaşam fikrinin parçası.",
+      "ECOLIVE’ın yerleşim planı altı temel alandan oluşuyor. Konaklama, sağlık, eğitim ve üretim; peyzaj ve kaynak yönetimiyle birlikte tasarlandı. Bu bütünlük, günlük ihtiyaçları ve yerleşkenin altyapısını aynı ölçekte değerlendirmeyi sağlıyor.",
     items: [
       {
         title: "Yaşam ve mimari",
-        text: "Bahçeye açılan konaklama birimleri ve ortak mekânlar; kişisel alan, komşuluk ve ailelerle bağ kurma ihtiyaçlarını aynı yerleşim içinde ele alıyor.",
+        text: "Bahçeye açılan konaklama birimleri ve ortak mekânlar, kişisel konforu komşuluk ve aile ilişkileriyle birlikte gözetiyor.",
       },
       {
         title: "Sağlık ve iyi yaşam",
-        text: "Bakım, fizik tedavi ve rehabilitasyon alanları; hareket, dinlenme ve sosyal hayata katılım için ayrılan mekânlarla birlikte proje programında yer alıyor.",
+        text: "Bakım, fizik tedavi ve rehabilitasyon alanları; hareket, dinlenme ve sosyal katılım için ayrılan mekânlarla birlikte planlandı.",
       },
       {
         title: "Eğitim ve kuşaklar",
-        text: "Kreş, okul ve uygulamalı öğrenme alanları, çocukların ve öğrencilerin kampüsün doğasıyla, üretimiyle ve farklı kuşaklarıyla ilişki kurabilmesi düşüncesini taşıyor.",
+        text: "Kreş, okul ve uygulamalı eğitim alanları; doğayı gözlemleme, üretimi tanıma ve kuşaklar arası deneyim paylaşımıyla tamamlanıyor.",
       },
       {
         title: "Tarım ve üretim",
-        text: "Seralar, narenciye bahçeleri ve ortak bahçe alanları; yetiştirme süreçlerini beslenme, eğitim ve birlikte geçirilen zamanla ilişkilendiren bir üretim çevresi oluşturmak üzere planlandı.",
+        text: "Seralar, narenciye bahçeleri ve ortak üretim alanları, yetiştiriciliği beslenme ve eğitimle aynı yerleşkede buluşturuyor.",
       },
       {
         title: "Doğa ve peyzaj",
-        text: "Yürüyüş yolları, gölgeli dinlenme noktaları ve açık hava buluşma alanları, kampüsün farklı işlevlerini birbirine bağlayan peyzajın parçaları olarak tasarlandı.",
+        text: "Yürüyüş yolları, gölgeli dinlenme noktaları ve buluşma alanları, kampüsün bölümlerini birbirine bağlayan açık alan düzenini oluşturuyor.",
       },
       {
         title: "Enerji ve kaynaklar",
-        text: "Güneşten yararlanma, su yönetimi ve organik kaynakların değerlendirilmesi; yaşam alanlarıyla tarımsal üretimin ihtiyaçlarını birlikte gözeten bir altyapı yaklaşımında buluşuyor.",
+        text: "Güneş enerjisi, su yönetimi ve organik kaynakların değerlendirilmesi, yaşam alanlarının ve tarımsal üretimin ihtiyaçlarına göre planlanıyor.",
       },
     ],
   },
 };
 
 export const contactEnrichment = {
-  eyebrow: "GÖRÜŞMEYE HAZIRLANIRKEN",
-  title: "Merak ettiğiniz konudan başlayın",
+  eyebrow: "İLETİŞİM VE GÖRÜŞME",
+  title: "Sorularınızı ve önerilerinizi paylaşın",
   intro:
-    "Kendiniz veya aileniz için yaşam olanaklarını araştırıyor, bir kurum adına iş birliğini değerlendiriyor ya da yatırım yaklaşımını tanımak istiyor olabilirsiniz. İlk mesajınızda ilgi alanınızı kısaca anlatmanız, görüşmenin doğru konular üzerinden ilerlemesine yardımcı olur.",
+    "Kendiniz veya aileniz için yaşam olanaklarını incelemek, kurumsal iş birliğini değerlendirmek ya da yatırım yaklaşımı hakkında bilgi almak üzere ekibimize ulaşabilirsiniz. İlgilendiğiniz konuyu kısaca belirtmeniz, görüşmenin ihtiyaçlarınıza göre hazırlanmasına yardımcı olur.",
   steps: [
     {
       title: "İlgi alanınızı belirtin",
-      text: "Yaşam, sağlık, eğitim, üretim veya kurumsal iş birliği başlıklarından hangisiyle ilgilendiğinizi paylaşın. Kurum adına yazıyorsanız faaliyet alanınızı ve proje ile kurmak istediğiniz ilişkiyi kısaca açıklayabilirsiniz.",
+      text: "Yaşam, sağlık, eğitim, üretim veya kurumsal iş birliği alanlarından hangisiyle ilgilendiğinizi belirtin. Bir kurum adına yazıyorsanız faaliyet alanınızı ve iş birliği önerinizi kısaca paylaşabilirsiniz.",
     },
     {
-      title: "Sorularınızı bir araya getirin",
-      text: "Yerleşim yaklaşımı, yaşam olanakları veya iş birliği başlıkları hakkında öğrenmek istediklerinizi paylaşın. Sizin için öncelikli konuları belirtmeniz, görüşmeyi ihtiyaçlarınıza göre şekillendirmemize yardımcı olur.",
+      title: "Önceliklerinizi paylaşın",
+      text: "Yerleşim planı, yaşam olanakları veya iş birliği seçenekleri hakkında sorularınızı iletin. Öncelikli konularınızı bilmek, görüşmenin sizin için yararlı bilgilerle hazırlanmasını sağlar.",
     },
     {
-      title: "Mesajınızı e-posta ile paylaşın",
-      text: "info@ecolive.com.tr adresine yazarak bizimle iletişim kurabilirsiniz. Adınızı, varsa kurumunuzu ve size ulaşabileceğimiz iletişim bilgilerini eklemeniz yeterli.",
+      title: "Bize e-posta ile ulaşın",
+      text: "Mesajınızı info@ecolive.com.tr adresine gönderebilirsiniz. Adınızı, varsa kurumunuzu ve size ulaşabileceğimiz iletişim bilgilerini eklemeniz yeterli.",
     },
   ],
   faqs: [
     {
-      question: "İlk görüşmede hangi bilgileri sorabilirim?",
+      question: "Hangi konularda bilgi alabilirim?",
       answer:
-        "Yaşam alanlarını, kampüsün mimari yaklaşımını ve doğayla kurduğu ilişkiyi daha yakından tanıyabilirsiniz. Sağlık, eğitim, üretim veya yatırım başlıklarından ilginizi çeken konuları paylaşarak görüşmenin odağını belirleyebilirsiniz.",
+        "Yerleşim planı, mimari tasarım, konaklama alanları ve peyzaj hakkında bilgi alabilirsiniz. Sağlık, eğitim, tarımsal üretim, yatırım ve kurumsal iş birliği konularındaki sorularınızı da ekibimizle paylaşabilirsiniz.",
     },
     {
-      question: "İletişim kurmak için bir kurum temsilcisi olmam gerekiyor mu?",
+      question: "Bireysel olarak bilgi talep edebilir miyim?",
       answer:
-        "Kişisel ilginiz veya aileniz için de bilgi talep edebilirsiniz. Yatırımcılar ile eğitim, sağlık ve diğer alanlarda iş birliği düşünen kurumlar da aynı adrese yazabilir.",
+        "Kendiniz veya aileniz için bilgi talep edebilirsiniz. Yatırımcılar ile eğitim, sağlık ve diğer alanlarda iş birliği değerlendiren kurumlar da aynı e-posta adresinden ekibimize ulaşabilir.",
     },
     {
       question: "Kurumsal iş birliği için hangi bilgileri paylaşabilirim?",
       answer:
-        "Kurumunuzun faaliyet alanını, uzmanlığını ve ECOLIVE ile kurmak istediğiniz ilişkiyi kısaca anlatabilirsiniz. Eğitim, sağlık, bakım, üretim veya yatırım alanındaki önerinizi ve görüşmeye katılacak kişinin iletişim bilgilerini paylaşmanız yeterli.",
+        "Kurumunuzun faaliyet alanını, uzmanlığını ve önerdiğiniz iş birliğinin kapsamını kısaca açıklayabilirsiniz. Eğitim, sağlık, bakım, üretim veya yatırım alanındaki önerinize, görüşmeyi yürütecek kişinin iletişim bilgilerini eklemeniz yeterli.",
     },
   ],
 };

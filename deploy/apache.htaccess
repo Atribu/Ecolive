@@ -8,7 +8,7 @@
   <FilesMatch "\.(css|js|woff2?|ttf|otf|webp|png|jpe?g|svg|mp4|webm)$">
     Header set Cache-Control "public, max-age=604800, must-revalidate"
   </FilesMatch>
-  <FilesMatch "\.[a-f0-9]{8,12}\.(css|js|woff2?|ttf|otf|webp|png|jpe?g|svg)$">
+  <FilesMatch "\.(?:[a-f0-9]{8,12}|[A-Z0-9]{8})\.(css|js|woff2?|ttf|otf|webp|png|jpe?g|svg)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 </IfModule>

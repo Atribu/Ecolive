@@ -85,6 +85,7 @@ function browser({ reduced = false, saveData = false, compact = false } = {}) {
   });
   const connection = Object.assign(new EventTarget(), { saveData });
   const document = Object.assign(new EventTarget(), {
+    documentElement: { dataset: {} },
     hidden: false,
     // Neither load nor fonts is ready: the decoded poster must be sufficient.
     readyState: "loading",
@@ -121,6 +122,11 @@ function browser({ reduced = false, saveData = false, compact = false } = {}) {
   }
   return {
     video, seeks, classes, properties, dispose, window, connection,
+    async motion(paused) {
+      document.documentElement.dataset.motion = paused ? "paused" : "running";
+      emit(document, "ecolive:motionchange");
+      await flush();
+    },
     async decode() {
       await flush();
       assert.equal(typeof decodePoster, "function");
@@ -165,6 +171,36 @@ function setup(t, options) {
   t.after(page.dispose);
   return page;
 }
+
+test("global pause freezes scroll video without changing the track or downloading again", async (t) => {
+  const page = setup(t);
+  await page.decode();
+  await page.media("loadeddata", { duration: 10, readyState: 2, buffered: [[0, 10]] });
+  await page.scroll(0.2);
+  await page.finishSeek();
+  const loads = page.video.loads;
+  const seeks = page.seeks.length;
+  await page.motion(true);
+  await page.scroll(0.8);
+  await page.media("progress");
+  assert.equal(page.seeks.length, seeks);
+  assert.equal(page.classes.has("hero-scroll-enabled"), true);
+  assert.equal(page.video.src, "/desktop.mp4");
+  assert.equal(page.properties.has("--hero-title-opacity"), false);
+  assert.equal(page.properties.has("--hero-bottom-events"), false);
+  await page.motion(false);
+  assert.ok(Math.abs(page.seeks.at(-1) - 7.968) < 0.001);
+  assert.equal(page.video.loads, loads);
+});
+
+test("global pause defers video loading until the visitor resumes motion", async (t) => {
+  const page = setup(t);
+  await page.motion(true);
+  await page.decode();
+  assert.equal(page.video.src, "");
+  await page.motion(false);
+  assert.equal(page.video.src, "/desktop.mp4");
+});
 
 test("a decoded poster starts preload without document load, fonts, or scroll", async (t) => {
   const page = setup(t);

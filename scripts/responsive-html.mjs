@@ -100,6 +100,8 @@ export function enhanceResponsiveImages(html) {
 }
 
 export const fontPreloads = [
+  "serif-regular-latin",
+  "serif-regular-latin-ext",
   "serif-latin",
   "serif-latin-ext",
   "sans-latin",

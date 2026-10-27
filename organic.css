@@ -1,0 +1,51 @@
+/* The living layer is confined to text panels; approved image crops stay intact. */
+.organic-host::before { display: none; }
+.organic-surface { position:absolute; inset:0; z-index:-1; overflow:hidden; pointer-events:none; color:#547359; --organic-x:70%; --organic-y:65%; }
+.organic-surface svg { position:absolute; width:100%; height:100%; inset:0; opacity:.64; mask-image:linear-gradient(115deg,transparent 12%,#000 100%); }
+.organic-contours { stroke:currentColor; stroke-width:1; opacity:.23; }
+.organic-current { stroke:currentColor; stroke-width:1.5; stroke-dasharray:90 1600; opacity:.44; animation:organic-stream 26s linear infinite; animation-delay:var(--organic-offset,0s); }
+.organic-node { opacity:.4; }
+.organic-glow { position:absolute; inset:0; background:radial-gradient(ellipse at var(--organic-x) var(--organic-y),#b9bf8130,transparent 62%); opacity:.6; }
+.contact-main .organic-surface,.theme-doga .page-quote .organic-surface { color:#d3dfbd; }
+.organic-host:not(.organic-visible) .organic-current,
+.organic-hidden *,
+html[data-motion="paused"] * { animation-play-state:paused !important; }
+@keyframes organic-stream { to { stroke-dashoffset:-1690; } }
+.organic-progress { position:fixed; z-index:40; height:2px; inset:0 0 auto; background:linear-gradient(90deg,#8a9a64,#c9b78b); transform-origin:left; scale:0 1; pointer-events:none; }
+.organic-control { position:fixed; z-index:29; right:24px; bottom:20px; min-height:44px; display:flex; align-items:center; gap:8px; padding:10px 16px; border:1px solid #46604c2e; border-radius:40px 8px 40px 40px; background:#faf9f0ed; color:#234c38; box-shadow:0 4px 24px #112b2410; backdrop-filter:blur(12px); font-size:10px; letter-spacing:.06em; opacity:.65; transition:opacity .3s,background .3s; }
+.organic-control svg { width:21px; height:21px; fill:none; stroke:currentColor; stroke-width:1.2; stroke-linecap:round; }
+.organic-control .organic-pause { stroke-width:2; }
+.organic-control[aria-pressed="false"] .organic-pause { display:none; }
+.organic-control:hover,.organic-control:focus-visible,.organic-control-ready { opacity:1; }
+.organic-control:disabled { cursor:default; }
+.button { transition:background .3s,color .3s,border-color .3s,box-shadow .3s; }
+.button:hover { box-shadow:0 7px 24px #173c2a14; }
+.main-nav a { transition:padding-left .35s cubic-bezier(.2,.8,.2,1),color .3s; }
+.main-nav a:hover { padding-left:12px; }
+.navigation[open] .menu-panel { animation:organic-panel .5s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes organic-panel { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+html[data-motion="paused"] { scroll-behavior:auto; }
+html[data-motion="paused"] *,
+html[data-motion="paused"] *::before,
+html[data-motion="paused"] *::after { transition:none !important; }
+html[data-motion="paused"] .motion-reveal { opacity:1; translate:none; transition:none; }
+html[data-motion="paused"] img.motion-parallax { translate:none; scale:1; }
+html[data-motion="paused"] .motion-wave-active { --wave-shift:0px !important; --wave-scale:1 !important; }
+html[data-motion="paused"] .button,
+html[data-motion="paused"] .main-nav a { transition:none; }
+html[data-motion="paused"] dialog[open],
+html[data-motion="paused"] .navigation[open]::backdrop,
+html[data-motion="paused"] .navigation[open] .menu-panel,
+html[data-motion="paused"] .navigation[open] .main-nav a { animation:none; }
+@media(max-width:760px) {
+  .organic-surface svg { width:155%; left:-40%; opacity:.55; }
+  .organic-current { animation-duration:36s; }
+  .organic-control { right:12px; bottom:max(12px,env(safe-area-inset-bottom)); width:44px; padding:10px; border-radius:50%; }
+  .organic-control span { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+}
+@media(prefers-reduced-motion:reduce) {
+  .organic-current,.navigation[open] .menu-panel { animation:none; }
+  .organic-control,.main-nav a { transition:none; }
+}
+@media(forced-colors:active),print { .organic-surface,.organic-progress { display:none; } }
+@media print { .organic-control { display:none; } }

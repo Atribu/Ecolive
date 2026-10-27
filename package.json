@@ -8,10 +8,17 @@
     "dev": "node scripts/generate-pages.mjs && node scripts/serve.mjs",
     "start": "node scripts/generate-pages.mjs && node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
-    "check": "node --check app.js && node --check content.js && node --check page-content.js && node --check project-content.js && node --check scripts/generate-pages.mjs && node --check scripts/serve.mjs && node --check scripts/build.mjs && node --check page-enrichment.js && node --check project-enrichment.js && node --check scripts/enriched-sections.mjs && node --check waves.js && node --check motion.js && node --check hero-scroll.js && node --check scripts/responsive-html.mjs && node --check focus-data.js && node --check deploy/verify-build.mjs",
+    "check": "node --check organic.js && node --check living-cycle.js && node --check living-campus.js && node --check app.js && node --check content.js && node --check page-content.js && node --check project-content.js && node --check scripts/generate-pages.mjs && node --check scripts/serve.mjs && node --check scripts/build.mjs && node --check page-enrichment.js && node --check project-enrichment.js && node --check scripts/enriched-sections.mjs && node --check waves.js && node --check motion.js && node --check hero-scroll.js && node --check scripts/responsive-html.mjs && node --check focus-data.js && node --check deploy/verify-build.mjs && node --check scripts/living-experiences.mjs && node --check living-experiences-life.js && node --check living-experiences-nature.js && node --check living-experiences-project.js && node --check day-rhythm.js && node --check day-rhythm-content.js && node --check scripts/day-rhythm.mjs && node --check living-details.js && node --check immersive-journey.js && node --check journey-content.js && node --check scripts/immersive-journey.mjs && node --check ambient-details.js && node --check cinematic-details.js && node --check journey-content-life.js && node --check journey-content-nature.js && node --check journey-content-contact.js && node --check scripts/verify-journey-pages.mjs && node --check experience.js && node --check experience-content.js && node --check scripts/scene-layout.mjs && node --check scene-navigation.js && node --check campus-explorer.js && node --check scripts/campus-explorer.mjs && node --check spatial-gallery.js && node --check scripts/spatial-gallery.mjs && node --check deferred-features.js",
     "preview": "NODE_ENV=production SERVE_ROOT=dist node scripts/serve.mjs",
     "verify:build": "node deploy/verify-build.mjs",
-    "verify:hero": "node --test scripts/verify-hero-scroll.mjs"
+    "verify:hero": "node --test scripts/verify-hero-scroll.mjs",
+    "verify:cycle": "node --test scripts/verify-living-cycle.mjs",
+    "verify:day": "node --test scripts/verify-day-rhythm.mjs",
+    "verify:journey": "node --test scripts/verify-immersive-journey.mjs",
+    "verify:journey-pages": "node --test scripts/verify-journey-pages.mjs",
+    "verify:experience": "node --test scripts/verify-experience.mjs",
+    "verify:loading": "node --test scripts/verify-deferred-features.mjs",
+    "verify:scroll": "node --test scripts/verify-scroll-motion.mjs"
   },
   "devDependencies": {
     "esbuild": "^0.28.2"

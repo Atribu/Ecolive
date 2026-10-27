@@ -1,0 +1,43 @@
+// Project themes, not a schedule or a promise of operating services.
+export const journeyChapters = [
+  {
+    id: "yerlesmek",
+    label: "Yerleşmek",
+    eyebrow: "KENDİNİZE AİT BİR YER",
+    title: "Kişisel alan, ortak bir yaşam çevresi.",
+    text: "Bahçeye açılan yaşam birimleri, yürüyüş yolları ve ortak alanlar bir bütün olarak tasarlandı. ECOLIVE’ın mimari yaklaşımı, mahremiyeti korurken komşuluğa ve sosyal yaşama katılımı da gözetiyor.",
+    link: "Yaşam ve mimariyi keşfedin",
+    href: "/yasam-ve-mimari/",
+    image: "area:yasam",
+  },
+  {
+    id: "paylasmak",
+    label: "Paylaşmak",
+    eyebrow: "KUŞAKLAR ARASI ÖĞRENME",
+    title: "Merak ve deneyim aynı ortamda.",
+    text: "Ortak bahçeler, atölyeler ve öğrenme alanları, farklı kuşakların birlikte zaman geçirmesi için planlandı. Bir bitkinin bakımını paylaşmak ya da bir beceriyi aktarmak, öğrenmenin günlük yaşamla ilişkisini güçlendiriyor.",
+    link: "Eğitim ve kuşakları keşfedin",
+    href: "/egitim-ve-kusaklar/",
+    image: "extra:learning-greenhouse",
+  },
+  {
+    id: "yetistirmek",
+    label: "Yetiştirmek",
+    eyebrow: "YERLEŞKENİN ÜRETİM KÜLTÜRÜ",
+    title: "Üretim, gündelik yaşamın bir parçası.",
+    text: "Narenciye bahçeleri ve seralar, yerleşkenin üretim kültürünü oluşturuyor. Ekimden bakıma ve hasada uzanan süreç; beslenme, uygulamalı öğrenme ve kuşaklar arası paylaşım başlıklarını aynı çevrede bir araya getiriyor.",
+    link: "Tarım ve üretimi keşfedin",
+    href: "/tarim-ve-uretim/",
+    image: "extra:botanic-workshop",
+  },
+  {
+    id: "yavaslamak",
+    label: "Yavaşlamak",
+    eyebrow: "AÇIK HAVADA DİNLENME VE HAREKET",
+    title: "Doğayla iç içe, kendinize ait zaman.",
+    text: "Gölgeli oturma alanları, gölet kıyısı ve bahçe yolları; açık havada geçirilen zamana farklı seçenekler sunan peyzajın parçaları. Ortak buluşma alanlarıyla sakin köşeler, sosyal yaşamı ve kişisel zamanı dengeliyor.",
+    link: "Doğa ve peyzajı keşfedin",
+    href: "/doga-ve-peyzaj/",
+    image: "extra:lakeside-landscape",
+  },
+];

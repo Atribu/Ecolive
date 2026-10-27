@@ -1,0 +1,107 @@
+/* Reading accents live beside the copy. They never conceal or translate text. */
+.living-details-row {
+  --living-details-ink: #58724b;
+  position: relative;
+}
+.living-details-row::before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 30px;
+  height: 46px;
+  width: 1px;
+  border-radius: 1px;
+  background: var(--living-details-ink);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 380ms ease;
+}
+.living-details-row:first-child::before,
+.project-timeline .living-details-row::before { top: 4px; }
+.living-details-row.living-details-current::before { opacity: .6; }
+.living-details-number { position: relative; }
+.living-details-ring {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  left: 50%;
+  top: -2px;
+  margin-left: -17px;
+  color: var(--living-details-ink);
+  pointer-events: none;
+}
+.timeline-mark .living-details-ring {
+  width: 47px;
+  height: 47px;
+  top: -6px;
+  margin-left: -23.5px;
+}
+.living-details-ring svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.living-details-ring-track { stroke: currentColor; stroke-width: .8; opacity: .14; }
+.living-details-ring-progress {
+  stroke: currentColor;
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: var(--living-details-offset, 100);
+  transform: rotate(-90deg);
+  transform-origin: 20px 20px;
+  opacity: .65;
+  transition: stroke-dashoffset 380ms cubic-bezier(.2, .7, .2, 1), opacity 380ms ease;
+}
+.living-details-current .living-details-ring-progress { opacity: 1; }
+
+/* An outline is drawn around the existing arrow; no control or card moves. */
+@property --living-details-trace {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0turn;
+}
+:is(.related-card .related-arrow, .place-card .place-arrow)::before,
+:is(.related-card .related-arrow, .place-card .place-arrow)::after {
+  content: "";
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+:is(.related-card .related-arrow, .place-card .place-arrow)::before {
+  border: 1px solid currentColor;
+  opacity: .2;
+}
+:is(.related-card .related-arrow, .place-card .place-arrow)::after {
+  --living-details-trace: 0turn;
+  background: conic-gradient(from -90deg, currentColor var(--living-details-trace), transparent 0);
+  mask-image: radial-gradient(farthest-side, transparent calc(100% - 1px), #000 calc(100% - 1px));
+  opacity: .85;
+  transition: --living-details-trace 650ms cubic-bezier(.22, .7, .2, 1);
+}
+.place-card .place-arrow::before,
+.place-card .place-arrow::after { width: calc(100% + 12px); height: calc(100% + 12px); }
+.related-card:focus-visible .related-arrow::after,
+.place-card:focus-visible .place-arrow::after { --living-details-trace: 1turn; }
+@media (hover: hover) and (pointer: fine) {
+  .related-card:hover .related-arrow::after,
+  .place-card:hover .place-arrow::after { --living-details-trace: 1turn; }
+}
+html.living-details-still .living-details-row::before,
+html.living-details-still .living-details-ring-progress,
+html.living-details-still :is(.related-arrow, .place-arrow)::after,
+html[data-motion="paused"] .living-details-row::before,
+html[data-motion="paused"] .living-details-ring-progress,
+html[data-motion="paused"] :is(.related-arrow, .place-arrow)::after { transition: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .living-details-row::before,
+  .living-details-ring-progress,
+  :is(.related-arrow, .place-arrow)::after { transition: none !important; }
+}
+@media (forced-colors: active), print {
+  .living-details-ring,
+  .living-details-row::before,
+  :is(.related-arrow, .place-arrow)::before,
+  :is(.related-arrow, .place-arrow)::after { display: none; }
+}

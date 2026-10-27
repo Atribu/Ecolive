@@ -39,6 +39,8 @@
       media="not all and (max-width: 760px) and (max-aspect-ratio: 9/16)"
       data-poster-preload="true"
     />
+    <link rel="preload" href="/assets/fonts/serif-regular-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/serif-regular-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/assets/fonts/fonts.css" />
     <link rel="stylesheet" href="/styles.css" />
     <link
@@ -74,6 +76,18 @@
     <link rel="stylesheet" href="/interactions.css" />
     <link rel="stylesheet" href="/hero-scroll.css" />
     <link rel="stylesheet" href="/surface-art.css" />
+    <link rel="stylesheet" href="/organic.css" />
+    <link rel="stylesheet" href="/living-cycle.css" />
+    <link rel="stylesheet" href="/living-campus.css" />
+    <link rel="stylesheet" href="/day-rhythm.css" />
+    <link rel="stylesheet" href="/living-details.css" />
+    <link rel="stylesheet" href="/immersive-journey.css" />
+    <link rel="stylesheet" href="/ambient-details.css" />
+    <link rel="stylesheet" href="/cinematic-details.css" />
+    <link rel="stylesheet" href="/experience.css" />
+    <link rel="stylesheet" href="/scene-navigation.css" />
+    <link rel="stylesheet" href="/campus-explorer.css" />
+    <link rel="stylesheet" href="/spatial-gallery.css" />
     <script src="/app.js" type="module"></script>
   </head>
   <body>
@@ -184,7 +198,7 @@
         data-scroll-hero
       >
         <div class="hero-sticky">
-          <div class="hero-media">
+          <div class="hero-media" data-scene-destination>
             <picture
               ><source
                 media="(max-width: 760px) and (max-aspect-ratio: 9/16)"
@@ -205,8 +219,8 @@
             /></picture>
             <video
               data-hero-video
-              data-src="/assets/video/home-scroll.mp4"
-              data-mobile-src="/assets/video/home-scroll-mobile.mp4"
+              data-src="/assets/video/home-scroll.69a6e74219b6.mp4"
+              data-mobile-src="/assets/video/home-scroll-mobile.48166c5569d5.mp4"
               muted
               playsinline
               preload="none"
@@ -217,11 +231,12 @@
           </div>
           <div class="hero-shade"></div>
           <div class="hero-title">
-            <span class="micro hero-location">ANTALYA, TÜRKİYE</span>
+            <span class="micro hero-location">ECOLIVE · ANTALYA · BİR YAŞAM YERLEŞKESİ</span>
             <h1 id="hero-title">
-              <em>Doğayla birlikte,</em><span>HAYATIN İÇİNDE.</span>
+              <span>Yaşamın</span><em>içine.</em>
             </h1>
           </div>
+          <span class="hero-side-note" aria-hidden="true">DOĞAYLA BİRLİKTE, HAYATIN İÇİNDE</span>
           <div class="hero-bottom">
             <p>
               Sağlığı, eğitimi, üretimi ve farklı kuşakları<br
@@ -233,7 +248,7 @@
               class="scroll-cue"
               href="#vizyon"
               aria-label="ECOLIVE fikrini keşfedin"
-              ><span>↓</span></a
+              ><b>Yaşamı keşfedin</b><span>↓</span></a
             >
           </div>
         </div>
@@ -244,7 +259,7 @@
           <div class="title-block" data-surface-art>
             <span class="micro">ECOLIVE FİKRİ</span>
             <h2 class="section-title" id="vision-title">
-              <em>Birlikte daha iyi</em><span>DÜŞÜNÜLMÜŞ<br />BİR YAŞAM.</span>
+              <em>Bir evden fazlası.</em><span>Bir yaşam<br />biçimi.</span>
             </h2>
           </div>
           <div class="body-block">
@@ -254,8 +269,9 @@
             </p>
             <p>
               Antalya’nın narenciye dokusu içinde tasarlanan bu yaşam modeli,
-              insanların doğayla ve birbirleriyle kurduğu bağı merkezine alıyor.
-              Her yaşın katkısına, her günün yeni bir deneyimine yer açıyor.
+              kişisel yaşam alanlarını ortak bahçeler, öğrenme ortamları ve
+              sosyal mekânlarla tamamlıyor. Farklı kuşakların deneyimlerini
+              paylaşabildiği, doğaya yakın bir yaşam çevresi sunmayı amaçlıyor.
             </p>
             <a class="text-link" href="#yasam"
               >Yaşamı keşfedin <span>↗</span></a
@@ -276,6 +292,33 @@
           />
         </div>
       </section>
+      <!-- immersive-journey:start --><section class="immersive-journey" id="yasamin-izinde" data-journey data-journey-index="0" style="--journey-progress:0" aria-labelledby="yasamin-izinde-heading">
+    <header class="journey-header">
+      <div><span class="micro">ECOLIVE’DA YAŞAMIN İZİNDE</span><h2 id="yasamin-izinde-heading">Birlikte yaşamanın <em>izinde.</em></h2></div>
+      <p>Birbirine açılan mekânlar, birbirini tamamlayan yaşamlar. Kampüs fikrini dört farklı bağ üzerinden keşfedin.</p>
+    </header>
+    <div class="journey-track" data-journey-track>
+      <div class="journey-stage" data-journey-stage>
+        <figure class="journey-scene" data-journey-scene>
+          <img class="journey-image is-current" data-journey-image="0" src="/assets/responsive/living-960.3510d45e.webp" srcset="/assets/responsive/living-640.6863379d.webp 640w, /assets/responsive/living-960.3510d45e.webp 960w, /assets/responsive/living-1440.21c79380.webp 1440w, /assets/responsive/living-1920.4df6ba9b.webp 1920w" sizes="100vw" width="2200" height="1584" alt="Narenciye ağaçları ve peyzaj içinde, ahşap ve taş yüzeyli yaşam alanlarının proje görselleştirmesi" loading="lazy" decoding="async" style="object-position:50% 50%"/>
+          <img class="journey-image" data-journey-image="1" alt="" aria-hidden="true" decoding="async"/>
+          <figcaption aria-live="off"><span>ECOLIVE</span><span data-journey-label>Yerleşmek</span></figcaption>
+          <span class="journey-frame" aria-hidden="true"></span>
+        </figure>
+        <div class="journey-panel" id="yasamin-izinde-detail" role="region" aria-label="Seçilen keşif bölümü">
+          <div class="journey-panel-top"><span class="journey-count" data-journey-count>01 / 04</span><span class="journey-scroll-hint">Kaydırarak keşfedin <span aria-hidden="true">↓</span></span></div>
+          <div class="journey-copy" data-journey-copy aria-live="off" aria-atomic="true"><span class="micro" data-journey-eyebrow>KENDİNİZE AİT BİR YER</span><h3 data-journey-title>Kişisel alan, ortak bir yaşam çevresi.</h3><p data-journey-text>Bahçeye açılan yaşam birimleri, yürüyüş yolları ve ortak alanlar bir bütün olarak tasarlandı. ECOLIVE’ın mimari yaklaşımı, mahremiyeti korurken komşuluğa ve sosyal yaşama katılımı da gözetiyor.</p></div>
+          <a class="journey-link" data-journey-link href="/yasam-ve-mimari/"><span>Yaşam ve mimariyi keşfedin</span><span aria-hidden="true">↗</span></a>
+          <div class="journey-choices" role="group" aria-label="Keşif bölümlerini seçin"><button class="journey-choice is-active" type="button" data-journey-choice="0" aria-pressed="true" aria-controls="yasamin-izinde-detail" disabled><span class="journey-choice-number" aria-hidden="true">01</span><span>Yerleşmek</span><span class="journey-choice-mark" aria-hidden="true">↗</span></button><button class="journey-choice" type="button" data-journey-choice="1" aria-pressed="false" aria-controls="yasamin-izinde-detail" disabled><span class="journey-choice-number" aria-hidden="true">02</span><span>Paylaşmak</span><span class="journey-choice-mark" aria-hidden="true">↗</span></button><button class="journey-choice" type="button" data-journey-choice="2" aria-pressed="false" aria-controls="yasamin-izinde-detail" disabled><span class="journey-choice-number" aria-hidden="true">03</span><span>Yetiştirmek</span><span class="journey-choice-mark" aria-hidden="true">↗</span></button><button class="journey-choice" type="button" data-journey-choice="3" aria-pressed="false" aria-controls="yasamin-izinde-detail" disabled><span class="journey-choice-number" aria-hidden="true">04</span><span>Yavaşlamak</span><span class="journey-choice-mark" aria-hidden="true">↗</span></button></div>
+          <div class="journey-navigation"><span>HİKÂYEYİ KEŞFETMEYE DEVAM EDİN</span><div><button type="button" data-journey-prev aria-label="Önceki keşif bölümü" aria-controls="yasamin-izinde-detail" disabled>←</button><button type="button" data-journey-next aria-label="Sonraki keşif bölümü" aria-controls="yasamin-izinde-detail" disabled>→</button></div></div>
+        </div>
+        <div class="journey-progress" data-journey-progress role="progressbar" aria-label="Keşif ilerlemesi" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+      </div>
+    </div>
+    <span class="journey-status" data-journey-status role="status" aria-atomic="true"></span>
+    <noscript><ol class="journey-fallback"><li><span class="micro">Paylaşmak</span><h3>Merak ve deneyim aynı ortamda.</h3><p>Ortak bahçeler, atölyeler ve öğrenme alanları, farklı kuşakların birlikte zaman geçirmesi için planlandı. Bir bitkinin bakımını paylaşmak ya da bir beceriyi aktarmak, öğrenmenin günlük yaşamla ilişkisini güçlendiriyor.</p><a href="/egitim-ve-kusaklar/">Eğitim ve kuşakları keşfedin ↗</a></li><li><span class="micro">Yetiştirmek</span><h3>Üretim, gündelik yaşamın bir parçası.</h3><p>Narenciye bahçeleri ve seralar, yerleşkenin üretim kültürünü oluşturuyor. Ekimden bakıma ve hasada uzanan süreç; beslenme, uygulamalı öğrenme ve kuşaklar arası paylaşım başlıklarını aynı çevrede bir araya getiriyor.</p><a href="/tarim-ve-uretim/">Tarım ve üretimi keşfedin ↗</a></li><li><span class="micro">Yavaşlamak</span><h3>Doğayla iç içe, kendinize ait zaman.</h3><p>Gölgeli oturma alanları, gölet kıyısı ve bahçe yolları; açık havada geçirilen zamana farklı seçenekler sunan peyzajın parçaları. Ortak buluşma alanlarıyla sakin köşeler, sosyal yaşamı ve kişisel zamanı dengeliyor.</p><a href="/doga-ve-peyzaj/">Doğa ve peyzajı keşfedin ↗</a></li></ol></noscript>
+    <script type="application/json" data-journey-items>[{"id":"yerlesmek","label":"Yerleşmek","eyebrow":"KENDİNİZE AİT BİR YER","title":"Kişisel alan, ortak bir yaşam çevresi.","text":"Bahçeye açılan yaşam birimleri, yürüyüş yolları ve ortak alanlar bir bütün olarak tasarlandı. ECOLIVE’ın mimari yaklaşımı, mahremiyeti korurken komşuluğa ve sosyal yaşama katılımı da gözetiyor.","link":"Yaşam ve mimariyi keşfedin","href":"/yasam-ve-mimari/","image":{"src":"/assets/responsive/living-960.3510d45e.webp","srcset":"/assets/responsive/living-640.6863379d.webp 640w, /assets/responsive/living-960.3510d45e.webp 960w, /assets/responsive/living-1440.21c79380.webp 1440w, /assets/responsive/living-1920.4df6ba9b.webp 1920w","sizes":"100vw","width":2200,"height":1584,"alt":"Narenciye ağaçları ve peyzaj içinde, ahşap ve taş yüzeyli yaşam alanlarının proje görselleştirmesi","position":"50% 50%"}},{"id":"paylasmak","label":"Paylaşmak","eyebrow":"KUŞAKLAR ARASI ÖĞRENME","title":"Merak ve deneyim aynı ortamda.","text":"Ortak bahçeler, atölyeler ve öğrenme alanları, farklı kuşakların birlikte zaman geçirmesi için planlandı. Bir bitkinin bakımını paylaşmak ya da bir beceriyi aktarmak, öğrenmenin günlük yaşamla ilişkisini güçlendiriyor.","link":"Eğitim ve kuşakları keşfedin","href":"/egitim-ve-kusaklar/","image":{"src":"/assets/responsive/learning-greenhouse-960.ac506c3a.webp","srcset":"/assets/responsive/learning-greenhouse-640.e53e063a.webp 640w, /assets/responsive/learning-greenhouse-960.ac506c3a.webp 960w, /assets/responsive/learning-greenhouse-1440.2f65608b.webp 1440w, /assets/responsive/learning-greenhouse-1920.36ba1249.webp 1920w","sizes":"100vw","width":2000,"height":1400,"alt":"Serada yetiştirme masaları çevresinde çocukların ve yetişkinlerin birlikte çalıştığı konsept görselleştirmesi.","position":"55% 60%"}},{"id":"yetistirmek","label":"Yetiştirmek","eyebrow":"YERLEŞKENİN ÜRETİM KÜLTÜRÜ","title":"Üretim, gündelik yaşamın bir parçası.","text":"Narenciye bahçeleri ve seralar, yerleşkenin üretim kültürünü oluşturuyor. Ekimden bakıma ve hasada uzanan süreç; beslenme, uygulamalı öğrenme ve kuşaklar arası paylaşım başlıklarını aynı çevrede bir araya getiriyor.","link":"Tarım ve üretimi keşfedin","href":"/tarim-ve-uretim/","image":{"src":"/assets/responsive/botanic-workshop-960.4f1a6b80.webp","srcset":"/assets/responsive/botanic-workshop-640.be87bf95.webp 640w, /assets/responsive/botanic-workshop-960.4f1a6b80.webp 960w, /assets/responsive/botanic-workshop-1440.72e0ea9f.webp 1440w, /assets/responsive/botanic-workshop-1920.b5c55783.webp 1920w","sizes":"100vw","width":2000,"height":1493,"alt":"Botanik kulübünün narenciye ağaçları arasındaki açık atölyesinde bitkilerle çalışan bireylerin konsept görselleştirmesi.","position":"50% 70%"}},{"id":"yavaslamak","label":"Yavaşlamak","eyebrow":"AÇIK HAVADA DİNLENME VE HAREKET","title":"Doğayla iç içe, kendinize ait zaman.","text":"Gölgeli oturma alanları, gölet kıyısı ve bahçe yolları; açık havada geçirilen zamana farklı seçenekler sunan peyzajın parçaları. Ortak buluşma alanlarıyla sakin köşeler, sosyal yaşamı ve kişisel zamanı dengeliyor.","link":"Doğa ve peyzajı keşfedin","href":"/doga-ve-peyzaj/","image":{"src":"/assets/responsive/lakeside-landscape-960.de28cf29.webp","srcset":"/assets/responsive/lakeside-landscape-640.451ac295.webp 640w, /assets/responsive/lakeside-landscape-960.de28cf29.webp 960w, /assets/responsive/lakeside-landscape-1440.b0a2a311.webp 1440w, /assets/responsive/lakeside-landscape-1920.5fc33a51.webp 1920w","sizes":"100vw","width":2000,"height":1493,"alt":"Gün batımında gölet, ahşap dinlenme platformu, seralar ve narenciye bahçesinin konsept illüstrasyonu.","position":"50% 55%"}}]</script>
+  </section><!-- immersive-journey:end -->
       <section class="focus-section" id="yasam" aria-labelledby="focus-title">
         <div class="focus-image" id="focus-image">
           <img
@@ -298,7 +341,7 @@
             <h2 class="section-title" id="focus-title">
               <em>Hayatın her yönü.</em><span>TEK BİR BÜTÜN.</span>
             </h2>
-            <p>Size dokunan yerden keşfedin.</p>
+            <p>ECOLIVE’ın altı temel yaşam alanını keşfedin.</p>
           </div>
           <div
             class="focus-options"
@@ -334,92 +377,78 @@
             ><span>BİRLİKTE<br />HAYATA KATILMAK.</span>
           </h2>
           <p>
-            Bir çocuğun merakı, bir büyüğün deneyimi. Aynı bahçede karşılaşan,
-            birlikte üreten ve birbirinden öğrenen kuşaklar.
+            Çocukların merakı ve ileri yaştaki bireylerin deneyimi, ortak
+            bahçelerde ve atölyelerde bir araya geliyor. Birlikte üretmek,
+            kuşaklar arasında bilgi ve deneyim paylaşımını destekliyor.
           </p>
           <p>
-            ECOLIVE’ın ortak alanları, gündelik hayatın içindeki bu doğal
-            buluşmalara yer açmak için tasarlandı.
+            ECOLIVE’ın eğitim ve sosyal alanları, farklı yaş gruplarının
+            günlük yaşam içinde düzenli olarak karşılaşabileceği bir yerleşim
+            anlayışıyla tasarlandı.
           </p>
           <a class="text-link" href="/egitim-ve-kusaklar/"
             >Eğitim ve kuşaklar arası yaşam <span>↗</span></a
           >
         </div>
       </section>
-      <section class="places" id="mekanlar" aria-labelledby="places-title">
-        <div class="section-intro" data-surface-art>
-          <h2 class="section-title" id="places-title">
-            <em>Doğanın içinde</em><span>HAYATA AÇILAN<br />MEKÂNLAR.</span>
-          </h2>
-          <p>
-            Günün farklı anları, aynı yaşamın parçaları.<br />Size ait
-            alanlardan birlikte geçirilen zamana.
-          </p>
+      <!-- day-rhythm:start --><section class="day-rhythm" id="gunun-ritmi" data-day-rhythm data-day="morning" style="--day-sun-x:22.4%;--day-sun-y:30.8%" aria-labelledby="day-rhythm-heading">
+    <header class="day-rhythm__header">
+      <div><span class="micro">GÜNÜN RİTMİ</span><h2 id="day-rhythm-heading">Bir günün içinde, <em>birçok yaşam.</em></h2></div>
+      <p>Kendi gününüzü hayal edin. Bir zamanı seçin; bahçelerden ortak alanlara uzanan farklı yaşam anlarını keşfedin.</p>
+    </header>
+    <div class="day-rhythm__body">
+      <figure class="day-rhythm__scene" data-day-scene>
+        <img class="day-rhythm__image is-current" data-day-image="0" src="/assets/responsive/living-960.3510d45e.webp" srcset="/assets/responsive/living-640.6863379d.webp 640w, /assets/responsive/living-960.3510d45e.webp 960w, /assets/responsive/living-1440.21c79380.webp 1440w, /assets/responsive/living-1920.4df6ba9b.webp 1920w" sizes="(max-width: 760px) 90vw, (max-width: 1100px) 48vw, 760px" width="2200" height="1584" alt="Narenciye ağaçları ve peyzaj içinde, ahşap ve taş yüzeyli yaşam alanlarının proje görselleştirmesi" loading="lazy" decoding="async" style="object-position:50% 50%"/>
+        <img class="day-rhythm__image" data-day-image="1" alt="" aria-hidden="true" decoding="async"/>
+        <figcaption><span>YAŞAMIN FARKLI ANLARI</span><span class="day-rhythm__index" data-day-count>01 / 04</span></figcaption>
+      </figure>
+      <div class="day-rhythm__detail" data-day-detail id="gunun-ritmi-detail" role="region" aria-label="Seçilen yaşam anı">
+    <div class="day-rhythm__controls">
+      <div class="day-rhythm__choices" role="group" aria-label="Günün zamanını seçin"><button class="day-rhythm__choice is-active" type="button" data-day-choice="0" aria-pressed="true" aria-controls="gunun-ritmi-detail" disabled><span class="day-rhythm__choice-number" aria-hidden="true">01</span><span class="day-rhythm__choice-label">Sabah</span></button><button class="day-rhythm__choice" type="button" data-day-choice="1" aria-pressed="false" aria-controls="gunun-ritmi-detail" disabled><span class="day-rhythm__choice-number" aria-hidden="true">02</span><span class="day-rhythm__choice-label">Gün ortası</span></button><button class="day-rhythm__choice" type="button" data-day-choice="2" aria-pressed="false" aria-controls="gunun-ritmi-detail" disabled><span class="day-rhythm__choice-number" aria-hidden="true">03</span><span class="day-rhythm__choice-label">Öğleden sonra</span></button><button class="day-rhythm__choice" type="button" data-day-choice="3" aria-pressed="false" aria-controls="gunun-ritmi-detail" disabled><span class="day-rhythm__choice-number" aria-hidden="true">04</span><span class="day-rhythm__choice-label">Akşam</span></button></div>
+      <label class="day-rhythm__range-label" for="day-rhythm-range">Günün içinde gezinin</label><input id="day-rhythm-range" class="day-rhythm__range" type="range" data-day-range min="0" max="3" step="1" value="0" aria-label="Günün zamanını seçin" aria-valuetext="Sabah" aria-controls="gunun-ritmi-detail" disabled/>
+      <div class="day-rhythm__navigator" aria-label="Yaşam anları arasında gezinme"><button type="button" data-day-prev aria-label="Önceki yaşam anı" aria-controls="gunun-ritmi-detail" disabled>←</button><span>Günün ritmini siz belirleyin</span><button type="button" data-day-next aria-label="Sonraki yaşam anı" aria-controls="gunun-ritmi-detail" disabled>→</button></div>
+    </div>
+        <div class="day-rhythm__sky" aria-hidden="true">
+          <svg class="day-rhythm__arc" viewBox="0 0 400 200" preserveAspectRatio="none" fill="none"><path d="M28 167C72 53 129 4 196 20S321 61 371 167"/><path class="day-rhythm__contour" d="M4 180C76 154 91 177 145 158S256 151 303 168 357 161 396 146"/><path class="day-rhythm__contour" d="M4 194C81 173 103 195 152 177S266 170 314 188 361 182 396 166"/></svg>
+          <span class="day-rhythm__sun"></span>
         </div>
-        <div class="place-grid">
-          <a class="place-card" href="/yasam-ve-mimari/"
-            ><img
-              src="/assets/responsive/hero-960.f5818f06.webp"
-              alt="ECOLIVE mimarisi"
-              loading="lazy"
-              srcset="/assets/responsive/hero-640.219a5027.webp 640w, /assets/responsive/hero-960.f5818f06.webp 960w, /assets/responsive/hero-1440.3def5ab6.webp 1440w, /assets/responsive/hero-1920.037e95da.webp 1920w"
-              sizes="(max-width: 760px) 100vw, 50vw"
-              width="2200"
-              height="1584"
-              data-original-src="/assets/hero.webp"
-              decoding="async"
-            /><span class="place-label"
-              ><em>Yaşam alanları</em
-              ><span>ÖZENLE TASARLANMIŞ MEKÂNLAR</span></span
-            ><span class="place-arrow" aria-hidden="true">↗</span></a
-          >
-          <a class="place-card" href="/doga-ve-peyzaj/"
-            ><img
-              src="/assets/responsive/living-960.3510d45e.webp"
-              alt="Doğayla iç içe bahçeler"
-              loading="lazy"
-              srcset="/assets/responsive/living-640.6863379d.webp 640w, /assets/responsive/living-960.3510d45e.webp 960w, /assets/responsive/living-1440.21c79380.webp 1440w, /assets/responsive/living-1920.4df6ba9b.webp 1920w"
-              sizes="(max-width: 760px) 100vw, 50vw"
-              width="2200"
-              height="1584"
-              data-original-src="/assets/living.webp"
-              decoding="async"
-            /><span class="place-label"
-              ><em>Bahçeler</em><span>DOĞAYLA GÜNDELİK BİR BAĞ</span></span
-            ><span class="place-arrow" aria-hidden="true">↗</span></a
-          >
-          <a class="place-card" href="/saglik-ve-iyi-yasam/"
-            ><img
-              src="/assets/responsive/active-960.a33e3de3.webp"
-              alt="Açık havada spor ve sosyal alanlar"
-              loading="lazy"
-              srcset="/assets/responsive/active-640.1cd4d0f1.webp 640w, /assets/responsive/active-960.a33e3de3.webp 960w, /assets/responsive/active-1440.18b71f78.webp 1440w, /assets/responsive/active-1920.2a075a9b.webp 1920w"
-              sizes="(max-width: 760px) 100vw, 50vw"
-              width="2200"
-              height="1584"
-              data-original-src="/assets/active.webp"
-              decoding="async"
-            /><span class="place-label"
-              ><em>Aktif yaşam</em><span>HAREKET, DENGE VE PAYLAŞIM</span></span
-            ><span class="place-arrow" aria-hidden="true">↗</span></a
-          >
-          <a class="place-card" href="/tarim-ve-uretim/"
-            ><img
-              src="/assets/responsive/greenhouses-960.2a62a201.webp"
-              alt="Narenciye bahçeleri ve seralar"
-              loading="lazy"
-              srcset="/assets/responsive/greenhouses-640.aa57accf.webp 640w, /assets/responsive/greenhouses-960.2a62a201.webp 960w, /assets/responsive/greenhouses-1440.119c7058.webp 1440w, /assets/responsive/greenhouses-1700.11429c3d.webp 1700w"
-              sizes="(max-width: 760px) 100vw, 50vw"
-              width="1700"
-              height="949"
-              data-original-src="/assets/greenhouses.webp"
-              decoding="async"
-            /><span class="place-label"
-              ><em>Üretim alanları</em><span>TOPRAKTAN HAYATA</span></span
-            ><span class="place-arrow" aria-hidden="true">↗</span></a
-          >
-        </div>
-      </section>
+        <span class="day-rhythm__time" data-day-label>Sabah</span>
+        <div class="day-rhythm__copy" aria-live="polite" aria-atomic="true"><span class="micro day-rhythm__eyebrow" data-day-eyebrow>DOĞAYA AÇILAN YAŞAM ALANLARI</span>
+        <h3 data-day-title>Günün ilk saatlerinde bahçeye açılmak.</h3>
+        <p data-day-text>Bahçeye açılan konaklama birimleri ve yürüyüş yolları, doğayı günlük yaşamın parçası olarak ele alıyor. Güne kişisel alışkanlıklara uygun başlamak, açık havada zaman geçirmek veya kısa bir yürüyüş yapmak, bu mimari yaklaşımın gözettiği kullanım seçenekleri.</p>
+        <span class="day-rhythm__relationship" data-day-relationship>Kişisel alan → bahçe → gündelik hareket</span></div>
+        <a class="day-rhythm__link" data-day-link href="/yasam-ve-mimari/"><span>Yaşam alanlarını keşfedin</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <span class="day-rhythm__status" data-day-status role="status" aria-atomic="true"></span>
+    <noscript><ul class="day-rhythm__fallback"><li><span class="micro">Gün ortası</span><h3>Doğayı gözlemleyerek öğrenmek.</h3><p>Seralar ve üretim alanları, bitkilerin gelişimini ve yetiştirme süreçlerini gözlemlemeye uygun öğrenme ortamları olarak tasarlandı. Bu yaklaşım, çocukların sorularını farklı kuşakların deneyimiyle buluşturmayı ve bilgiyi günlük yaşamla ilişkilendirmeyi amaçlıyor.</p><a href="/egitim-ve-kusaklar/">Kuşaklar arası öğrenmeyi keşfedin ↗</a></li><li><span class="micro">Öğleden sonra</span><h3>Üretim etrafında bir araya gelmek.</h3><p>Botanik atölyeleri ve ortak bahçeler, farklı yaşlardan bireylerin ilgi alanlarını paylaşabileceği mekânlar olarak planlandı. Bitki bakımı ve bahçecilik gibi uğraşlar, üretim bilgisiyle sosyal yaşamı bir araya getirirken kuşaklar arası deneyim aktarımına da ortam oluşturuyor.</p><a href="/tarim-ve-uretim/">Ortak üretim alanlarını keşfedin ↗</a></li><li><span class="micro">Akşam</span><h3>Günün sonunda kendinize ait zaman.</h3><p>Gölet çevresindeki oturma alanları, bahçe yolları ve ortak buluşma noktaları, günün sonunda açık havada zaman geçirmek için farklı seçenekler oluşturuyor. Peyzajdaki sakin köşeler ile sosyal alanlar, dinlenmeyi ve birlikte geçirilen zamanı dengeliyor.</p><a href="/doga-ve-peyzaj/">Doğa ve peyzajı keşfedin ↗</a></li></ul></noscript>
+    <script type="application/json" data-day-items>[{"id":"sabah","label":"Sabah","eyebrow":"DOĞAYA AÇILAN YAŞAM ALANLARI","title":"Günün ilk saatlerinde bahçeye açılmak.","text":"Bahçeye açılan konaklama birimleri ve yürüyüş yolları, doğayı günlük yaşamın parçası olarak ele alıyor. Güne kişisel alışkanlıklara uygun başlamak, açık havada zaman geçirmek veya kısa bir yürüyüş yapmak, bu mimari yaklaşımın gözettiği kullanım seçenekleri.","relationship":"Kişisel alan → bahçe → gündelik hareket","link":"Yaşam alanlarını keşfedin","href":"/yasam-ve-mimari/","image":{"src":"/assets/responsive/living-960.3510d45e.webp","srcset":"/assets/responsive/living-640.6863379d.webp 640w, /assets/responsive/living-960.3510d45e.webp 960w, /assets/responsive/living-1440.21c79380.webp 1440w, /assets/responsive/living-1920.4df6ba9b.webp 1920w","sizes":"(max-width: 760px) 90vw, (max-width: 1100px) 48vw, 760px","width":2200,"height":1584,"alt":"Narenciye ağaçları ve peyzaj içinde, ahşap ve taş yüzeyli yaşam alanlarının proje görselleştirmesi","position":"50% 50%"},"theme":"morning","sun":{"x":22.4,"y":30.8}},{"id":"gun-ortasi","label":"Gün ortası","eyebrow":"GÖZLEM VE UYGULAMALI ÖĞRENME","title":"Doğayı gözlemleyerek öğrenmek.","text":"Seralar ve üretim alanları, bitkilerin gelişimini ve yetiştirme süreçlerini gözlemlemeye uygun öğrenme ortamları olarak tasarlandı. Bu yaklaşım, çocukların sorularını farklı kuşakların deneyimiyle buluşturmayı ve bilgiyi günlük yaşamla ilişkilendirmeyi amaçlıyor.","relationship":"Merak → üretim → birlikte öğrenme","link":"Kuşaklar arası öğrenmeyi keşfedin","href":"/egitim-ve-kusaklar/","image":{"src":"/assets/responsive/learning-greenhouse-960.ac506c3a.webp","srcset":"/assets/responsive/learning-greenhouse-640.e53e063a.webp 640w, /assets/responsive/learning-greenhouse-960.ac506c3a.webp 960w, /assets/responsive/learning-greenhouse-1440.2f65608b.webp 1440w, /assets/responsive/learning-greenhouse-1920.36ba1249.webp 1920w","sizes":"(max-width: 760px) 90vw, (max-width: 1100px) 48vw, 760px","width":2000,"height":1400,"alt":"Serada yetiştirme masaları çevresinde çocukların ve yetişkinlerin birlikte çalıştığı konsept görselleştirmesi.","position":"55% 60%"},"theme":"noon","sun":{"x":49,"y":10}},{"id":"ogleden-sonra","label":"Öğleden sonra","eyebrow":"ORTAK UĞRAŞLAR VE PAYLAŞIM","title":"Üretim etrafında bir araya gelmek.","text":"Botanik atölyeleri ve ortak bahçeler, farklı yaşlardan bireylerin ilgi alanlarını paylaşabileceği mekânlar olarak planlandı. Bitki bakımı ve bahçecilik gibi uğraşlar, üretim bilgisiyle sosyal yaşamı bir araya getirirken kuşaklar arası deneyim aktarımına da ortam oluşturuyor.","relationship":"Ortak ilgi → üretim → paylaşım","link":"Ortak üretim alanlarını keşfedin","href":"/tarim-ve-uretim/","image":{"src":"/assets/responsive/botanic-workshop-960.4f1a6b80.webp","srcset":"/assets/responsive/botanic-workshop-640.be87bf95.webp 640w, /assets/responsive/botanic-workshop-960.4f1a6b80.webp 960w, /assets/responsive/botanic-workshop-1440.72e0ea9f.webp 1440w, /assets/responsive/botanic-workshop-1920.b5c55783.webp 1920w","sizes":"(max-width: 760px) 90vw, (max-width: 1100px) 48vw, 760px","width":2000,"height":1493,"alt":"Botanik kulübünün narenciye ağaçları arasındaki açık atölyesinde bitkilerle çalışan bireylerin konsept görselleştirmesi.","position":"50% 70%"},"theme":"afternoon","sun":{"x":66.9,"y":24.2}},{"id":"aksam","label":"Akşam","eyebrow":"AÇIK HAVADA DİNLENME","title":"Günün sonunda kendinize ait zaman.","text":"Gölet çevresindeki oturma alanları, bahçe yolları ve ortak buluşma noktaları, günün sonunda açık havada zaman geçirmek için farklı seçenekler oluşturuyor. Peyzajdaki sakin köşeler ile sosyal alanlar, dinlenmeyi ve birlikte geçirilen zamanı dengeliyor.","relationship":"Peyzaj → dinlenme → birlikte zaman","link":"Doğa ve peyzajı keşfedin","href":"/doga-ve-peyzaj/","image":{"src":"/assets/responsive/lakeside-landscape-960.de28cf29.webp","srcset":"/assets/responsive/lakeside-landscape-640.451ac295.webp 640w, /assets/responsive/lakeside-landscape-960.de28cf29.webp 960w, /assets/responsive/lakeside-landscape-1440.b0a2a311.webp 1440w, /assets/responsive/lakeside-landscape-1920.5fc33a51.webp 1920w","sizes":"(max-width: 760px) 90vw, (max-width: 1100px) 48vw, 760px","width":2000,"height":1493,"alt":"Gün batımında gölet, ahşap dinlenme platformu, seralar ve narenciye bahçesinin konsept illüstrasyonu.","position":"50% 55%"},"theme":"evening","sun":{"x":87,"y":62.2}}]</script>
+  </section><!-- day-rhythm:end -->
+      <div id="mekanlar"></div>
+      <!-- spatial-gallery:start --><section class="spatial-gallery" id="mekanin-ruhu" data-spatial-gallery aria-labelledby="mekanin-ruhu-title">
+    <header class="spatial-heading"><div><span class="micro">MEKÂNLARDAN BİR SEÇKİ</span><h2 id="mekanin-ruhu-title">Mekânın <em>ruhu.</em></h2></div><div class="spatial-intro"><p>Konutlardan ortak salonlara, öğrenme ortamlarından gölet kıyısına: ECOLIVE’ın mimari karakterini ve günlük yaşama yaklaşımını dört farklı mekân üzerinden keşfedin.</p><span class="spatial-invitation">Bir görsel seçin, yakından keşfedin <span aria-hidden="true">↗</span></span></div></header>
+    <div class="spatial-composition" data-spatial-composition><span class="spatial-whisper" aria-hidden="true">Işık. Doku. Yaşam.</span><figure class="spatial-card spatial-card-1" data-spatial-card>
+      <a class="spatial-image-link" href="/assets/responsive/living-960.3510d45e.webp" data-spatial-open="0" aria-label="Bahçeyle bütünleşen konutlar — görseli büyüt" aria-haspopup="dialog" aria-controls="mekanin-ruhu-dialog"><div class="spatial-image-window"><img src="/assets/responsive/living-960.3510d45e.webp" srcset="/assets/responsive/living-640.6863379d.webp 640w, /assets/responsive/living-960.3510d45e.webp 960w, /assets/responsive/living-1440.21c79380.webp 1440w, /assets/responsive/living-1920.4df6ba9b.webp 1920w" sizes="(max-width: 700px) 88vw, (max-width: 1000px) 44vw, 48vw" width="2200" height="1584" alt="Bitkilendirilmiş yaya yolları boyunca ahşap kaplamalı, yeşil çatılı yaşam birimlerinin konsept görselleştirmesi." loading="lazy" decoding="async" style="object-position:50% 45%"></div><span class="spatial-open-mark" aria-hidden="true">↗</span><span class="spatial-image-label" aria-hidden="true">YAŞAM ALANLARI</span></a>
+      <figcaption><span class="spatial-number">01</span><h3>Bahçeyle bütünleşen konutlar</h3><span class="spatial-caption-arrow" aria-hidden="true">↗</span></figcaption>
+    </figure><figure class="spatial-card spatial-card-2" data-spatial-card>
+      <a class="spatial-image-link" href="/assets/responsive/shared-lounge-960.c86cbc1d.webp" data-spatial-open="1" aria-label="Paylaşıma açık ortak salon — görseli büyüt" aria-haspopup="dialog" aria-controls="mekanin-ruhu-dialog"><div class="spatial-image-window"><img src="/assets/responsive/shared-lounge-960.c86cbc1d.webp" srcset="/assets/responsive/shared-lounge-640.bc60912e.webp 640w, /assets/responsive/shared-lounge-960.c86cbc1d.webp 960w, /assets/responsive/shared-lounge-1440.c9bfc57e.webp 1440w, /assets/responsive/shared-lounge-1920.9debcdf6.webp 1920w" sizes="(max-width: 700px) 88vw, (max-width: 1000px) 44vw, 48vw" width="2000" height="1493" alt="Peyzaja açılan ahşap taşıyıcılı ortak salonda sohbet eden ileri yaştaki bireylerin konsept görselleştirmesi." loading="lazy" decoding="async" style="object-position:50% 60%"></div><span class="spatial-open-mark" aria-hidden="true">↗</span><span class="spatial-image-label" aria-hidden="true">ORTAK MEKÂNLAR</span></a>
+      <figcaption><span class="spatial-number">02</span><h3>Paylaşıma açık ortak salon</h3><span class="spatial-caption-arrow" aria-hidden="true">↗</span></figcaption>
+    </figure><figure class="spatial-card spatial-card-3" data-spatial-card>
+      <a class="spatial-image-link" href="/assets/responsive/learning-greenhouse-960.ac506c3a.webp" data-spatial-open="2" aria-label="Serada uygulamalı öğrenme — görseli büyüt" aria-haspopup="dialog" aria-controls="mekanin-ruhu-dialog"><div class="spatial-image-window"><img src="/assets/responsive/learning-greenhouse-960.ac506c3a.webp" srcset="/assets/responsive/learning-greenhouse-640.e53e063a.webp 640w, /assets/responsive/learning-greenhouse-960.ac506c3a.webp 960w, /assets/responsive/learning-greenhouse-1440.2f65608b.webp 1440w, /assets/responsive/learning-greenhouse-1920.36ba1249.webp 1920w" sizes="(max-width: 700px) 88vw, (max-width: 1000px) 44vw, 48vw" width="2000" height="1400" alt="Serada yetiştirme masaları çevresinde çocukların ve yetişkinlerin birlikte çalıştığı konsept görselleştirmesi." loading="lazy" decoding="async" style="object-position:55% 60%"></div><span class="spatial-open-mark" aria-hidden="true">↗</span><span class="spatial-image-label" aria-hidden="true">YAŞAYAN ÖĞRENME</span></a>
+      <figcaption><span class="spatial-number">03</span><h3>Serada uygulamalı öğrenme</h3><span class="spatial-caption-arrow" aria-hidden="true">↗</span></figcaption>
+    </figure><figure class="spatial-card spatial-card-4" data-spatial-card>
+      <a class="spatial-image-link" href="/assets/responsive/lakeside-landscape-960.de28cf29.webp" data-spatial-open="3" aria-label="Gölet kıyısında dinlenme — görseli büyüt" aria-haspopup="dialog" aria-controls="mekanin-ruhu-dialog"><div class="spatial-image-window"><img src="/assets/responsive/lakeside-landscape-960.de28cf29.webp" srcset="/assets/responsive/lakeside-landscape-640.451ac295.webp 640w, /assets/responsive/lakeside-landscape-960.de28cf29.webp 960w, /assets/responsive/lakeside-landscape-1440.b0a2a311.webp 1440w, /assets/responsive/lakeside-landscape-1920.5fc33a51.webp 1920w" sizes="(max-width: 700px) 88vw, (max-width: 1000px) 44vw, 48vw" width="2000" height="1493" alt="Gün batımında gölet, ahşap dinlenme platformu, seralar ve narenciye bahçesinin konsept illüstrasyonu." loading="lazy" decoding="async" style="object-position:50% 55%"></div><span class="spatial-open-mark" aria-hidden="true">↗</span><span class="spatial-image-label" aria-hidden="true">GÖLET KIYISI</span></a>
+      <figcaption><span class="spatial-number">04</span><h3>Gölet kıyısında dinlenme</h3><span class="spatial-caption-arrow" aria-hidden="true">↗</span></figcaption>
+    </figure></div>
+    <div class="spatial-bottom"><span>ECOLIVE / MEKÂN SEÇKİSİ</span><span>04 BAKIŞ, BİR YAŞAM FİKRİ</span></div>
+    <dialog class="spatial-dialog" id="mekanin-ruhu-dialog" aria-labelledby="mekanin-ruhu-dialog-title" aria-describedby="mekanin-ruhu-dialog-copy" data-spatial-dialog>
+      <div class="spatial-dialog-veil" data-spatial-veil aria-hidden="true"></div>
+      <div class="spatial-dialog-top"><span>ECOLIVE <span aria-hidden="true">/</span> MEKÂNIN RUHU</span><button type="button" class="spatial-close" data-spatial-close autofocus aria-label="Görseli kapat ve galeriye dön"><span>KAPAT</span><span aria-hidden="true">×</span></button></div>
+      <div class="spatial-dialog-image" data-spatial-target><img data-spatial-detail-image alt="" decoding="async"></div>
+      <div class="spatial-dialog-caption" data-spatial-caption><div><span class="micro" data-spatial-detail-label></span><h3 id="mekanin-ruhu-dialog-title" data-spatial-detail-title></h3></div><p id="mekanin-ruhu-dialog-copy" data-spatial-detail-copy></p><span class="spatial-dialog-count" data-spatial-detail-count></span></div>
+    </dialog>
+    <script type="application/json" data-spatial-items>[{"title":"Bahçeyle bütünleşen konutlar","label":"YAŞAM ALANLARI","text":"Ahşap yüzeyler, yeşil çatılar ve bahçeye yönelen açıklıklar konutların mimari karakterini belirliyor. Yaşam birimleri, kişisel mahremiyeti korurken açık havaya doğrudan erişim sağlayacak biçimde tasarlandı.","image":{"src":"/assets/responsive/living-960.3510d45e.webp","srcset":"/assets/responsive/living-640.6863379d.webp 640w, /assets/responsive/living-960.3510d45e.webp 960w, /assets/responsive/living-1440.21c79380.webp 1440w, /assets/responsive/living-1920.4df6ba9b.webp 1920w","sizes":"(max-width: 700px) 88vw, (max-width: 1000px) 44vw, 48vw","width":2200,"height":1584,"alt":"Bitkilendirilmiş yaya yolları boyunca ahşap kaplamalı, yeşil çatılı yaşam birimlerinin konsept görselleştirmesi.","position":"50% 45%"}},{"title":"Paylaşıma açık ortak salon","label":"ORTAK MEKÂNLAR","text":"Gün ışığı alan ortak salon, bahçeyle görsel bütünlük içinde tasarlandı. Farklı oturma düzenleri; sohbet, okuma ve dinlenme için hem ortak hem de daha sakin kullanım seçenekleri sunuyor.","image":{"src":"/assets/responsive/shared-lounge-960.c86cbc1d.webp","srcset":"/assets/responsive/shared-lounge-640.bc60912e.webp 640w, /assets/responsive/shared-lounge-960.c86cbc1d.webp 960w, /assets/responsive/shared-lounge-1440.c9bfc57e.webp 1440w, /assets/responsive/shared-lounge-1920.9debcdf6.webp 1920w","sizes":"(max-width: 700px) 88vw, (max-width: 1000px) 44vw, 48vw","width":2000,"height":1493,"alt":"Peyzaja açılan ahşap taşıyıcılı ortak salonda sohbet eden ileri yaştaki bireylerin konsept görselleştirmesi.","position":"50% 60%"}},{"title":"Serada uygulamalı öğrenme","label":"YAŞAYAN ÖĞRENME","text":"Seradaki yetiştirme masaları, bitkilerin gelişimini yakından izlemeye ve üretim süreçlerini deneyimlemeye olanak tanıyor. Mekân, çocuklarla yetişkinlerin bilgi ve deneyim paylaşabileceği bir uygulamalı öğrenme ortamı olarak tasarlandı.","image":{"src":"/assets/responsive/learning-greenhouse-960.ac506c3a.webp","srcset":"/assets/responsive/learning-greenhouse-640.e53e063a.webp 640w, /assets/responsive/learning-greenhouse-960.ac506c3a.webp 960w, /assets/responsive/learning-greenhouse-1440.2f65608b.webp 1440w, /assets/responsive/learning-greenhouse-1920.36ba1249.webp 1920w","sizes":"(max-width: 700px) 88vw, (max-width: 1000px) 44vw, 48vw","width":2000,"height":1400,"alt":"Serada yetiştirme masaları çevresinde çocukların ve yetişkinlerin birlikte çalıştığı konsept görselleştirmesi.","position":"55% 60%"}},{"title":"Gölet kıyısında dinlenme","label":"GÖLET KIYISI","text":"Gölet kıyısındaki ahşap platformlar, açık manzaraya yönelen dinlenme alanları oluşturuyor. Bahçe yollarıyla bağlantılı bu noktalar, yürüyüşe ara vermek ve açık havada zaman geçirmek için düzenlendi.","image":{"src":"/assets/responsive/lakeside-landscape-960.de28cf29.webp","srcset":"/assets/responsive/lakeside-landscape-640.451ac295.webp 640w, /assets/responsive/lakeside-landscape-960.de28cf29.webp 960w, /assets/responsive/lakeside-landscape-1440.b0a2a311.webp 1440w, /assets/responsive/lakeside-landscape-1920.5fc33a51.webp 1920w","sizes":"(max-width: 700px) 88vw, (max-width: 1000px) 44vw, 48vw","width":2000,"height":1493,"alt":"Gün batımında gölet, ahşap dinlenme platformu, seralar ve narenciye bahçesinin konsept illüstrasyonu.","position":"50% 55%"}}]</script>
+  </section><!-- spatial-gallery:end -->
       <section class="cycle-section" id="dongu" aria-labelledby="cycle-title">
         <div class="cycle-image">
           <img
@@ -500,46 +529,41 @@
           >
         </div>
       </section>
-      <section
-        class="project-section"
-        id="proje"
-        aria-labelledby="project-title"
-      >
-        <div class="project-copy" data-surface-art="terrain">
-          <span class="micro">ANTALYA’DA BİR GELECEK FİKRİ</span>
-          <h2 class="section-title" id="project-title">
-            <em>Bir vizyondan</em><span>ORTAK BİR<br />GELECEĞE.</span>
-          </h2>
-          <p>
-            ECOLIVE, Antalya’nın doğasında farklı kuşakları bir araya getiren
-            bir yaşam fikri. Kişisel alanın huzuru, ortak yaşamın paylaşımıyla
-            birlikte düşünülüyor.
-          </p>
-          <p>
-            Yaşam alanlarından sağlık ve eğitime, üretimden kaynak yönetimine
-            uzanan proje; bütün bileşenleri bir arada düşünülerek geliştirildi.
-          </p>
-          <a class="button dark" href="/proje-hakkinda/"
-            >Projeyi yakından tanıyın <span>↗</span></a
-          >
+      <div id="proje"></div>
+      <!-- campus-explorer:start --><section class="campus-explorer" id="kampus-kesfi" data-campus-explorer aria-labelledby="kampus-kesfi-title">
+    <header class="campus-explorer-heading">
+      <div><span class="micro">YERLEŞKENİN İÇİNDE</span><h2 id="kampus-kesfi-title">Yerleşkeyi<br><em>yakından keşfedin.</em></h2></div>
+      <p>Konutların, ortak alanların ve üretim bahçelerinin yerleşim içindeki konumlarını inceleyin. Plan üzerindeki işaretlerden her alanın ayrıntılarına ulaşabilirsiniz.</p>
+    </header>
+    <div class="campus-explorer-body">
+      <div class="campus-explorer-map-column">
+        <div class="campus-explorer-map-top"><span>ECOLIVE <i aria-hidden="true">/</i> YERLEŞİM PLANI</span><button class="campus-explorer-reset" type="button" data-campus-reset disabled>Bütünü gör <span aria-hidden="true">↙</span></button></div>
+        <div class="campus-explorer-viewport" data-campus-viewport>
+          <div class="campus-explorer-plane" data-campus-plane>
+            <img class="campus-explorer-plan" src="/assets/responsive/campus-plan-tr-960.831595d5.webp" srcset="/assets/responsive/campus-plan-tr-640.b298d129.webp 640w, /assets/responsive/campus-plan-tr-960.831595d5.webp 960w, /assets/responsive/campus-plan-tr-1440.012e13bb.webp 1440w, /assets/responsive/campus-plan-tr-1451.6d13262e.webp 1451w" sizes="(max-width: 1000px) 100vw, 65vw" width="1451" height="1084" alt="Seralar, narenciye bahçeleri, bungalovlar, sağlık merkezi, merkezî agora ve yaya yollarının Türkçe açıklamalarla gösterildiği ECOLIVE yerleşim planı" loading="lazy" decoding="async">
+            <button class="campus-explorer-pin" type="button" data-campus-choice="0" style="--campus-x:16.2%;--campus-y:43.5%" aria-label="01 · Seralar ve üretim" aria-controls="kampus-kesfi-detail" aria-pressed="false" disabled><span>01</span></button><button class="campus-explorer-pin" type="button" data-campus-choice="1" style="--campus-x:82.5%;--campus-y:27.3%" aria-label="02 · Yaşam alanları" aria-controls="kampus-kesfi-detail" aria-pressed="false" disabled><span>02</span></button><button class="campus-explorer-pin" type="button" data-campus-choice="2" style="--campus-x:30.5%;--campus-y:65.2%" aria-label="03 · İyi yaşam merkezi" aria-controls="kampus-kesfi-detail" aria-pressed="false" disabled><span>03</span></button><button class="campus-explorer-pin" type="button" data-campus-choice="3" style="--campus-x:45.3%;--campus-y:68.1%" aria-label="04 · Merkezî agora" aria-controls="kampus-kesfi-detail" aria-pressed="false" disabled><span>04</span></button><button class="campus-explorer-pin" type="button" data-campus-choice="4" style="--campus-x:77.8%;--campus-y:54.6%" aria-label="05 · Bahçeler ve yollar" aria-controls="kampus-kesfi-detail" aria-pressed="false" disabled><span>05</span></button>
+          </div>
+          <div class="campus-explorer-map-corners" aria-hidden="true"></div>
         </div>
-        <button
-          class="campus-map"
-          id="map-open"
-          aria-label="Kampüsün açıklamalı yerleşim planını büyütün"
-        >
-          <img src="/assets/responsive/campus-plan-tr-960.831595d5.webp" alt="Seralar, narenciye bahçeleri, bungalovlar, sağlık merkezi, merkez agora ve yaya yollarının Türkçe açıklamalarla gösterildiği ECOLIVE yerleşim planı" loading="lazy" sizes="(max-width: 760px) 100vw, 56vw" srcset="/assets/responsive/campus-plan-tr-640.b298d129.webp 640w, /assets/responsive/campus-plan-tr-960.831595d5.webp 960w, /assets/responsive/campus-plan-tr-1440.012e13bb.webp 1440w, /assets/responsive/campus-plan-tr-1451.6d13262e.webp 1451w" data-original-src="/assets/campus-plan-tr.png" decoding="async" width="1451" height="1084"><span class="map-caption"
-            ><span>KAMPÜSÜN BÜTÜNÜ</span><span class="map-expand">↗</span></span
-          >
-        </button>
+        <div class="campus-explorer-map-bottom"><span data-campus-map-label>Bir alan seçerek yakından keşfedin</span><button type="button" id="map-open" class="campus-explorer-expand">Planı büyük inceleyin ↗</button></div>
+        <div class="campus-explorer-options" role="group" aria-label="Kampüsün alanlarını keşfedin"><button class="campus-explorer-option" type="button" data-campus-choice="0" aria-pressed="false" aria-controls="kampus-kesfi-detail" disabled><span class="campus-explorer-option-number">01</span><span>Seralar ve üretim</span><span class="campus-explorer-option-arrow" aria-hidden="true">↗</span></button><button class="campus-explorer-option" type="button" data-campus-choice="1" aria-pressed="false" aria-controls="kampus-kesfi-detail" disabled><span class="campus-explorer-option-number">02</span><span>Yaşam alanları</span><span class="campus-explorer-option-arrow" aria-hidden="true">↗</span></button><button class="campus-explorer-option" type="button" data-campus-choice="2" aria-pressed="false" aria-controls="kampus-kesfi-detail" disabled><span class="campus-explorer-option-number">03</span><span>İyi yaşam merkezi</span><span class="campus-explorer-option-arrow" aria-hidden="true">↗</span></button><button class="campus-explorer-option" type="button" data-campus-choice="3" aria-pressed="false" aria-controls="kampus-kesfi-detail" disabled><span class="campus-explorer-option-number">04</span><span>Merkezî agora</span><span class="campus-explorer-option-arrow" aria-hidden="true">↗</span></button><button class="campus-explorer-option" type="button" data-campus-choice="4" aria-pressed="false" aria-controls="kampus-kesfi-detail" disabled><span class="campus-explorer-option-number">05</span><span>Bahçeler ve yollar</span><span class="campus-explorer-option-arrow" aria-hidden="true">↗</span></button></div>
+      </div>
+      <section class="campus-explorer-detail" id="kampus-kesfi-detail" aria-labelledby="kampus-kesfi-detail-title" aria-live="off">
+        <figure class="campus-explorer-photo-frame"><img class="campus-explorer-photo" data-campus-photo src="/assets/responsive/hero-960.f5818f06.webp" srcset="/assets/responsive/hero-640.219a5027.webp 640w, /assets/responsive/hero-960.f5818f06.webp 960w, /assets/responsive/hero-1440.3def5ab6.webp 1440w, /assets/responsive/hero-1920.037e95da.webp 1920w" sizes="(max-width: 600px) 100vw, (max-width: 1000px) 48vw, 33vw" width="2200" height="1584" alt="Bahçeler ve ortak yaşam alanlarıyla bütünleşen ECOLIVE kampüsünün proje görselleştirmesi" loading="lazy" decoding="async"><figcaption><span data-campus-photo-label>Kampüsün bütünü</span><span data-campus-count aria-hidden="true">ECOLIVE</span></figcaption></figure>
+        <div class="campus-explorer-copy" data-campus-copy><span class="micro" data-campus-eyebrow>BÜTÜNCÜL YERLEŞİM YAKLAŞIMI</span><h3 id="kampus-kesfi-detail-title" data-campus-title>Günlük yaşamı tamamlayan bir yerleşke.</h3><p data-campus-description>Konutlar, üretim bahçeleri, iyi yaşam merkezi ve sosyal alanlar ortak bir yerleşim planında buluşuyor. ECOLIVE’da her işlev, günlük yaşamın farklı bir ihtiyacını karşılayacak biçimde konumlandırıldı.</p><a class="campus-explorer-link" data-campus-link href="/proje-hakkinda/"><span>Projeyi yakından tanıyın</span><span aria-hidden="true">↗</span></a></div>
       </section>
+    </div>
+    <span class="campus-explorer-status" data-campus-status role="status" aria-atomic="true"></span>
+    <noscript><div class="campus-explorer-fallback"><a href="/tarim-ve-uretim/">Seralar ve üretim ↗</a><a href="/yasam-ve-mimari/">Yaşam alanları ↗</a><a href="/saglik-ve-iyi-yasam/">İyi yaşam merkezi ↗</a><a href="/egitim-ve-kusaklar/">Merkezî agora ↗</a><a href="/doga-ve-peyzaj/">Bahçeler ve yollar ↗</a></div></noscript>
+    <script type="application/json" data-campus-items>{"items":[{"id":"uretim","label":"Seralar ve üretim","title":"Üretimin merkezinde toprak.","x":16.2,"y":43.5,"eyebrow":"ORGANİK SERALAR VE BİTKİ BAHÇELERİ","description":"Seralar ve bitki bahçeleri, tarımsal üretimle uygulamalı öğrenmeyi aynı çevrede buluşturuyor. Mevsimsel üretim ve bahçecilik, yerleşkenin beslenme ve ortak etkinlik yaklaşımını tamamlıyor.","link":"Üretim yaklaşımını keşfedin","area":"uretim","image":{"src":"/assets/responsive/greenhouses-960.2a62a201.webp","srcset":"/assets/responsive/greenhouses-640.aa57accf.webp 640w, /assets/responsive/greenhouses-960.2a62a201.webp 960w, /assets/responsive/greenhouses-1440.119c7058.webp 1440w, /assets/responsive/greenhouses-1700.11429c3d.webp 1700w","sizes":"(max-width: 600px) 100vw, (max-width: 1000px) 48vw, 33vw","width":1700,"height":949,"alt":"Narenciye bahçeleriyle çevrili sera ve tarımsal üretim alanlarının proje görselleştirmesi"},"href":"/tarim-ve-uretim/"},{"id":"yasam","label":"Yaşam alanları","title":"Bahçeye açılan yaşam alanları.","x":82.5,"y":27.3,"eyebrow":"AZ KATLI BUNGALOV KONUTLAR","description":"Bahçeye açılan konutlar, kişisel mahremiyet ile ortak alanlara erişimi birlikte gözetiyor. Az katlı yerleşim; açık havada geçirilen zamanı, yaya ulaşımını ve komşuluk ilişkilerini destekleyecek biçimde tasarlandı.","link":"Yaşam alanlarını keşfedin","area":"yasam","image":{"src":"/assets/responsive/living-960.3510d45e.webp","srcset":"/assets/responsive/living-640.6863379d.webp 640w, /assets/responsive/living-960.3510d45e.webp 960w, /assets/responsive/living-1440.21c79380.webp 1440w, /assets/responsive/living-1920.4df6ba9b.webp 1920w","sizes":"(max-width: 600px) 100vw, (max-width: 1000px) 48vw, 33vw","width":2200,"height":1584,"alt":"Narenciye ağaçları ve peyzaj içinde, ahşap ve taş yüzeyli yaşam alanlarının proje görselleştirmesi"},"href":"/yasam-ve-mimari/"},{"id":"saglik","label":"İyi yaşam merkezi","title":"Günlük yaşamı destekleyen mekânlar.","x":30.5,"y":65.2,"eyebrow":"SAĞLIK AKADEMİSİ VE İYİ YAŞAM MERKEZİ","description":"Sağlık, bakım ve rehabilitasyon alanları; hareket, dinlenme ve sosyal mekânlarla birlikte planlandı. Tasarımın odağında, farklı destek ihtiyaçlarına uygun bir çevre ve bireyin günlük yaşama katılımı yer alıyor.","link":"İyi yaşam yaklaşımını keşfedin","area":"saglik","image":{"src":"/assets/responsive/wellness-960.ec7bb400.webp","srcset":"/assets/responsive/wellness-640.104533c3.webp 640w, /assets/responsive/wellness-960.ec7bb400.webp 960w, /assets/responsive/wellness-1440.73f8c7e1.webp 1440w, /assets/responsive/wellness-1920.756d4032.webp 1920w","sizes":"(max-width: 600px) 100vw, (max-width: 1000px) 48vw, 33vw","width":2200,"height":1584,"alt":"Bahçeyle bütünleşen fizik tedavi ve iyi yaşam alanlarının proje görselleştirmesi"},"href":"/saglik-ve-iyi-yasam/"},{"id":"agora","label":"Merkezî agora","title":"Ortak yaşamın buluşma noktası.","x":45.3,"y":68.1,"eyebrow":"MERKEZÎ AGORA VE ORTAK YAŞAM ALANI","description":"Merkezî agora, yerleşkenin sosyal buluşma noktası. Ortak salonlar ve çevresindeki bahçeler; sohbet, dinlenme ve kuşaklar arası etkinlikler için birbirini tamamlayan mekânlar oluşturuyor.","link":"Birlikte yaşamı keşfedin","area":"egitim","image":{"src":"/assets/responsive/shared-lounge-960.c86cbc1d.webp","srcset":"/assets/responsive/shared-lounge-640.bc60912e.webp 640w, /assets/responsive/shared-lounge-960.c86cbc1d.webp 960w, /assets/responsive/shared-lounge-1440.c9bfc57e.webp 1440w, /assets/responsive/shared-lounge-1920.9debcdf6.webp 1920w","sizes":"(max-width: 600px) 100vw, (max-width: 1000px) 48vw, 33vw","width":2000,"height":1493,"alt":"Bahçeye açılan ortak yaşam salonunda sohbet eden kişilerin proje görselleştirmesi"},"alt":"Bahçeye açılan ortak yaşam salonunda sohbet eden kişilerin proje görselleştirmesi","href":"/egitim-ve-kusaklar/"},{"id":"doga","label":"Bahçeler ve yollar","title":"Yerleşkeyi birleştiren yeşil yollar.","x":77.8,"y":54.6,"eyebrow":"YAYA YOLLARI VE KAMPÜS İÇİ ULAŞIM","description":"Bahçe yolları; konutları, üretim alanlarını ve sosyal mekânları birbirine bağlıyor. Gölgeli dinlenme noktalarıyla desteklenen yaya ağı, açık havada hareket etmeyi ve yerleşke içinde rahat dolaşımı önceliklendiriyor.","link":"Peyzajı keşfedin","area":"doga","image":{"src":"/assets/responsive/hero-960.f5818f06.webp","srcset":"/assets/responsive/hero-640.219a5027.webp 640w, /assets/responsive/hero-960.f5818f06.webp 960w, /assets/responsive/hero-1440.3def5ab6.webp 1440w, /assets/responsive/hero-1920.037e95da.webp 1920w","sizes":"(max-width: 600px) 100vw, (max-width: 1000px) 48vw, 33vw","width":2200,"height":1584,"alt":"Yeşil alanlar, bahçe yolları ve doğayla bütünleşen kampüs yapılarının proje görselleştirmesi"},"href":"/doga-ve-peyzaj/"}],"overview":{"label":"Kampüsün bütünü","eyebrow":"BÜTÜNCÜL YERLEŞİM YAKLAŞIMI","title":"Günlük yaşamı tamamlayan bir yerleşke.","description":"Konutlar, üretim bahçeleri, iyi yaşam merkezi ve sosyal alanlar ortak bir yerleşim planında buluşuyor. ECOLIVE’da her işlev, günlük yaşamın farklı bir ihtiyacını karşılayacak biçimde konumlandırıldı.","link":"Projeyi yakından tanıyın","href":"/proje-hakkinda/","image":{"src":"/assets/responsive/hero-960.f5818f06.webp","srcset":"/assets/responsive/hero-640.219a5027.webp 640w, /assets/responsive/hero-960.f5818f06.webp 960w, /assets/responsive/hero-1440.3def5ab6.webp 1440w, /assets/responsive/hero-1920.037e95da.webp 1920w","sizes":"(max-width: 600px) 100vw, (max-width: 1000px) 48vw, 33vw","width":2200,"height":1584,"alt":"Bahçeler ve ortak yaşam alanlarıyla bütünleşen ECOLIVE kampüsünün proje görselleştirmesi"}}}</script>
+  </section><!-- campus-explorer:end -->
     </main>
 
     <footer id="iletisim" class="site-footer">
       <div class="footer-contact">
         <h2 class="section-title">
-          <em>Birlikte konuşalım.</em
-          ><span>ECOLIVE’I<br />YAKINDAN TANIYIN.</span>
+          <em>ECOLIVE’ı yakından tanıyın.</em
+          ><span>Bizimle<br />iletişime geçin.</span>
         </h2>
         <div>
           <p>

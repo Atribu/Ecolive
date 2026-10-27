@@ -1,63 +1,63 @@
 export const projectContent = {
   intro:
-    "ECOLIVE, Antalya’da yaşam alanlarını sağlık, eğitim, tarım ve doğayla birlikte ele alan bir yerleşke projesi. Kişisel alanın huzurunu, ortak yaşamın paylaşımını ve farklı kuşakların bir arada olmasını aynı kampüste buluşturan bir yaşam anlayışıyla tasarlandı.",
+    "ECOLIVE, Antalya’da yaşam alanlarını sağlık, eğitim, tarım ve doğayla bütünleştiren bir yerleşke projesi. Bahçeye açılan konaklama birimleri, kuşakları bir araya getiren ortak mekânlar ve üretim alanları aynı planın parçaları. Tasarımın merkezinde, kişisel konforla sosyal yaşam arasında kurulan denge yer alıyor.",
   principles: [
     {
-      title: "Hayatın farklı dönemlerine yer açmak",
-      text: "Çocukların merakı, yetişkinlerin gündelik hayatı ve ileri yaştaki bireylerin deneyimi birlikte düşünülüyor. Erişilebilir mekânlar, ortak bahçeler ve sosyal alanlar, farklı ihtiyaçları gözeten bir yaşam çevresi oluşturmak üzere tasarlandı.",
+      title: "Farklı yaşlar, ortak bir çevre",
+      text: "Çocukların, yetişkinlerin ve ileri yaştaki bireylerin ihtiyaçları aynı yerleşim içinde değerlendiriliyor. Erişilebilir mekânlar, ortak bahçeler ve sosyal alanlar; kişisel tercihlere saygılı, kuşaklar arası paylaşıma açık bir çevre oluşturmak üzere tasarlandı.",
     },
     {
-      title: "Doğayı gündelik yaşamla buluşturmak",
-      text: "Narenciye bahçeleri, yürüyüş yolları ve seralar kampüsün yerleşimini şekillendiriyor. Mimari ile peyzaj arasındaki ilişki; açık havada zaman geçirmeye, mevsimleri izlemeye ve üretimle bağ kurmaya alan açıyor.",
+      title: "Doğayla bütünleşen günlük yaşam",
+      text: "Narenciye bahçeleri, yürüyüş yolları ve seralar yerleşim planının temel unsurları. Yapıların açık alanlarla bağlantısı, doğanın ve üretimin gün boyunca görülebileceği, açık havada zaman geçirilebilecek bir düzen oluşturuyor.",
     },
     {
-      title: "Kaynakları birlikte düşünmek",
-      text: "Enerji, su, ısı ve organik atık yönetimi, yaşam alanlarıyla tarımsal üretimin ihtiyaçları üzerinden birlikte ele alınıyor. Tasarımın hedefi, kaynakları verimli kullanan ve uygun süreçlerde yeniden değerlendiren bir yerleşke düzeni kurmak.",
+      title: "Kaynakları verimli kullanmak",
+      text: "Enerji, su, ısı ve organik atık yönetimi; yaşam alanlarının ve tarımsal üretimin ihtiyaçlarına göre planlanıyor. Tüketimin izlenmesi ve uygun süreçlerde yeniden kullanım, altyapı tasarımının temel hedefleri arasında.",
     },
   ],
   stages: [
     {
-      title: "Kendi ritminde yaşamak",
+      title: "Kişisel alanın konforu",
       status: "KİŞİSEL ALAN",
-      text: "Bahçeye açılan yaşam birimleri; dinlenmeye, kendi başına zaman geçirmeye ve gündelik alışkanlıkları sürdürmeye alan açacak şekilde tasarlandı. Mimari yaklaşımın merkezinde kişisel alanın huzuru ve farklı yaşam ihtiyaçlarına duyulan özen yer alıyor.",
+      text: "Bahçeye açılan yaşam birimleri, mahremiyeti ve günlük alışkanlıkların sürekliliğini gözetiyor. İç mekân, teras ve bahçe arasındaki geçişler; dinlenme, kişisel uğraşlar ve açık havada zaman geçirme için farklı kullanım olanakları sağlayacak biçimde tasarlandı.",
     },
     {
-      title: "Birlikte daha çok paylaşmak",
+      title: "Paylaşılan mekânlar",
       status: "ORTAK YAŞAM",
-      text: "Ortak bahçeler, yemek alanları ve atölyeler, farklı kuşakların yollarının kesişebileceği bir çevre olarak planlandı. Komşuluk, öğrenme ve birlikte üretme düşüncesi; yaşam, eğitim ve sosyal alanlar arasındaki ilişkileri şekillendiriyor.",
+      text: "Ortak bahçeler, yemek alanları ve atölyeler, farklı kuşakların bir araya gelebileceği mekânlar olarak planlandı. Bu alanların konaklama ve eğitim birimleriyle yakınlığı, komşuluk ilişkilerini ve birlikte üretme olanaklarını destekliyor.",
     },
     {
-      title: "Doğayla bağ kurmak",
+      title: "Açık havada yaşam",
       status: "DOĞAYLA BİRLİKTE",
-      text: "Narenciye bahçeleri, seralar ve yürüyüş yolları, açık havayı gündelik hayatın bir parçası olarak ele alıyor. Mevsimleri izlemek ve üretime yakın olmak, kaynakların verimli kullanılmasıyla birlikte ECOLIVE’ın yaşam yaklaşımını tamamlıyor.",
+      text: "Narenciye bahçeleri, seralar ve yürüyüş yolları, yerleşkenin açık alan düzenini oluşturuyor. Mevsimsel değişimleri izlemek, bitkilerle ilgilenmek ve üretime katılmak, ECOLIVE’ın günlük yaşam için öngördüğü deneyimler arasında.",
     },
   ],
   faqs: [
     {
       question: "ECOLIVE’ın yaşam yaklaşımının merkezinde ne var?",
       answer:
-        "Kişisel alan ile ortak yaşam arasında dengeli bir ilişki kurmak. Bahçeye açılan yaşam birimleri, farklı kuşakları buluşturan sosyal alanlar ve doğayla temas; sağlık, eğitim ve üretimle birlikte düşünülüyor. Bu bütünlük, kişinin kendi ritmini korurken çevresiyle bağ kurabileceği bir yerleşke fikrine dayanıyor.",
+        "Kişisel konforu, sosyal katılımı ve doğayla teması aynı yerleşkede buluşturmak. Bahçeye açılan yaşam birimleri; sağlık, eğitim ve üretim alanlarıyla birlikte planlandı. Ortak mekânlar, kuşaklar arası paylaşımı desteklerken kişinin kendi günlük düzenini koruması da gözetiliyor.",
     },
     {
       question: "ECOLIVE nasıl bir yerleşke olarak tasarlandı?",
       answer:
-        "Yaşam ve konaklama alanları; sağlık ve bakım, eğitim, tarımsal üretim ve ortak sosyal mekânlarla birlikte planlandı. Narenciye bahçeleri, seralar ve yürüyüş yolları bu alanları birbirine bağlayan kampüs düzeninin parçaları.",
+        "Konaklama, sağlık ve bakım, eğitim, tarımsal üretim ve sosyal alanları bir araya getiren bir yerleşke olarak tasarlandı. Narenciye bahçeleri, seralar ve yürüyüş yolları bu alanların birbirleriyle bağlantısını ve kampüsün açık alan düzenini belirliyor.",
     },
     {
-      question: "Proje kimler için düşünülüyor?",
+      question: "ECOLIVE kimlere yönelik bir proje?",
       answer:
-        "ECOLIVE, farklı kuşakların bir arada bulunabildiği bir yaşam çevresi olarak tasarlandı. İleri yaştaki bireylerin gündelik hayata katılımı ve destek ihtiyaçları; ailelerle bağlar, çocukların eğitimi ve ortak yaşam alanlarıyla birlikte ele alınıyor. Kişisel ihtiyaçlarınıza uygun olanakları görüşmek için ekiple iletişim kurabilirsiniz.",
+        "ECOLIVE, farklı kuşakların bir arada yaşayabileceği ve öğrenebileceği bir çevre olarak tasarlandı. İleri yaştaki bireylerin destek ihtiyaçları ve sosyal katılımı; aile ilişkileri, çocukların eğitimi ve ortak yaşam olanaklarıyla birlikte ele alınıyor. Kendiniz veya aileniz için projenin sunduğu yaklaşımı ekibimizle görüşebilirsiniz.",
     },
     {
       question: "Sağlık ve eğitim alanları yerleşkeye nasıl katılıyor?",
       answer:
-        "Sağlık, bakım, fizik tedavi ve rehabilitasyon alanları, yaşam mekânları ve ortak sosyal çevreyle ilişkili olarak tasarlandı. Kreş, okul ve uygulamalı öğrenme alanları ise bahçeler, üretim ve kuşaklar arası paylaşımla birlikte ele alınıyor. Böylece destek, öğrenme ve gündelik yaşam aynı yerleşke yaklaşımında buluşuyor.",
+        "Sağlık, bakım, fizik tedavi ve rehabilitasyon alanları, konaklama ve sosyal mekânlarla bağlantılı olarak planlandı. Kreş, okul ve uygulamalı eğitim alanlarının bahçelere ve üretim mekânlarına yakınlığı ise gözleme, deneyime ve kuşaklar arası paylaşıma dayalı öğrenmeyi destekliyor.",
     },
     {
       question:
-        "Proje hakkında bilgi almak veya görüşmek için nasıl ulaşabilirim?",
+        "Proje hakkında nasıl bilgi alabilirim?",
       answer:
-        "info@ecolive.com.tr adresine yazarak yaşam olanakları, yatırım ve iş birliği ya da eğitim ve sağlık iş birlikleri hakkında görüşme talebinizi paylaşabilirsiniz. Mesajınızda ilgilendiğiniz konuyu ve size ulaşılabilecek iletişim bilgilerini belirtmeniz yeterli.",
+        "info@ecolive.com.tr adresinden yaşam olanakları, yatırım, eğitim veya sağlık iş birlikleri hakkında bilgi ve görüşme talep edebilirsiniz. İlgilendiğiniz konuyu ve size ulaşabileceğimiz iletişim bilgilerini paylaşmanız yeterli.",
     },
   ],
 };
@@ -67,21 +67,21 @@ export const contactTopics = [
     id: "yasam",
     title: "Yaşam hakkında bilgi",
     description:
-      "Yerleşkenin yaşam yaklaşımını tanımak, kendiniz veya aileniz için düşünülen olanakları görüşmek üzere bize yazın.",
+      "Yerleşkenin yaşam olanaklarını, mimari yaklaşımını ve kendiniz veya aileniz için öngörülen seçenekleri ekibimizle görüşebilirsiniz.",
     subject: "ECOLIVE — Yaşam hakkında bilgi talebi",
   },
   {
     id: "yatirim",
     title: "Yatırım ve iş birliği",
     description:
-      "Projenin kapsamını ve yatırım yaklaşımını tanımak, ticari iş birliği olanaklarını görüşmek için iletişime geçin.",
+      "Projenin kapsamı, yatırım yaklaşımı ve ticari iş birliği olanakları hakkında görüşme talep edebilirsiniz.",
     subject: "ECOLIVE — Yatırım ve iş birliği görüşmesi",
   },
   {
     id: "egitim-saglik",
     title: "Eğitim ve sağlık iş birlikleri",
     description:
-      "Eğitim, sağlık, bakım veya uygulamalı öğrenme alanlarında kurumunuzun deneyimini ve olası katkılarını paylaşın.",
+      "Eğitim, sağlık, bakım ve uygulamalı öğrenme alanlarında kurumunuzun uzmanlığını ve iş birliği önerilerini paylaşabilirsiniz.",
     subject: "ECOLIVE — Eğitim ve sağlık iş birliği görüşmesi",
   },
 ];
