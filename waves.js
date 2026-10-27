@@ -68,7 +68,11 @@ export function initWaves() {
     }
     return "#f6f4ee";
   };
+  // These solid surfaces have enough top padding for an independent curve.
+  // Edge-to-edge photos keep their original static full-surface mask.
+  const isolatedSurfaces = ".immersive-journey, .spatial-gallery, .inner-page :is(.deep-feature, .deep-essentials, .page-intro, .chapter-columns, .faq-section, .page-quote, .related)";
   boundaries.forEach(({ incoming, mobile }, i) => {
+    incoming.classList.toggle("motion-wave-isolated", incoming.matches(isolatedSurfaces));
     incoming.dataset.motionWave = "";
     incoming.dataset.waveScope = mobile ? "mobile" : "all";
     const curve =

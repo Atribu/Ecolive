@@ -45,7 +45,12 @@ export function initMotion() {
         ...document.querySelectorAll(
           ".deep-image > img, .section-image > img, .focus-image > img, .together-photo > img, .place-card > img, .cycle-image > img, .page-photo:not(.hero-photo) > img",
         ),
-      ].map((image) => ({
+      ].filter((image) =>
+        // Inner editorial photos already open through their own frame mask.
+        // Keep their crop stable while those sections pass through the viewport.
+        !document.body.classList.contains("inner-page") ||
+        !image.matches(".deep-image > img, .page-photo:not(.hero-photo) > img"),
+      ).map((image) => ({
         image,
         frame: image.parentElement,
         styles: new Map(),
@@ -54,13 +59,15 @@ export function initMotion() {
         scaleValue: "1",
       }))
     : [];
-  const waves = [...document.querySelectorAll("[data-motion-wave]")].map(
-    (element) => ({
+  // Only marked surfaces isolate the curve from their moving content. Other
+  // sections keep their existing curved mask at its static CSS defaults.
+  const waves = [...document.querySelectorAll("[data-motion-wave]")]
+    .filter((element) => element.classList.contains("motion-wave-isolated"))
+    .map((element) => ({
       element,
       frame: element,
       styles: new Map(),
-    }),
-  );
+    }));
   const effectFrames = new Set([...parallax, ...waves].map(({ frame }) => frame));
   const nearViewport = new Set();
   let visibilityObserver = null;

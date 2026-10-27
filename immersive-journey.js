@@ -47,7 +47,11 @@ function connectJourney(host) {
   };
   const stopped = () => reduced.matches || document.documentElement.dataset.motion === 'paused';
   const moving = () => !disposed && visible && !pageHidden && !stopped();
-  const announce = (text = '') => { if (status) status.textContent = text; };
+  const announce = (text = '', error = false) => {
+    if (!status) return;
+    status.dataset.error = String(error);
+    status.textContent = text;
+  };
   const busy = (value) => scene.setAttribute('aria-busy', String(value));
 
   function cancelFrame() {
@@ -120,7 +124,7 @@ function connectJourney(host) {
       pending = null;
       image.onload = image.onerror = null;
       busy(false);
-      announce('Bu sahnenin görseli yüklenemedi. Önceki sahne gösteriliyor; yeniden seçerek deneyebilirsiniz.');
+      announce('Bu sahnenin görseli yüklenemedi. Önceki sahne gösteriliyor; yeniden seçerek deneyebilirsiniz.', true);
     };
     image.decoding = 'async';
     image.onload = async () => {

@@ -23,16 +23,18 @@
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
-/* Keep sticky scenes and moving gallery images out of a page-sized mask.
+/* Padded editorial sections keep photos and decorations out of the mask.
    Only the shallow curved background needs masking; the body stays solid. */
-.motion-wave-active.motion-wave-active:is(.immersive-journey, .spatial-gallery) {
+.motion-wave-active.motion-wave-active.motion-wave-isolated {
+  isolation: isolate;
   background-color: transparent;
   -webkit-mask: none;
   mask: none;
 }
-.motion-wave-active:is(.immersive-journey, .spatial-gallery)::before,
-.motion-wave-active:is(.immersive-journey, .spatial-gallery)::after {
+.motion-wave-active.motion-wave-isolated::before,
+.motion-wave-active.motion-wave-isolated::after {
   content: "";
+  display: block;
   position: absolute;
   left: 0;
   right: 0;
@@ -40,8 +42,13 @@
   pointer-events: none;
   background: var(--wave-background, var(--cream));
 }
-.motion-wave-active:is(.immersive-journey, .spatial-gallery)::before {
+.motion-wave-active.motion-wave-isolated::before {
   top: 0;
+  bottom: auto;
+  width: auto;
+  aspect-ratio: auto;
+  opacity: 1;
+  transform: none;
   height: calc(var(--wave-height) + 16px);
   -webkit-mask-image: var(--wave-mask);
   mask-image: var(--wave-mask);
@@ -52,9 +59,14 @@
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
-.motion-wave-active:is(.immersive-journey, .spatial-gallery)::after {
+.motion-wave-active.motion-wave-isolated::after {
   top: calc(var(--wave-height) + 1px);
   bottom: 0;
+}
+/* Keep decorative ink inside the solid body, below the transparent curve. */
+.motion-wave-active.motion-wave-isolated > .organic-surface,
+.motion-wave-active.motion-wave-isolated > .ambient-surface {
+  top: calc(var(--wave-height) + 1px);
 }
 /* Short navigation/status strips need clear space on both curved edges. */
 .inner-page .page-guide.motion-wave-active,
@@ -123,11 +135,11 @@
     mask: none;
     margin-top: 0;
   }
-  .motion-wave-active.motion-wave-active:is(.immersive-journey, .spatial-gallery) {
+  .motion-wave-active.motion-wave-active.motion-wave-isolated {
     background-color: var(--wave-background, var(--cream));
   }
-  .motion-wave-active:is(.immersive-journey, .spatial-gallery)::before,
-  .motion-wave-active:is(.immersive-journey, .spatial-gallery)::after {
+  .motion-wave-active.motion-wave-isolated::before,
+  .motion-wave-active.motion-wave-isolated::after {
     display: none;
   }
 }

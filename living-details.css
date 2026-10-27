@@ -20,21 +20,30 @@
 .project-timeline .living-details-row::before { top: 4px; }
 .living-details-row.living-details-current::before { opacity: .6; }
 .living-details-number { position: relative; }
+.deep-essentials-list .chapter-number {
+  display: grid;
+  place-items: center;
+  align-self: flex-start;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  line-height: 1;
+  letter-spacing: 0;
+  font-variant-numeric: lining-nums tabular-nums;
+}
 .living-details-ring {
   position: absolute;
   width: 34px;
   height: 34px;
   left: 50%;
-  top: -2px;
-  margin-left: -17px;
+  top: 50%;
+  translate: -50% -50%;
   color: var(--living-details-ink);
   pointer-events: none;
 }
 .timeline-mark .living-details-ring {
   width: 47px;
   height: 47px;
-  top: -6px;
-  margin-left: -23.5px;
 }
 .living-details-ring svg { display: block; width: 100%; height: 100%; overflow: visible; }
 .living-details-ring-track { stroke: currentColor; stroke-width: .8; opacity: .14; }

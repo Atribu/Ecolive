@@ -10,6 +10,7 @@ class Element extends EventTarget {
   dataset = {};
   textContent = "";
   classes = new Set();
+  matchingSelectors = new Set();
   writes = [];
   values = new Map();
   rect = { top: 100, height: 700, width: 1200 };
@@ -26,18 +27,19 @@ class Element extends EventTarget {
   getBoundingClientRect() { return { ...this.rect, bottom: this.rect.top + this.rect.height }; }
   querySelector() { return null; }
   closest() { return null; }
-  matches() { return false; }
+  matches(selector) { return this.matchingSelectors.has(selector); }
   contains(other) { return other === this; }
   emit(name) { this.dispatchEvent(new Event(name)); }
 }
 
-function fixture({ waveTop = 100, waveHeight = 2600, text = false } = {}) {
+function fixture({ waveTop = 100, waveHeight = 2600, text = false, inner = false, editorialPhoto = true, isolatedWave = true } = {}) {
   const root = new Element();
   root.dataset.motion = "running";
   root.clientHeight = 900;
   const document = new Element();
   document.documentElement = root;
   document.body = new Element();
+  if (inner) document.body.classList.add("inner-page");
   document.activeElement = document.body;
   document.hidden = false;
   const window = new Element();
@@ -51,9 +53,11 @@ function fixture({ waveTop = 100, waveHeight = 2600, text = false } = {}) {
   wave.rect.top = waveTop;
   wave.rect.height = waveHeight;
   wave.classList.add("motion-wave-active");
+  if (isolatedWave) wave.classList.add("motion-wave-isolated");
   const photoFrame = new Element();
   const photo = new Element();
   photo.parentElement = photoFrame;
+  if (editorialPhoto) photo.matchingSelectors.add(".deep-image > img, .page-photo:not(.hero-photo) > img");
   const paragraph = new Element();
   paragraph.textContent = "An existing editorial paragraph.";
   paragraph.rect = { top: 1100, height: 60, width: 400 };
@@ -111,6 +115,49 @@ test("a tall visible chapter stops repainting its offscreen wave while its photo
     assert.equal(page.wave.writes.length, 0);
     assert.deepEqual(page.photo.writes.map(([name]) => name), ["--motion-parallax-y"]);
     assert.equal(page.frames.size, 0, "no continuous frame loop");
+  } finally { page.dispose(); }
+});
+
+test("inner editorial photographs stay still while home photographs retain scroll parallax", () => {
+  for (const inner of [false, true]) {
+    const page = fixture({ inner });
+    try {
+      assert.equal(page.photo.classList.contains("motion-parallax"), !inner);
+      assert.equal(page.observers[0].targets.has(page.photoFrame), !inner);
+      page.observers[0].show(page.wave, page.photoFrame);
+      page.flush();
+      page.photoFrame.rect.top -= 120;
+      page.window.emit("scroll");
+      page.flush();
+      if (inner) assert.equal(page.photo.writes.length, 0);
+      else assert.equal(page.photo.writes.filter(([name]) => name === "--motion-parallax-y").length, 2);
+    } finally { page.dispose(); }
+  }
+});
+
+test("only isolated curve layers animate; full-surface masks remain static even onscreen", () => {
+  for (const isolatedWave of [false, true]) {
+    const page = fixture({ isolatedWave, waveTop: 400 });
+    try {
+      assert.equal(page.observers[0].targets.has(page.wave), isolatedWave);
+      page.observers[0].show(page.wave, page.photoFrame);
+      page.flush();
+      page.wave.rect.top -= 150;
+      page.window.emit("scroll");
+      page.flush();
+      assert.equal(page.wave.writes.length, isolatedWave ? 4 : 0);
+      assert.equal(page.wave.classList.contains("motion-wave-active"), true, "the curved separator itself remains present");
+    } finally { page.dispose(); }
+  }
+});
+
+test("inner non-editorial enhancements are unaffected by the photo stability rule", () => {
+  const page = fixture({ inner: true, editorialPhoto: false });
+  try {
+    page.observers[0].show(page.photoFrame);
+    page.flush();
+    assert.equal(page.photo.classList.contains("motion-parallax"), true);
+    assert.equal(page.photo.writes.length, 2);
   } finally { page.dispose(); }
 });
 

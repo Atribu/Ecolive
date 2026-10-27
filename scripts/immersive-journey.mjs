@@ -54,6 +54,10 @@ export function renderImmersiveJourney(slug = "") {
   const first = items[0];
   const headingId = `${journey.id}-heading`;
   const detailId = `${journey.id}-detail`;
+  // Shared grid cells reserve the tallest real scene at every viewport width.
+  // These inert copies contain no IDs, controller hooks, or live regions.
+  const copyReserves = items.map((item) => `<div class="journey-copy-reserve" aria-hidden="true" inert><span class="micro">${esc(item.eyebrow)}</span><h3>${esc(item.title)}</h3><p>${esc(item.text)}</p></div>`).join("");
+  const linkReserves = items.map((item) => `<span class="journey-link-reserve" aria-hidden="true" inert>${esc(item.link)}</span>`).join("");
   return `<section class="immersive-journey" id="${esc(journey.id)}" data-journey data-journey-index="0" style="--journey-progress:0" aria-labelledby="${esc(headingId)}">
     <header class="journey-header">
       <div><span class="micro">${esc(journey.eyebrow)}</span><h2 id="${esc(headingId)}">${esc(journey.title)} <em>${esc(journey.emphasis)}</em></h2></div>
@@ -69,8 +73,8 @@ export function renderImmersiveJourney(slug = "") {
         </figure>
         <div class="journey-panel" id="${esc(detailId)}" role="region" aria-label="Seçilen keşif bölümü">
           <div class="journey-panel-top"><span class="journey-count" data-journey-count>01 / ${number(items.length)}</span><span class="journey-scroll-hint">Kaydırarak keşfedin <span aria-hidden="true">↓</span></span></div>
-          <div class="journey-copy" data-journey-copy aria-live="off" aria-atomic="true"><span class="micro" data-journey-eyebrow>${esc(first.eyebrow)}</span><h3 data-journey-title>${esc(first.title)}</h3><p data-journey-text>${esc(first.text)}</p></div>
-          <a class="journey-link" data-journey-link href="${esc(first.href)}"><span>${esc(first.link)}</span><span aria-hidden="true">↗</span></a>
+          <div class="journey-copy" data-journey-copy aria-live="off" aria-atomic="true"><div class="journey-copy-active"><span class="micro" data-journey-eyebrow>${esc(first.eyebrow)}</span><h3 data-journey-title>${esc(first.title)}</h3><p data-journey-text>${esc(first.text)}</p></div>${copyReserves}</div>
+          <a class="journey-link" data-journey-link href="${esc(first.href)}"><span class="journey-link-labels"><span data-journey-link-label>${esc(first.link)}</span>${linkReserves}</span><span aria-hidden="true">↗</span></a>
           <div class="journey-choices" role="group" aria-label="Keşif bölümlerini seçin">${items.map((item, index) => `<button class="journey-choice${index === 0 ? " is-active" : ""}" type="button" data-journey-choice="${index}" aria-pressed="${index === 0}" aria-controls="${esc(detailId)}" disabled><span class="journey-choice-number" aria-hidden="true">${number(index + 1)}</span><span>${esc(item.label)}</span><span class="journey-choice-mark" aria-hidden="true">↗</span></button>`).join("")}</div>
           <div class="journey-navigation"><span>HİKÂYEYİ KEŞFETMEYE DEVAM EDİN</span><div><button type="button" data-journey-prev aria-label="Önceki keşif bölümü" aria-controls="${esc(detailId)}" disabled>←</button><button type="button" data-journey-next aria-label="Sonraki keşif bölümü" aria-controls="${esc(detailId)}" disabled>→</button></div></div>
         </div>

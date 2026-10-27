@@ -1,5 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { journeys, renderImmersiveJourney } from './immersive-journey.mjs';
 
 class Classes {
   values = new Set();
@@ -81,6 +83,10 @@ async function fixture(run, { desktop: isDesktop = true, reduced: isReduced = fa
   const progress = new Element();
   const link = new Element();
   link.firstElementChild = new Element();
+  const linkLabel = new Element();
+  const linkReserves = items.map(item => item.link);
+  link.firstElementChild.reserves = linkReserves;
+  link.querySelector = selector => selector === '[data-journey-link-label]' ? linkLabel : null;
   const data = new Element();
   data.textContent = JSON.stringify(items);
   const track = new Element();
@@ -144,7 +150,7 @@ async function fixture(run, { desktop: isDesktop = true, reduced: isReduced = fa
   try {
     const module = await import(`../immersive-journey.js?test=${++fixtureId}`);
     dispose = module.initImmersiveJourney();
-    await run({ items, fields, buttons, photos, scene, copy, previous, next, status, progress, link, host, track, stage, document, window, reduced, desktop, geometry, preloads, observers, frames, seeks, flush, scroll, dispose, init: module.initImmersiveJourney });
+    await run({ items, fields, buttons, photos, scene, copy, previous, next, status, progress, link, linkLabel, linkReserves, host, track, stage, document, window, reduced, desktop, geometry, preloads, observers, frames, seeks, flush, scroll, dispose, init: module.initImmersiveJourney });
   } finally {
     dispose?.();
     for (const [key, descriptor] of originals) {
@@ -198,6 +204,65 @@ test('desktop chapter controls seek the native track, while mobile selection sta
     assert.equal(frames.size, 0);
     assert.equal(fields.title.textContent, items[2].title);
   }, { desktop: false });
+});
+
+test('all pages reserve every real copy and link before JavaScript without duplicate live fields', () => {
+  const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+  for (const journey of journeys) {
+    const html = renderImmersiveJourney(journey.slug);
+    const reserves = [...html.matchAll(/<div class="journey-copy-reserve" aria-hidden="true" inert>([\s\S]*?)<\/div>/g)].map(match => match[1]);
+    const links = [...html.matchAll(/<span class="journey-link-reserve" aria-hidden="true" inert>([\s\S]*?)<\/span>/g)].map(match => match[1]);
+    assert.equal(reserves.length, journey.chapters.length, `${journey.slug}: all scenes contribute to the initial height budget`);
+    assert.equal(links.length, journey.chapters.length);
+    journey.chapters.forEach((chapter, index) => {
+      for (const field of ['eyebrow', 'title', 'text']) assert.ok(reserves[index].includes(escape(chapter[field])), `${journey.slug}: ${field} reserves its actual wrapping`);
+      assert.equal(links[index], escape(chapter.link));
+      assert.doesNotMatch(reserves[index], /\bid=|data-journey-|aria-live|<a\b|<button\b/);
+    });
+    for (const field of ['eyebrow', 'title', 'text', 'link-label']) {
+      assert.equal((html.match(new RegExp(`data-journey-${field}(?:\\s|>)`, 'g')) || []).length, 1, `${journey.slug}: one active ${field}`);
+    }
+  }
+});
+
+test('mobile loading, successful selection and failure retain sizing labels and never seek the page', async () => fixture(async ({ buttons, preloads, link, linkLabel, linkReserves, status, items, seeks, window }) => {
+  window.scrollY = 5427.5;
+  const reserved = [...linkReserves];
+  for (const index of [2, 3, 0, 1]) {
+    buttons[index].emit('click');
+    assert.equal(status.textContent, 'Sahne hazırlanıyor.');
+    assert.equal(status.dataset.error, 'false');
+    await preloads.at(-1).onload();
+    assert.equal(linkLabel.textContent, items[index].link);
+    assert.deepEqual(link.firstElementChild.reserves, reserved);
+    assert.equal(link.firstElementChild.textContent, '', 'label updates must not replace the sizing grid');
+  }
+  buttons[3].emit('click');
+  preloads.at(-1).onerror();
+  assert.match(status.textContent, /Önceki sahne/);
+  assert.equal(status.dataset.error, 'true', 'failed media exposes visible feedback without adding a flow box');
+  assert.deepEqual(link.firstElementChild.reserves, reserved);
+  buttons[3].emit('click');
+  assert.equal(status.dataset.error, 'false', 'retry clears visible error feedback');
+  await preloads.at(-1).onload();
+  assert.equal(status.dataset.error, 'false');
+  assert.equal(window.scrollY, 5427.5);
+  assert.deepEqual(seeks, []);
+}, { desktop: false }));
+
+test('status announcements stay outside layout and reserve copies share one grid cell', async () => {
+  const css = await readFile(new URL('../immersive-journey.css', import.meta.url), 'utf8');
+  const statusRule = css.match(/\.journey-status\s*\{([^}]+)\}/)?.[1] || '';
+  assert.match(statusRule, /position:\s*absolute/);
+  assert.match(statusRule, /clip-path:\s*inset\(50%\)/);
+  const errorRule = css.match(/\.journey-status\[data-error="true"\]\s*\{([^}]+)\}/)?.[1] || '';
+  assert.match(errorRule, /clip-path:\s*none/);
+  assert.match(errorRule, /max-height:\s*48px/);
+  assert.doesNotMatch(errorRule, /position:\s*(?:static|relative)/);
+  assert.doesNotMatch(css, /\.journey-status:empty/);
+  assert.match(css, /\.journey-copy\s*\{[^}]*display:\s*grid/);
+  assert.match(css, /\.journey-copy-active,\s*\.journey-copy-reserve\s*\{[^}]*grid-area:\s*1\s*\/\s*1/);
+  assert.match(css, /\.journey-link-labels > span\s*\{[^}]*grid-area:\s*1\s*\/\s*1/);
 });
 
 test('pause preserves the desktop layout and freezes scroll, while manual scene selection remains usable', async () => fixture(async ({ observers, flush, document, host, buttons, preloads, fields, items, copy, frames, scroll, seeks, window }) => {
